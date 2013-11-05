@@ -8,10 +8,10 @@ import thaumcraftextras.helpers.IconHelper;
 import thaumcraftextras.register.CreativeTabRegister;
 
 
-public class TCEBlock extends BlockFire{
+public class FireBlock extends BlockFire{
 
 
-        public TCEBlock(int id) {
+        public FireBlock(int id) {
                 super(id, Material.iron);
                 setCreativeTab(CreativeTabRegister.tabMain);
         }
