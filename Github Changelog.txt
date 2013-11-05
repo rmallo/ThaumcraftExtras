@@ -1,0 +1,4 @@
+=====Changelog=====
+Did some basework on the new Fire Block.
+Tweaked Heal Foci so it doesnt heal you if you already have 20 health (max health)
+Created Misc Item that i might use as the Creative Tab Logo.
