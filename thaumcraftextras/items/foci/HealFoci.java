@@ -18,9 +18,17 @@ public class HealFoci extends ItemFoci {
 
         @Override
         public ItemStack onFocusRightClick(ItemStack itemstack, World world, EntityPlayer player, MovingObjectPosition movingobjectposition) {
+            {
             ItemWandCasting wand = (ItemWandCasting)itemstack.getItem();
             if (wand.consumeAllVis(itemstack, player, getVisCost(), true)) {
+            	if(player.getPrevHealth <= 20)
+            	{
         	player.heal(2);
+            	}
+            	else
+            	{
+            	player.heal(0);	
+            	}
             }
       		return itemstack;
           }
