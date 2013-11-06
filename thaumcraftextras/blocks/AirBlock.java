@@ -18,7 +18,7 @@ public class FireBlock extends BlockFire{
 
 
         public FireBlock(int id) {
-                super(id, Material.iron);
+                super(id, Material.air);
                 setCreativeTab(CreativeTabRegister.tabMain);
         }
         
@@ -28,13 +28,6 @@ public class FireBlock extends BlockFire{
         blockIcon = IconHelper.forBlock(par1IconRegister, this);
 }
 
-
-        @Override
-        public boolean canBlockCatchFire(IBlockAccess blockacces, int x, int y, int z, ForgeDirection face) 
-        {
-        return false;
-        }
-        
         @Override
         public boolean renderAsNormalBlock()
         {
