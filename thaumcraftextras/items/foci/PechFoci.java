@@ -1,45 +1,48 @@
 package thaumcraftextras.items.foci;
 
+import java.util.Random;
+
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.common.entities.monster.EntityPech;
 import thaumcraft.common.items.wands.ItemWandCasting;
 
-public class ArrowFoci extends ItemFoci {
+public class PechFoci extends ItemFoci {
 
-        private static final AspectList visUsage = new AspectList().add(Aspect.AIR, 10);
+        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 625).add(Aspect.AIR, 625);
 
-        public ArrowFoci(int i) {
+        public PechFoci(int i) {
                 super(i);
         }
 
         @Override
         public ItemStack onFocusRightClick(ItemStack itemstack, World world, EntityPlayer player, MovingObjectPosition movingobjectposition) {
             ItemWandCasting wand = (ItemWandCasting)itemstack.getItem();
+        	EntityPech ep;
             if (wand.consumeAllVis(itemstack, player, getVisCost(), true)) {
-        	if(!world.isRemote)
-        	{
-        		EntityArrow arrow;
-        		arrow = new EntityArrow(world, player, 4);
-        		arrow.canBePickedUp = 0;
-                world.spawnEntityInWorld(arrow);
-        	}
+            	if(!world.isRemote)
+            	{
+            	Random rand = new Random();
+            	ep = new EntityPech(world);
+                ep.setLocationAndAngles(player.posX+0.5, player.posY+1, player.posZ+ 0.5,(float)(rand.nextInt(15)* 360) / 16f,0f);              
+                world.spawnEntityInWorld(ep);
+            	}
             }
-    		return itemstack;
+      		return itemstack;
         }
 
         @Override
         public String getSortingHelper(ItemStack itemstack) {
-                return "ARROW";
+                return "PECH";
         }
 
         @Override
         public int getFocusColor() {
-                return 0x996633;
+                return 0xCCFF00;
         }
 
         @Override
@@ -51,7 +54,7 @@ public class ArrowFoci extends ItemFoci {
         public AspectList getVisCost() {
                 return visUsage;
         }
-
+        
 		@Override
 		public boolean acceptsEnchant(int id) {
 			return false;

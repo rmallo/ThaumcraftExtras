@@ -2,6 +2,7 @@ package thaumcraftextras.register;
 
 import net.minecraft.block.Block;
 import thaumcraftextras.blocks.TCEBlock;
+import thaumcraftextras.blocks.TCEBlockAir;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
@@ -22,7 +23,7 @@ public class BlockRegister {
 		GameRegistry.registerBlock(fireBlock, "FireBlock");
 		LanguageRegistry.addName(fireBlock, TCELocalization.FireBlock);
 		
-		airBlock = new TCEBlock(Config.airBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.AirBlockTexture);
+		airBlock = new TCEBlockAir(Config.airBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.AirBlockTexture);
 		GameRegistry.registerBlock(airBlock, "AirBlock");
 		LanguageRegistry.addName(airBlock, TCELocalization.AirBlock);
 	}

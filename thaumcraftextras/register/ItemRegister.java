@@ -6,6 +6,7 @@ import thaumcraftextras.items.TCEItem;
 import thaumcraftextras.items.foci.ArrowFoci;
 import thaumcraftextras.items.foci.EnderFoci;
 import thaumcraftextras.items.foci.HealFoci;
+import thaumcraftextras.items.foci.PechFoci;
 import thaumcraftextras.items.foci.SpeedFoci;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
@@ -59,6 +60,9 @@ public class ItemRegister {
 		
 		speedFoci = new SpeedFoci(Config.speedFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.speedFociTexture);
 		LanguageRegistry.addName(speedFoci, TCELocalization.speedFoci);
+		
+		pechFoci = new PechFoci(Config.pechFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.pechFociTexture);
+		LanguageRegistry.addName(pechFoci, TCELocalization.pechFoci);
 	}
 	
 	public static void recipe()
@@ -81,4 +85,5 @@ public class ItemRegister {
 	public static Item arrowFoci;
 	public static Item healFoci;
 	public static Item speedFoci;
+	public static Item pechFoci;
 }

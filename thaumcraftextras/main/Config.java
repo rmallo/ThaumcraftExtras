@@ -32,6 +32,7 @@ public class Config {
 	        arrowFociId = config.getItem("arrowFoci", 13231).getInt();
 	        healFociId = config.getItem("healFoci", 13232).getInt();
 	        speedFociId = config.getItem("speedFoci", 13233).getInt();
+	        pechFociId = config.getItem("pechFoci", 13234).getInt();
 
 	    	config.save();
 }
@@ -56,4 +57,5 @@ public class Config {
     public static int arrowFociId;  
     public static int healFociId;
     public static int speedFociId;
+    public static int pechFociId;
 }

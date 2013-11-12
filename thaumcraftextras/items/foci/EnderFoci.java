@@ -11,7 +11,7 @@ import thaumcraft.common.items.wands.ItemWandCasting;
 
 public class EnderFoci extends ItemFoci {
 
-        private static final AspectList visUsage = new AspectList().add(Aspect.AIR, 1500);
+        private static final AspectList visUsage = new AspectList().add(Aspect.AIR, 1000);
 
         public EnderFoci(int i) {
                 super(i);

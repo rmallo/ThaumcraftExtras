@@ -12,7 +12,7 @@ import thaumcraft.common.items.wands.ItemWandCasting;
 
 public class SpeedFoci extends ItemFoci {
 
-        private static final AspectList visUsage = new AspectList().add(Aspect.AIR, 1250);
+        private static final AspectList visUsage = new AspectList().add(Aspect.AIR, 625);
 
         public SpeedFoci(int i) {
                 super(i);

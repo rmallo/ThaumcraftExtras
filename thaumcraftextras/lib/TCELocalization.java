@@ -19,6 +19,7 @@ public class TCELocalization {
 	public static String arrowFociTexture = "arrowFoci";
 	public static String healFociTexture = "healFoci";
 	public static String speedFociTexture = "speedFoci";
+	public static String pechFociTexture = "pechFoci";
 
 	/** Block Texture Name */
 	public static String ResearchBlockTexture = "researchblock";
@@ -44,8 +45,9 @@ public class TCELocalization {
 	public static String enderFoci = "Wand Focus: Blink";
 	public static String arrowFoci = "Wand Focus: Arrow";
 	public static String healFoci = "Wand Focus: Heal";
-	public static String speedFoci = "Wand Focus: Steadfast";
-
+	public static String speedFoci = "Wand Focus: Speed";
+	public static String pechFoci = "Wand Focus: Pech Summon";
+	
 	/** Block Name */
 	public static String ResearchBlock = "Research Block";
 	public static String FireBlock = "Fire Block";

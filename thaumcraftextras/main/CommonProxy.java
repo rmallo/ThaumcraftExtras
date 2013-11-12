@@ -6,6 +6,13 @@ import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
 
 public class CommonProxy {
+	
+	public void load()
+	{
+    	registerParticles();
+        registerRenderInformation();
+	}
+	
     public void registerRenderInformation()
     {
 
@@ -20,5 +27,6 @@ public class CommonProxy {
 	public void registerParticles()
 	{
 	}
+	
 }
 
