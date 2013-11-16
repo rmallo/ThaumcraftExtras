@@ -75,17 +75,6 @@ public class ThaumcraftRecipeRegister {
 		"XXX",
 		'X', ItemRegister.magicTradeTier4});
 	
-	airBlock = ThaumcraftApi.addArcaneCraftingRecipe("Air Block", new ItemStack(BlockRegister.airBlock), new AspectList().add(Aspect.AIR, 8), new Object[]{
-		"XXX",
-		"XXX",
-		"XXX",
-		'X', Item.feather});
-	
-	fireBlock = ThaumcraftApi.addArcaneCraftingRecipe("Fire Block", new ItemStack(BlockRegister.fireBlock), new AspectList().add(Aspect.FIRE, 8), new Object[]{
-		"XXX",
-		"XXX",
-		"XXX",
-		'X', Item.netherrackBrick});
 
 	enderFoci = ThaumcraftApi.addInfusionCraftingRecipe("Ender Foci", new ItemStack(ItemRegister.enderFoci),4 , 
 			new AspectList().add(Aspect.MAGIC, 50).add(Aspect.ELDRITCH, 50).add(Aspect.ENTROPY, 25), 
@@ -93,7 +82,6 @@ public class ThaumcraftRecipeRegister {
 		new ItemStack(Item.netherQuartz), new ItemStack(Item.netherrackBrick), new ItemStack(Item.netherQuartz),
 		new ItemStack(Item.netherrackBrick), new ItemStack(Item.netherQuartz), new ItemStack(Item.netherrackBrick), 
 		new ItemStack(Item.netherQuartz), new ItemStack(Item.netherrackBrick)});
-	
 	
 	
 	arrowFoci = ThaumcraftApi.addInfusionCraftingRecipe("Arrow Foci", new ItemStack(ItemRegister.arrowFoci),4 , 
@@ -135,9 +123,6 @@ public class ThaumcraftRecipeRegister {
 	public static ShapedArcaneRecipe magicTradeTier3;
 	public static ShapedArcaneRecipe magicTradeTier4;
 	public static ShapedArcaneRecipe magicTradeTier5;
-	
-	public static ShapedArcaneRecipe airBlock;
-	public static ShapedArcaneRecipe fireBlock;
 	
 	public static InfusionRecipe enderFoci;
 	public static InfusionRecipe arrowFoci;

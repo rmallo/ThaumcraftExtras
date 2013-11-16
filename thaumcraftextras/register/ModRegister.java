@@ -11,6 +11,8 @@ public class ModRegister {
     	ItemRegister.load();
     	AspectRegister.addAspects();
     	ItemRegister.recipe();
+    	InfusionRegister.load();
+    	InfusionRegister.recipe();
     	ThaumcraftRecipeRegister.load();
     	CreativeTabRegister.load();
 	}

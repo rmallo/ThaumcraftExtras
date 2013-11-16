@@ -23,9 +23,18 @@ public class TCELocalization {
 
 	/** Block Texture Name */
 	public static String ResearchBlockTexture = "researchblock";
+
+	
+	/** Infusion Blocks Textures */
 	public static String FireBlockTexture = "fireblock";
 	public static String AirBlockTexture = "airblock";
-
+	public static String WaterBlockTexture = "waterblock";
+	public static String EarthBlockTexture = "earthblock";
+	public static String LightBlockTexture = "lightblock";
+	
+	/** Infusion Shards Textures */
+	public static String lightShardTexture = "lightshard";
+	
 	/** Thaumonomicon Tab Icon*/
 	public static String TCETabIcon = "textures/tabs/tce.png";
 	
@@ -48,9 +57,16 @@ public class TCELocalization {
 	public static String speedFoci = "Wand Focus: Speed";
 	public static String pechFoci = "Wand Focus: Pech Summon";
 	
-	/** Block Name */
+	/** Basic Blocks*/
 	public static String ResearchBlock = "Research Block";
+	
+	/** Infusion Shards */
+	public static String lightShard = "Light Shard";
+	
+	 /** Infusion blocks */
 	public static String FireBlock = "Fire Block";
 	public static String AirBlock = "Air Block";
-	
+	public static String EarthBlock = "Earth Block";
+	public static String WaterBlock = "Water Block";
+	public static String LightBlock = "Light Block";
 }

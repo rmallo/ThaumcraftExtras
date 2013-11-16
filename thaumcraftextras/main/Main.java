@@ -19,7 +19,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid = "ThaumcraftExtras", name = "ThaumcraftExtras", version = "0.1.3" ,dependencies = "required-after:Thaumcraft")
+@Mod(modid = "ThaumcraftExtras", name = "ThaumcraftExtras", version = "0.2" ,dependencies = "required-after:Thaumcraft")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class Main {
 	

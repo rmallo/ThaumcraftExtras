@@ -15,7 +15,10 @@ public class Config {
 	        researchBlockId = config.getBlock("researchBlock", 224).getInt();
 	        fireBlockId = config.getBlock("fireBlock", 225).getInt();
 	        airBlockId = config.getBlock("airBlock", 226).getInt();
-
+	        earthBlockId = config.getBlock("earthBlock", 227).getInt();
+	        waterBlockId = config.getBlock("waterBlock", 228).getInt();
+	        lightBlockId = config.getBlock("lightBlock", 229).getInt();
+	        
 	        pechTradeTier1Id = config.getItem("pechTradeTier1", 12225).getInt();
 	        pechTradeTier2Id = config.getItem("pechTradeTier2", 12226).getInt();
 	        pechTradeTier3Id = config.getItem("pechTradeTier3", 12227).getInt();
@@ -34,12 +37,18 @@ public class Config {
 	        speedFociId = config.getItem("speedFoci", 13233).getInt();
 	        pechFociId = config.getItem("pechFoci", 13234).getInt();
 
+	        lightShardId = config.getItem("lightShard", 14201).getInt();
+
 	    	config.save();
 }
 	
     public static int researchBlockId;
     public static int fireBlockId;
     public static int airBlockId;
+    public static int waterBlockId;
+    public static int earthBlockId;
+    public static int lightBlockId;
+    //public static int darkBlockId;
     
     public static int pechTradeTier1Id;
     public static int pechTradeTier2Id;
@@ -58,4 +67,6 @@ public class Config {
     public static int healFociId;
     public static int speedFociId;
     public static int pechFociId;
+    
+    public static int lightShardId;
 }

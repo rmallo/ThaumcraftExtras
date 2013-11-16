@@ -10,6 +10,7 @@ import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.helpers.ResearchHelper;
+import thaumcraftextras.lib.BookEntry;
 import thaumcraftextras.lib.TCELocalization;
 
 public class ThaumonomiconRegister {
@@ -21,47 +22,66 @@ public class ThaumonomiconRegister {
 		String text;
 		String text2;
 		
-		text = "You found out there is a lot more in Thaumcraft then you expected.";
+		text = BookEntry.mainEntry;
 		research = new ResearchHelper("Thaumcraft Extras", "TCE", new AspectList(), 0, 0, 30, new ItemStack(BlockRegister.researchBlock)).setRound().setAutoUnlock().registerResearchItem();
 		research.setPages(new ResearchPage(text));
 		
-		text = "Good for trading with Pech's.";
-		text2 = "You can craft them until you have a tier 5 Pech Trade.";
+		text = BookEntry.pechTradeEntryPage1;
+		text2 = BookEntry.pechTradeEntryPage2;
 		research = new ResearchHelper("Pech Trade", "TCE", new AspectList().add(Aspect.GREED, 10).add(Aspect.EXCHANGE, 10), 2, -2, 3, new ItemStack(ItemRegister.pechTradeTier1)).setParents("Thaumcraft Extras").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.pechTradeTier1), new ResearchPage(text2), new ResearchPage(ThaumcraftRecipeRegister.pechTradeTier2));
 
-		text = "A collection of Aspects.";
-		text2 = "You can craft them until you have a tier 5 Magic Trade.";
+		text = BookEntry.magicTradeEntryPage1;
+		text2 = BookEntry.magicTradeEntryPage2;
 		research = new ResearchHelper("Magic Trade", "TCE", new AspectList().add(Aspect.MAGIC, 10), 2, -4, 3, new ItemStack(ItemRegister.magicTradeTier1)).setParents("Pech Trade").setConcealed().registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.magicTradeTier1), new ResearchPage(text2), new ResearchPage(ThaumcraftRecipeRegister.magicTradeTier2));
-		
-		text = "A collection of Fire Made out of the holy fire of hell.";
-		research = new ResearchHelper("Fire Block", "TCE", new AspectList().add(Aspect.FIRE, 10), 0, -2, 3, new ItemStack(BlockRegister.fireBlock)).setParents("Thaumcraft Extras").registerResearchItem();
-		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.fireBlock));
-		
-		text = "A collection of Air Scooped out of the Air itself, you can place blocks in it just like you can in air.";
-		research = new ResearchHelper("Air Block", "TCE", new AspectList().add(Aspect.AIR, 10), 0, -4, 3, new ItemStack(BlockRegister.airBlock)).setParents("Fire Block").setConcealed().registerResearchItem();
-		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.airBlock));
-		
-		text = "The magic of arrows will sometimes do good when your not getting hit by them.";
+	
+		text = BookEntry.arrowFociEntry;
 		research = new ResearchHelper(TCELocalization.arrowFoci, "TCE", new AspectList().add(Aspect.AIR, 20), -2, -2, 3, new ItemStack(ItemRegister.arrowFoci)).setParents("Thaumcraft Extras").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.arrowFoci));
 
-		text = "You discovered a way to teleport around with this wonderful focus, Go to whatever place you want to be in!";
+		text = BookEntry.enderFociEntry; 
 		research = new ResearchHelper(TCELocalization.enderFoci, "TCE", new AspectList().add(Aspect.AIR, 20), -2, -3, 3, new ItemStack(ItemRegister.enderFoci)).setParents("Wand Focus: Arrow").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.enderFoci));
 		
-		text = "You discovered a way to heal yourself with this wonderful focus, But is there a negetive side to that all?";
+		text = BookEntry.healFociEntry;
 		research = new ResearchHelper(TCELocalization.healFoci, "TCE", new AspectList().add(Aspect.ORDER, 20).add(Aspect.HEAL, 25), -3, -2, 3, new ItemStack(ItemRegister.healFoci)).setParents("Thaumcraft Extras").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.healFoci));
 		
-		text = "You discovered a way to run faster and faster, You can use this to make your journey go way faster.";
+		text = BookEntry.speedFociEntry;
 		research = new ResearchHelper(TCELocalization.speedFoci, "TCE", new AspectList().add(Aspect.AIR, 10), -3, -3, 3, new ItemStack(ItemRegister.speedFoci)).setParents("Wand Focus: Heal").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.speedFoci));
 	
-		text = "You found a way to summon this mysterious creature called The Pech, Please don't make him angry.";
+		text = BookEntry.pechFociEntry;
 		research = new ResearchHelper(TCELocalization.pechFoci, "TCE", new AspectList().add(Aspect.EXCHANGE, 10), -2, 2, 3, new ItemStack(ItemRegister.pechFoci)).setParents("Thaumcraft Extras").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.pechFoci));
+		
+		text = BookEntry.shardInfusionEntry;
+		research = new ResearchHelper("Shard Infusion", "TCE", new AspectList().add(Aspect.LIGHT, 10), 2, 0, 3, new ItemStack(InfusionRegister.lightShard)).setParents("Thaumcraft Extras").setRound().setAutoUnlock().registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(InfusionRegister.lightShardRecipe));
+		
+		text = BookEntry.blockInfusionEntry;
+		text2 = BookEntry.airBlockEntry;
+		research = new ResearchHelper("Block Infusion", "TCE", new AspectList().add(Aspect.FIRE, 10), 2, 3, 3, new ItemStack(BlockRegister.airBlock)).setParents("Shard Infusion").setRound().setAutoUnlock().registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(text2), new ResearchPage(InfusionRegister.airBlock));
+		
+
+		text = BookEntry.fireBlockEntry;
+		research = new ResearchHelper("Fire Block", "TCE", new AspectList().add(Aspect.FIRE, 10), 0, 3, 3, new ItemStack(BlockRegister.fireBlock)).setParents("Block Infusion").registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(InfusionRegister.fireBlock));
+
+		text = BookEntry.waterBlockEntry;
+		research = new ResearchHelper("Water Block", "TCE", new AspectList().add(Aspect.WATER, 10), 0, 2, 3, new ItemStack(BlockRegister.waterBlock)).setParents("Block Infusion").registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(InfusionRegister.waterBlock));
+	
+		text = BookEntry.earthBlockEntry;
+		research = new ResearchHelper("Earth Block", "TCE", new AspectList().add(Aspect.EARTH, 10), 0, 4, 3, new ItemStack(BlockRegister.earthBlock)).setParents("Block Infusion").registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(InfusionRegister.earthBlock));
+		
+		text = BookEntry.lightBlockEntry;
+		research = new ResearchHelper("Light Block", "TCE", new AspectList().add(Aspect.LIGHT, 10), 0, 5, 3, new ItemStack(BlockRegister.lightBlock)).setParents("Block Infusion").registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(InfusionRegister.lightBlock));
+		
 	}
 	
 	public static void addPage()
