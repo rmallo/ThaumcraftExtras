@@ -11,7 +11,7 @@ import thaumcraft.common.items.wands.ItemWandCasting;
 
 public class ArrowFoci extends ItemFoci {
 
-        private static final AspectList visUsage = new AspectList().add(Aspect.AIR, 10);
+        private static final AspectList visUsage = new AspectList().add(Aspect.AIR, 10).add(Aspect.ORDER, 5);
 
         public ArrowFoci(int i) {
                 super(i);
@@ -24,7 +24,7 @@ public class ArrowFoci extends ItemFoci {
         	if(!world.isRemote)
         	{
         		EntityArrow arrow;
-        		arrow = new EntityArrow(world, player, 4);
+        		arrow = new EntityArrow(world, player, 5);
         		arrow.canBePickedUp = 0;
                 world.spawnEntityInWorld(arrow);
         	}

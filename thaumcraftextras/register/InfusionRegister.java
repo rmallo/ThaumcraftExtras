@@ -39,41 +39,56 @@ public class InfusionRegister {
 			'X', ConfigItems.itemShard,
 			'I', Block.stoneBrick});
 		
-		lightBlock = ThaumcraftApi.addArcaneCraftingRecipe("Light Block", new ItemStack(BlockRegister.lightBlock), new AspectList().add(Aspect.LIGHT, 18), new Object[]{
+		if(Config.lightBlock = true)
+		{
+		lightBlock = ThaumcraftApi.addArcaneCraftingRecipe("Light Block", new ItemStack(BlockRegister.lightBlock), new AspectList().add(Aspect.FIRE, 2).add(Aspect.AIR, 2), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
 			'X', lightShard,
 			'I', Block.stoneBrick});
+		}
 		
+		if(Config.waterBlock = true)
+		{
 		waterBlock = ThaumcraftApi.addArcaneCraftingRecipe("Water Block", new ItemStack(BlockRegister.waterBlock), new AspectList().add(Aspect.WATER, 18), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
 			'X', new ItemStack(ConfigItems.itemShard, 2, 2),
 			'I', Block.stoneBrick});
+		}
 		
+		if(Config.earthBlock = true)
+		{
 		earthBlock = ThaumcraftApi.addArcaneCraftingRecipe("Earth Block", new ItemStack(BlockRegister.earthBlock), new AspectList().add(Aspect.EARTH, 18), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
 			'X', new ItemStack(ConfigItems.itemShard, 3, 3),
 			'I', Block.stoneBrick});
+		}
 		
+		if(Config.fireBlock = true)
+		{
 		fireBlock = ThaumcraftApi.addArcaneCraftingRecipe("Fire Block", new ItemStack(BlockRegister.fireBlock), new AspectList().add(Aspect.FIRE, 18), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
 			'X', new ItemStack(ConfigItems.itemShard, 1, 1),
 			'I', Block.stoneBrick});
+		}
 		
-		lightShardRecipe = ThaumcraftApi.addArcaneCraftingRecipe("Light Shard", new ItemStack(lightShard), new AspectList().add(Aspect.LIGHT, 2), new Object[]{
+		if(Config.lightBlock = true)
+		{
+		lightShardRecipe = ThaumcraftApi.addArcaneCraftingRecipe("Light Shard", new ItemStack(lightShard), new AspectList().add(Aspect.AIR, 2).add(Aspect.FIRE, 2), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
 			'X', Item.coal	,
 			'I', ConfigItems.itemShard});
-	}
+		}
+		}
 	
 
 	public static ShapedArcaneRecipe airBlock;

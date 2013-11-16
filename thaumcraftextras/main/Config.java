@@ -39,7 +39,19 @@ public class Config {
 
 	        lightShardId = config.getItem("lightShard", 14201).getInt();
 
-	    	config.save();
+	        enderFoci = config.get(Configuration.CATEGORY_GENERAL, "enderFoci", true).getBoolean(enderFoci);
+	    	arrowFoci = config.get(Configuration.CATEGORY_GENERAL, "arrowFoci", true).getBoolean(arrowFoci);
+	    	healFoci = config.get(Configuration.CATEGORY_GENERAL, "healFoci", true).getBoolean(healFoci);
+	    	speedFoci = config.get(Configuration.CATEGORY_GENERAL, "speedFoci", true).getBoolean(speedFoci);
+	    	pechFoci = config.get(Configuration.CATEGORY_GENERAL, "pechFoci", true).getBoolean(pechFoci);
+	    	fireBlock = config.get(Configuration.CATEGORY_GENERAL, "fireBlock", true).getBoolean(fireBlock);
+	    	earthBlock = config.get(Configuration.CATEGORY_GENERAL, "earthBlock", true).getBoolean(earthBlock);
+	    	waterBlock = config.get(Configuration.CATEGORY_GENERAL, "waterBlock", true).getBoolean(waterBlock);
+	    	lightBlock = config.get(Configuration.CATEGORY_GENERAL, "lightBlock", true).getBoolean(lightBlock);
+	    	pechTrade = config.get(Configuration.CATEGORY_GENERAL, "pechTrade", true).getBoolean(pechTrade);
+	    	magicTrade = config.get(Configuration.CATEGORY_GENERAL, "magicTrade", true).getBoolean(magicTrade);
+
+	        config.save();
 }
 	
     public static int researchBlockId;
@@ -69,4 +81,16 @@ public class Config {
     public static int pechFociId;
     
     public static int lightShardId;
+    
+    public static boolean enderFoci;
+    public static boolean arrowFoci;
+    public static boolean healFoci;
+    public static boolean speedFoci;
+    public static boolean pechFoci;
+    public static boolean pechTrade;
+    public static boolean magicTrade;
+    public static boolean fireBlock;
+    public static boolean waterBlock;
+    public static boolean lightBlock;
+    public static boolean earthBlock;
 }

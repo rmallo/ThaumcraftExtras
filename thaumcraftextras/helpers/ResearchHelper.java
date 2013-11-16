@@ -33,6 +33,29 @@ public class ResearchHelper extends ResearchItem {
     @Override
     @SideOnly(Side.CLIENT)
     public String getText() {
-            return StatCollector.translateToLocal("[TCE] ") + StatCollector.translateToLocal(key +  ": Discovered by Wasliebob");
+            return StatCollector.translateToLocal("tce.tag." + key);
+    }
+    
+    @Override
+    public ResearchItem setPages(ResearchPage... par) {
+            for(ResearchPage page : par) {
+                    if(page.type == PageType.TEXT)
+                            page.text = "tce.text." + key;
+
+                    if(page.type == PageType.INFUSION_CRAFTING) {
+                            if(parentsHidden == null || parentsHidden.length == 0)
+                                    parentsHidden = new String[] { "INFUSION" };
+                            else {
+                                    String[] newParents = new String[parentsHidden.length + 1];
+                                    newParents[0] = "INFUSION";
+                                    for(int i = 0; i < parentsHidden.length; i++)
+                                            newParents[i + 1] = parentsHidden[i];
+                                    parentsHidden = newParents;
+                            }
+                    }
+            }
+
+
+            return super.setPages(par);
     }
 }

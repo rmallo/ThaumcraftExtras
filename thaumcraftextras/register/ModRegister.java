@@ -1,5 +1,7 @@
 package thaumcraftextras.register;
 
+import thaumcraftextras.helpers.LanguageConverting;
+
 
 public class ModRegister {
 
@@ -21,5 +23,6 @@ public class ModRegister {
 	{
 	ThaumonomiconRegister.addPage();
 	ThaumonomiconRegister.addEntryToThaumonomicon();
+	LanguageConverting.load();
 	}
 }
