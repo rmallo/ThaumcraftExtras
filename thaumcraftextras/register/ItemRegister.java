@@ -1,22 +1,29 @@
 package thaumcraftextras.register;
 
 import net.minecraft.item.Item;
+import thaumcraftextras.helpers.FuelHelper;
 import thaumcraftextras.helpers.MainHelper;
+import thaumcraftextras.items.TCEIgnisFuel;
 import thaumcraftextras.items.TCEItem;
+import thaumcraftextras.items.XPExtractor;
 import thaumcraftextras.items.foci.ArrowFoci;
 import thaumcraftextras.items.foci.EnderFoci;
+import thaumcraftextras.items.foci.ExperienceFoci;
 import thaumcraftextras.items.foci.HealFoci;
 import thaumcraftextras.items.foci.PechFoci;
 import thaumcraftextras.items.foci.SpeedFoci;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ItemRegister {
 
 	public static void load()
-	{
-		System.out.print("Added Materials, ");
+	{	
+		ignisFuel = new TCEItem(Config.ignisFuelId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.IgnisFuelTexture);
+		LanguageRegistry.addName(ignisFuel, TCELocalization.IgnisFuel);
+		GameRegistry.registerFuelHandler(new FuelHelper());
 		
 		pechTradeTier1 = new TCEItem(Config.pechTradeTier1Id).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.PechTradeTier1Texture);
 		LanguageRegistry.addName(pechTradeTier1, TCELocalization.PechTradeTier1);
@@ -33,7 +40,6 @@ public class ItemRegister {
 		pechTradeTier5 = new TCEItem(Config.pechTradeTier5Id).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.PechTradeTier5Texture);
 		LanguageRegistry.addName(pechTradeTier5, TCELocalization.PechTradeTier5);
 		
-		
 		magicTradeTier1 = new TCEItem(Config.magicTradeTier1Id).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.MagicTradeTier1Texture);
 		LanguageRegistry.addName(magicTradeTier1, TCELocalization.MagicTradeTier1);
 		
@@ -49,6 +55,7 @@ public class ItemRegister {
 		magicTradeTier5 = new TCEItem(Config.magicTradeTier5Id).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.MagicTradeTier5Texture);
 		LanguageRegistry.addName(magicTradeTier5, TCELocalization.MagicTradeTier5);
 		
+		
 		enderFoci = new EnderFoci(Config.enderFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.enderFociTexture);
 		LanguageRegistry.addName(enderFoci, TCELocalization.enderFoci);
 		
@@ -63,6 +70,12 @@ public class ItemRegister {
 		
 		pechFoci = new PechFoci(Config.pechFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.pechFociTexture);
 		LanguageRegistry.addName(pechFoci, TCELocalization.pechFoci);
+		
+		xpFoci = new ExperienceFoci(Config.xpFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.xpFociTexture);
+		LanguageRegistry.addName(xpFoci, TCELocalization.xpFoci);
+		
+		xpExtractor = new XPExtractor(Config.xpExtractorId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.xpExtractorTexture);
+		LanguageRegistry.addName(xpExtractor, TCELocalization.xpExtractor);
 	}
 	
 	public static void recipe()
@@ -81,9 +94,13 @@ public class ItemRegister {
 	public static Item magicTradeTier4;
 	public static Item magicTradeTier5;
 	
+	public static Item ignisFuel;
+	public static Item xpExtractor;
+	
 	public static Item enderFoci;
 	public static Item arrowFoci;
 	public static Item healFoci;
 	public static Item speedFoci;
 	public static Item pechFoci;
+	public static Item xpFoci;
 }

@@ -12,6 +12,7 @@ import thaumcraft.common.config.ConfigItems;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.items.ShardItem;
 import thaumcraftextras.items.TCEItem;
+import thaumcraftextras.items.XPShard;
 import thaumcraftextras.items.foci.ArrowFoci;
 import thaumcraftextras.items.foci.EnderFoci;
 import thaumcraftextras.items.foci.HealFoci;
@@ -28,6 +29,11 @@ public class InfusionRegister {
 		lightShard = new ShardItem(Config.lightShardId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.lightShardTexture);
 		LanguageRegistry.addName(lightShard, TCELocalization.lightShard);
 		
+		emptyShard = new ShardItem(Config.emptyShardId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.emptyShardTexture);
+		LanguageRegistry.addName(emptyShard, TCELocalization.emptyShard);
+		
+		xpShard = new XPShard(Config.xpShardId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.xpShardTexture);
+		LanguageRegistry.addName(xpShard, TCELocalization.xpShard);
 	}
 	
 	public static void recipe()
@@ -99,17 +105,6 @@ public class InfusionRegister {
 	public static ShapedArcaneRecipe lightShardRecipe;
 	
 	public static Item lightShard;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public static Item xpShard;
+	public static Item emptyShard;	
 }

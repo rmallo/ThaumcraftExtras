@@ -142,6 +142,33 @@ public class ThaumcraftRecipeRegister {
 			new ItemStack(ConfigItems.itemManaBean), new ItemStack(Item.netherQuartz), new ItemStack(ConfigItems.itemManaBean), 
 			new ItemStack(Item.netherQuartz), new ItemStack(ConfigItems.itemManaBean)});
 	}
+	
+	if(Config.xpFoci == true)
+	{
+	xpFoci = ThaumcraftApi.addInfusionCraftingRecipe("Experience Foci", new ItemStack(ItemRegister.xpFoci),4 , 
+			ResearchAspects.xpFoci, 
+			new ItemStack(ItemRegister.xpExtractor), new ItemStack[]{
+			new ItemStack(Item.netherQuartz), new ItemStack(InfusionRegister.xpShard), new ItemStack(Item.netherQuartz),
+			new ItemStack(InfusionRegister.xpShard), new ItemStack(Item.netherQuartz), new ItemStack(InfusionRegister.xpShard), 
+			new ItemStack(Item.netherQuartz), new ItemStack(InfusionRegister.xpShard)});
+	}
+	
+	if(Config.xpExtractor == true)
+	{
+		xpExtractor = ThaumcraftApi.addArcaneCraftingRecipe("Experience Extractor", new ItemStack(ItemRegister.xpExtractor),	ResearchAspects.xpExtractor,  new Object[]{
+			"YIY",
+			"IXI",
+			"YIY",
+			'X', ItemRegister.magicTradeTier2,
+			'Y', ItemRegister.pechTradeTier1,
+			'I', ItemRegister.magicTradeTier1});
+	}
+		ignisFuel = ThaumcraftApi.addArcaneCraftingRecipe("Ignis Fuel", new ItemStack(ItemRegister.ignisFuel),	ResearchAspects.ignisFuel,  new Object[]{
+			"Y  ",
+			"X  ",
+			"   ",
+			'X', Item.coal,
+			'Y', Item.flint});
 	}
 	
 	public static ShapedArcaneRecipe pechTradeTier1;
@@ -154,10 +181,13 @@ public class ThaumcraftRecipeRegister {
 	public static ShapedArcaneRecipe magicTradeTier3;
 	public static ShapedArcaneRecipe magicTradeTier4;
 	public static ShapedArcaneRecipe magicTradeTier5;
+	public static ShapedArcaneRecipe xpExtractor;
+	public static ShapedArcaneRecipe ignisFuel;
 	
 	public static InfusionRecipe enderFoci;
 	public static InfusionRecipe arrowFoci;
 	public static InfusionRecipe healFoci;
 	public static InfusionRecipe speedFoci;
 	public static InfusionRecipe pechFoci;
+	public static InfusionRecipe xpFoci;
 }

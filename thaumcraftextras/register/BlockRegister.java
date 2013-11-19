@@ -1,12 +1,14 @@
 package thaumcraftextras.register;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockCactus;
 import thaumcraftextras.blocks.TCEBlock;
 import thaumcraftextras.blocks.TCEBlockAir;
 import thaumcraftextras.blocks.TCEBlockEarth;
 import thaumcraftextras.blocks.TCEBlockFire;
 import thaumcraftextras.blocks.TCEBlockLight;
 import thaumcraftextras.blocks.TCEBlockWater;
+import thaumcraftextras.blocks.TCECactus;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
@@ -17,13 +19,12 @@ public class BlockRegister {
 
 	public static void load()
 	{
-		System.out.print("Added Blocks, ");
 
 		researchBlock = new TCEBlock(Config.researchBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ResearchBlockTexture);
 		GameRegistry.registerBlock(researchBlock, "ResearchBlock");
 		LanguageRegistry.addName(researchBlock, TCELocalization.ResearchBlock);
 		
-		fireBlock = new TCEBlockFire(Config.fireBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.FireBlockTexture);
+		fireBlock = new TCEBlockFire(Config.fireBlockId);//.setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.FireBlockTexture);
 		GameRegistry.registerBlock(fireBlock, "FireBlock");
 		LanguageRegistry.addName(fireBlock, TCELocalization.FireBlock);
 		
@@ -42,6 +43,10 @@ public class BlockRegister {
 		lightBlock = new TCEBlockLight(Config.lightBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.LightBlockTexture);
 		GameRegistry.registerBlock(lightBlock, "LightBlock");
 		LanguageRegistry.addName(lightBlock, TCELocalization.LightBlock);
+		
+		cactusBlock = new TCECactus(Config.cactusBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.cactusBlockTexture);
+		GameRegistry.registerBlock(cactusBlock, "CactusBlock");
+		LanguageRegistry.addName(cactusBlock, TCELocalization.CactusBlock);
 	}
 	
 	public static void recipe()
@@ -59,5 +64,5 @@ public class BlockRegister {
 	public static Block waterBlock;
 	public static Block earthBlock;
 	public static Block lightBlock;
-	
+	public static Block cactusBlock;	
 }

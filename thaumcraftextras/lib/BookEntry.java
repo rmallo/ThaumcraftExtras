@@ -17,7 +17,7 @@ public class BookEntry
 	public static String waterBlockEntry = "A block infused with Water. Acts a bit like water.";
 	public static String earthBlockEntry = "A block infused with Earth. When an entity collides with this block it will summon thorns.";
 	public static String lightBlockEntry = "A block infused with Light. This block will light you up and keep you warm. Who doesn't love magic light?";
-	
-	
-
+	public static String xpExtractorEntry = "After you discovered a way to extract experience from yourself you found out you can also do this with an wand focus.";
+	public static String xpFociEntry = "You discovered a way to extract experience from yourself. You can now give your experience to other people and all have fun with it.";
+	public static String ignisFuelEntry = "You discovered a way to infuse coal with flint to make a magic kind of fuel.";
 }

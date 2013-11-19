@@ -12,9 +12,6 @@ public class LanguageConverting {
 		for(String locale : lang)
             LanguageRegistry.instance().loadLocalization("/assets/thaumcraftextras/lang/" + locale + ".lang", locale, false);
 		
-		for(String locale : lang)
-		System.out.printf("ThaumcraftExtras:/assets/thaumcraftextras/lang/" + locale + ".lang", locale, false);
-
 		/*
 		String language;
 		language = "en_US";

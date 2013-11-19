@@ -16,12 +16,14 @@ public class ResearchAspects {
 	public static AspectList magicTradeTier3 = new AspectList().add(Aspect.ORDER, 15);
 	public static AspectList magicTradeTier4 = new AspectList().add(Aspect.ORDER, 15);
 	public static AspectList magicTradeTier5 = new AspectList().add(Aspect.ORDER, 15);
-
+	public static AspectList xpExtractor = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.LIFE, 1).add(Aspect.LIFE, 10).add(Aspect.EXCHANGE, 5);
+	public static AspectList ignisFuel = new AspectList().add(Aspect.FIRE, 5);
 	public static AspectList enderFoci = new AspectList().add(Aspect.MAGIC, 50).add(Aspect.ELDRITCH, 50).add(Aspect.ENTROPY, 25);
 	public static AspectList arrowFoci = new AspectList().add(Aspect.MAGIC, 20).add(Aspect.AIR, 20).add(Aspect.WEAPON, 10);
 	public static AspectList healFoci = new AspectList().add(Aspect.MAGIC, 50).add(Aspect.HEAL, 25).add(Aspect.ORDER, 1).add(Aspect.SENSES, 10);
 	public static AspectList speedFoci = new AspectList().add(Aspect.MAGIC, 50).add(Aspect.AIR, 25).add(Aspect.ORDER, 1).add(Aspect.SENSES, 10);
 	public static AspectList pechFoci = new AspectList().add(Aspect.MAGIC, 50).add(Aspect.AIR, 25).add(Aspect.EXCHANGE, 1).add(Aspect.LIFE, 10);
-
+	public static AspectList xpFoci = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.LIFE, 1).add(Aspect.LIFE, 10).add(Aspect.EXCHANGE, 5);
+	
 
 }

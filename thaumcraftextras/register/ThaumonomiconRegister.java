@@ -67,12 +67,27 @@ public class ThaumonomiconRegister {
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.speedFoci));
 		}
 		
+		if(Config.xpExtractor == true)
+		{
+		text = BookEntry.xpExtractorEntry;
+		research = new ResearchHelper(TCELocalization.xpExtractor, "TCE", new AspectList().add(Aspect.LIFE, 10), -3, -4, 3, new ItemStack(ItemRegister.xpExtractor)).setParents("Wand Focus: Heal").registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.xpExtractor));
+		}
+		
+		if(Config.xpFoci == true)
+		{
+		text = BookEntry.xpFociEntry;
+		research = new ResearchHelper(TCELocalization.xpFoci, "TCE", new AspectList().add(Aspect.LIFE, 10), -3, -5, 3, new ItemStack(ItemRegister.xpFoci)).setParents("Experience Extractor").registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.xpFoci));
+		}
+		
 		if(Config.pechFoci == true)
 		{
 		text = BookEntry.pechFociEntry;
 		research = new ResearchHelper(TCELocalization.pechFoci, "TCE", new AspectList().add(Aspect.EXCHANGE, 10), -2, 2, 3, new ItemStack(ItemRegister.pechFoci)).setParents("Thaumcraft Extras").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.pechFoci));
 		}
+		
 		
 		text = BookEntry.shardInfusionEntry;
 		research = new ResearchHelper("Shard Infusion", "TCE", new AspectList().add(Aspect.LIGHT, 10), 2, 0, 3, new ItemStack(InfusionRegister.lightShard)).setParents("Thaumcraft Extras").setRound().setAutoUnlock().registerResearchItem();
@@ -102,6 +117,10 @@ public class ThaumonomiconRegister {
 		text = BookEntry.lightBlockEntry;
 		research = new ResearchHelper("Light Block", "TCE", new AspectList().add(Aspect.LIGHT, 10), 0, 5, 3, new ItemStack(BlockRegister.lightBlock)).setParents("Block Infusion").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(InfusionRegister.lightBlock));
+		
+		text = BookEntry.ignisFuelEntry;
+		research = new ResearchHelper("Ignis Fuel", "TCE", new AspectList().add(Aspect.FIRE, 10), 2, 5, 3, new ItemStack(ItemRegister.ignisFuel)).setParents("Shard Infusion").registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.ignisFuel));
 		
 	}
 	

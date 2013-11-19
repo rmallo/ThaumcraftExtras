@@ -14,11 +14,13 @@ tce.tag.Wand Focus: Arrow=Aim, Wait, Shoot.
 tce.tag.Wand Focus: Heal=Try to kill me if you dare.
 tce.tag.Wand Focus: Speed=Where did he just go.
 tce.tag.Wand Focus: Pech Summon=Summon a magic creature.
-
+tce.tag.Experience Extractor=Get on my level.
+tce.tag.Wand Focus: Experience=Always have one with you.
+tce.tag.Ignis Fuel=A magic fuel source.
 ------Thauminomicon Entry------
-tce.text.Thaumcraft Extras=You found out there is a lot more in Thaumcraft then you expected. They call this Thaumcraft Extras.
-tce.text.Shard Infusion=You found a way to mix shards and create new onces. This will help you creating new magic items and blocks.
-tce.text.Block Infusion=You found a way infusion blocks with an aspect. this will help you creating new special blocks.
+tce.text.Thaumcraft Extras=You found out that there is a lot more in Thaumcraft then you expected. They call this Thaumcraft Extras.
+tce.text.Shard Infusion=You discovered a way to mix shards and create new onces. This will help you creating new magic items and blocks.
+tce.text.Block Infusion=You discovered a way infusion blocks with an aspect. this will help you creating new special blocks.
 tce.text.Pech Trade=Pech's really like this item because its shiny and full of magic. Pech are willing to give more for this item then they usually will give.
 tce.text.Magic Trade=A magic collection of different aspects
 tce.text.Air Block=The Air Block is an Example of an Infused Block. an Air Block is a block infused with Air. This blocks works a bit like air but in what way?
@@ -31,3 +33,6 @@ tce.text.Wand Focus: Arrow=The magic of arrows will sometimes do good when your 
 tce.text.Wand Focus: Heal=You discovered a way to heal yourself with this wonderful focus. But is there a negetive side to that all?
 tce.text.Wand Focus: Speed=You discovered a way to run faster and faster. You can use this to make your journey go way faster.
 tce.text.Wand Focus: Pech Summon=You found a way to summon this mysterious creature called The Pech. Please don't make him angry or you will regret it.
+tce.text.Experience Extractor=You discovered a way to extract experience from yourself. You can now give your experience to other people and all have fun with it.
+tce.text.Wand Focus: Experience=After you discovered a way to extract experience from yourself you found out you can also do this with an wand focus.
+tce.text.Ignis Fuel=You discovered a way to infuse coal with flint to make a magic kind of fuel.

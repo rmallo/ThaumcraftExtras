@@ -14,6 +14,8 @@ tce.tag.Wand Focus: Arrow=
 tce.tag.Wand Focus: Heal=
 tce.tag.Wand Focus: Speed=
 tce.tag.Wand Focus: Pech Summon=
+tce.tag.Wand Focus: Experience=
+tce.tag.Ignis Fuel=
 
 ------Thauminomicon Entry------
 tce.text.Thaumcraft Extras=
@@ -31,3 +33,5 @@ tce.text.Wand Focus: Arrow=
 tce.text.Wand Focus: Heal=
 tce.text.Wand Focus: Speed=
 tce.text.Wand Focus: Pech Summon=
+tce.text.Wand Focus: Experience=
+tce.text.Ignis Fuel=

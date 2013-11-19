@@ -1,20 +1,21 @@
 ------Thauminomicon Tags------
 tce.tag.Thaumcraft Extras=Een nieuwe laag met magie.
-tce.tag.Shard Infusion=
-tce.tag.Block Infusion=
-tce.tag.Pech Trade=
-tce.tag.Magic Trade=
-tce.tag.Air Block=
-tce.tag.Fire Block=
-tce.tag.Earth Block=
-tce.tag.Water Block=
-tce.tag.Light Block=
-tce.tag.Wand Focus: Blink=
-tce.tag.Wand Focus: Arrow=
+tce.tag.Shard Infusion=Ik mix dit met dat.
+tce.tag.Block Infusion=Een shard met een Block Maakt...
+tce.tag.Pech Trade=Geliefd door pech's.
+tce.tag.Magic Trade=Een magisch ruil instrument.
+tce.tag.Air Block=Het is lucht maar dan anders.
+tce.tag.Fire Block=Wat is het heet hier.
+tce.tag.Earth Block=Dit is toch geen val.
+tce.tag.Water Block=Water, water en nog meer water.
+tce.tag.Light Block=Nu is er weer wat licht hier.
+tce.tag.Wand Focus: Blink=Teleporte maar.
+tce.tag.Wand Focus: Arrow=Richt, Wacht, Schiet.
 tce.tag.Wand Focus: Heal=
 tce.tag.Wand Focus: Speed=
 tce.tag.Wand Focus: Pech Summon=
-
+tce.tag.Wand Focus: Experience=
+tce.tag.Ignis Fuel=
 ------Thauminomicon Entry------
 tce.text.Thaumcraft Extras=
 tce.text.Shard Infusion=
@@ -31,3 +32,5 @@ tce.text.Wand Focus: Arrow=
 tce.text.Wand Focus: Heal=
 tce.text.Wand Focus: Speed=
 tce.text.Wand Focus: Pech Summon=
+tce.text.Wand Focus: Experience=
+tce.text.Ignis Fuel=

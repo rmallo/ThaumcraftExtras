@@ -10,13 +10,12 @@ public class TCEItem extends Item{
 	public TCEItem(int id) {
 		super(id);
 		setCreativeTab(CreativeTabRegister.tabMain);
+		setMaxStackSize(64);
 	}
 	
 	@Override
     public void registerIcons(IconRegister par1IconRegister) 
 	{
         itemIcon = IconHelper.forItem(par1IconRegister, this);
-}
-
-	
+	}
 }

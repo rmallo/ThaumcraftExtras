@@ -17,7 +17,7 @@ public class TCEBlock extends Block{
     public void registerIcons(IconRegister par1IconRegister) 
 	{
         blockIcon = IconHelper.forBlock(par1IconRegister, this);
-}
+	}
 
 	
 }

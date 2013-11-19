@@ -4,13 +4,13 @@ import thaumcraftextras.helpers.IconHelper;
 import thaumcraftextras.register.CreativeTabRegister;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemCoal;
 
-public class ShardItem extends Item{
+public class TCEIgnisFuel extends ItemCoal{
 
-	public ShardItem(int id) {
+	public TCEIgnisFuel(int id) {
 		super(id);
 		setCreativeTab(CreativeTabRegister.tabMain);
-		setMaxStackSize(64);
 	}
 	
 	@Override

@@ -6,6 +6,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.world.World;
 import thaumcraftextras.helpers.IconHelper;
+import thaumcraftextras.register.BlockRegister;
 import thaumcraftextras.register.CreativeTabRegister;
 
 public class TCEBlockEarth extends Block{
@@ -27,20 +28,20 @@ public class TCEBlockEarth extends Block{
 	    {
 	        if (!world.isRemote)
 	        {
-	        	world.setBlock(x -1, y +1, z, Block.cactus.blockID);
-	        	world.setBlock(x +1, y +1, z, Block.cactus.blockID);
-	        	world.setBlock(x, y +1, z -1, Block.cactus.blockID);
-	        	world.setBlock(x, y +1, z +1, Block.cactus.blockID);
+	        	world.setBlock(x -1, y +1, z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x +1, y +1, z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y +1, z -1, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y +1, z +1, BlockRegister.cactusBlock.blockID);
 
-	        	world.setBlock(x -1, y, z, Block.cactus.blockID);
-	        	world.setBlock(x +1, y , z, Block.cactus.blockID);
-	        	world.setBlock(x, y , z -1, Block.cactus.blockID);
-	        	world.setBlock(x, y, z +1, Block.cactus.blockID);
+	        	world.setBlock(x -1, y, z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x +1, y , z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y , z -1, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y, z +1, BlockRegister.cactusBlock.blockID);
 	        	
-	        	world.setBlock(x -1, y +2, z, Block.cactus.blockID);
-	        	world.setBlock(x +1, y +2, z, Block.cactus.blockID);
-	        	world.setBlock(x, y +2, z -1, Block.cactus.blockID);
-	        	world.setBlock(x, y +2, z +1, Block.cactus.blockID);
+	        	world.setBlock(x -1, y +2, z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x +1, y +2, z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y +2, z -1, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y +2, z +1, BlockRegister.cactusBlock.blockID);
 	        }
 	    }
 	
@@ -49,20 +50,20 @@ public class TCEBlockEarth extends Block{
 	{
 		  if (!world.isRemote)
 	        {
-	        	world.setBlock(x -1, y +1, z, Block.cactus.blockID);
-	        	world.setBlock(x +1, y +1, z, Block.cactus.blockID);
-	        	world.setBlock(x, y +1, z -1, Block.cactus.blockID);
-	        	world.setBlock(x, y +1, z +1, Block.cactus.blockID);
+	        	world.setBlock(x -1, y +1, z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x +1, y +1, z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y +1, z -1, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y +1, z +1, BlockRegister.cactusBlock.blockID);
 
-	        	world.setBlock(x -1, y, z, Block.cactus.blockID);
-	        	world.setBlock(x +1, y , z, Block.cactus.blockID);
-	        	world.setBlock(x, y , z -1, Block.cactus.blockID);
-	        	world.setBlock(x, y, z +1, Block.cactus.blockID);
+	        	world.setBlock(x -1, y, z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x +1, y , z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y , z -1, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y, z +1, BlockRegister.cactusBlock.blockID);
 	        	
-	        	world.setBlock(x -1, y +2, z, Block.cactus.blockID);
-	        	world.setBlock(x +1, y +2, z, Block.cactus.blockID);
-	        	world.setBlock(x, y +2, z -1, Block.cactus.blockID);
-	        	world.setBlock(x, y +2, z +1, Block.cactus.blockID);
+	        	world.setBlock(x -1, y +2, z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x +1, y +2, z, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y +2, z -1, BlockRegister.cactusBlock.blockID);
+	        	world.setBlock(x, y +2, z +1, BlockRegister.cactusBlock.blockID);
 	        }
 	}
 }

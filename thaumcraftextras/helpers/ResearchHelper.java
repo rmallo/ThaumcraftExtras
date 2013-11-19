@@ -33,7 +33,7 @@ public class ResearchHelper extends ResearchItem {
     @Override
     @SideOnly(Side.CLIENT)
     public String getText() {
-            return StatCollector.translateToLocal("tce.tag." + key);
+            return StatCollector.translateToLocal("[TCE] ") + StatCollector.translateToLocal("tce.tag." + key);
     }
     
     @Override
