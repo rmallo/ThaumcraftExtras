@@ -14,7 +14,7 @@ public class TCEBlockEarth extends Block{
 	public TCEBlockEarth(int id) {
 		super(id, Material.grass);
 		setCreativeTab(CreativeTabRegister.tabMain);
-		
+		setHardness(1.0F);
 	}
 	
 	@Override

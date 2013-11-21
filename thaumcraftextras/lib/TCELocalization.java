@@ -23,10 +23,12 @@ public class TCELocalization {
 	public static String speedFociTexture = "speedFoci";
 	public static String pechFociTexture = "pechFoci";
 	public static String xpFociTexture = "xpFoci";
-
+	public static String returnFociTexture = "returnFoci";
+	public static String exchangeFociTexture = "exchangeFoci";
+	
 	/** Block Texture Name */
 	public static String ResearchBlockTexture = "researchblock";
-
+	public static String IgnisFuelBlockTexture = "ignisfuelblock";
 	
 	/** Infusion Blocks Textures */
 	public static String FireBlockTexture = "fireblock";
@@ -66,9 +68,12 @@ public class TCELocalization {
 	public static String speedFoci = "Wand Focus: Speed";
 	public static String pechFoci = "Wand Focus: Pech Summon";
 	public static String xpFoci = "Wand Focus: Experience";
+	public static String returnFoci = "Wand Focus: Return";
+	public static String exchangeFoci = "Wand Focus: Exchange";
 
 	/** Basic Blocks*/
 	public static String ResearchBlock = "Research Block";
+	public static String IgnisFuelBlock = "Ignis Fuel Block";
 	
 	/** Infusion Shards */
 	public static String lightShard = "Light Shard";

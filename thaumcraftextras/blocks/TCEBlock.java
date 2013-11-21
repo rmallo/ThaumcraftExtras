@@ -11,6 +11,7 @@ public class TCEBlock extends Block{
 	public TCEBlock(int id) {
 		super(id, Material.iron);
 		setCreativeTab(CreativeTabRegister.tabMain);
+		setHardness(1.0F);
 	}
 	
 	@Override

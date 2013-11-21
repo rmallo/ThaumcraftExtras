@@ -19,6 +19,7 @@ public class TCEBlockFire extends Block{
 	public TCEBlockFire(int id) {
 		super(id, Material.grass);
 		setCreativeTab(CreativeTabRegister.tabMain);
+		setHardness(1.0F);
 	}
 	
 	

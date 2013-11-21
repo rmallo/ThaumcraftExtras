@@ -1,5 +1,6 @@
 package thaumcraftextras.register;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import thaumcraft.api.ThaumcraftApi;
@@ -163,12 +164,39 @@ public class ThaumcraftRecipeRegister {
 			'Y', ItemRegister.pechTradeTier1,
 			'I', ItemRegister.magicTradeTier1});
 	}
+	
+	if(Config.returnFoci == true)
+	{
+		returnFoci = ThaumcraftApi.addInfusionCraftingRecipe("Return Foci", new ItemStack(ItemRegister.returnFoci),4,
+			ResearchAspects.returnFoci,
+			new ItemStack(ItemRegister.enderFoci), new ItemStack[]{
+			new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz),
+			new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), 
+			new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl)});
+	}
+	
+	if(Config.exchangeFoci == true)
+	{
+		exchangeFoci = ThaumcraftApi.addInfusionCraftingRecipe("Exchange Foci", new ItemStack(ItemRegister.exchangeFoci),4,
+			ResearchAspects.exchangeFoci,
+			new ItemStack(ItemRegister.pechFoci), new ItemStack[]{
+			new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.pechTradeTier2), new ItemStack(Item.netherQuartz),
+			new ItemStack(ItemRegister.pechTradeTier2), new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.pechTradeTier2), 
+			new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.pechTradeTier2)});
+	}
+	
 		ignisFuel = ThaumcraftApi.addArcaneCraftingRecipe("Ignis Fuel", new ItemStack(ItemRegister.ignisFuel),	ResearchAspects.ignisFuel,  new Object[]{
 			"Y  ",
 			"X  ",
 			"   ",
 			'X', Item.coal,
 			'Y', Item.flint});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.ignisFuelBlock), new Object[] {
+		"XXX",
+		"XXX",
+		"XXX",
+		'X', ItemRegister.ignisFuel});
 	}
 	
 	public static ShapedArcaneRecipe pechTradeTier1;
@@ -190,4 +218,6 @@ public class ThaumcraftRecipeRegister {
 	public static InfusionRecipe speedFoci;
 	public static InfusionRecipe pechFoci;
 	public static InfusionRecipe xpFoci;
+	public static InfusionRecipe returnFoci;
+	public static InfusionRecipe exchangeFoci;
 }

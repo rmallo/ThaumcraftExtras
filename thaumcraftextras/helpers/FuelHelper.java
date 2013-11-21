@@ -1,5 +1,6 @@
 package thaumcraftextras.helpers;
 import thaumcraft.common.config.ConfigItems;
+import thaumcraftextras.register.BlockRegister;
 import thaumcraftextras.register.ItemRegister;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.IFuelHandler;
@@ -10,6 +11,8 @@ public class FuelHelper implements IFuelHandler {
 			return 3200;
 		else if(fuel.itemID == ConfigItems.itemShard.itemID)
 			return 1700;
+		else if(fuel.itemID == BlockRegister.ignisFuelBlock.blockID)
+			return 15300;
 		else
 			return 0;
 }

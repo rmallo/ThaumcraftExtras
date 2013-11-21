@@ -66,7 +66,6 @@ public class ThaumonomiconRegister {
 		research = new ResearchHelper(TCELocalization.speedFoci, "TCE", new AspectList().add(Aspect.AIR, 10), -3, -3, 3, new ItemStack(ItemRegister.speedFoci)).setParents("Wand Focus: Heal").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.speedFoci));
 		}
-		
 		if(Config.xpExtractor == true)
 		{
 		text = BookEntry.xpExtractorEntry;
@@ -87,7 +86,6 @@ public class ThaumonomiconRegister {
 		research = new ResearchHelper(TCELocalization.pechFoci, "TCE", new AspectList().add(Aspect.EXCHANGE, 10), -2, 2, 3, new ItemStack(ItemRegister.pechFoci)).setParents("Thaumcraft Extras").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.pechFoci));
 		}
-		
 		
 		text = BookEntry.shardInfusionEntry;
 		research = new ResearchHelper("Shard Infusion", "TCE", new AspectList().add(Aspect.LIGHT, 10), 2, 0, 3, new ItemStack(InfusionRegister.lightShard)).setParents("Thaumcraft Extras").setRound().setAutoUnlock().registerResearchItem();
@@ -122,7 +120,18 @@ public class ThaumonomiconRegister {
 		research = new ResearchHelper("Ignis Fuel", "TCE", new AspectList().add(Aspect.FIRE, 10), 2, 5, 3, new ItemStack(ItemRegister.ignisFuel)).setParents("Shard Infusion").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.ignisFuel));
 		
-	}
+		if(Config.exchangeFoci == true)
+		{
+		text = BookEntry.exchangeFociEntry;
+		research = new ResearchHelper(TCELocalization.exchangeFoci, "TCE", new AspectList().add(Aspect.ORDER, 10), -2, 3, 3, new ItemStack(ItemRegister.exchangeFoci)).setParents("Wand Focus: Pech Summon").registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.exchangeFoci));
+		}
+		if(Config.returnFoci == true)
+		{
+		text = BookEntry.returnFociEntry;
+		research = new ResearchHelper(TCELocalization.returnFoci, "TCE", new AspectList().add(Aspect.FIRE, 10), -2, -4, 3, new ItemStack(ItemRegister.returnFoci)).setParents("Wand Focus: Blink").registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.returnFoci));
+		}	}
 	
 	public static void addPage()
 	{

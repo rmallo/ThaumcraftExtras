@@ -3,14 +3,15 @@ package thaumcraftextras.register;
 import net.minecraft.item.Item;
 import thaumcraftextras.helpers.FuelHelper;
 import thaumcraftextras.helpers.MainHelper;
-import thaumcraftextras.items.TCEIgnisFuel;
 import thaumcraftextras.items.TCEItem;
 import thaumcraftextras.items.XPExtractor;
 import thaumcraftextras.items.foci.ArrowFoci;
 import thaumcraftextras.items.foci.EnderFoci;
+import thaumcraftextras.items.foci.ExchangeFoci;
 import thaumcraftextras.items.foci.ExperienceFoci;
 import thaumcraftextras.items.foci.HealFoci;
 import thaumcraftextras.items.foci.PechFoci;
+import thaumcraftextras.items.foci.ReturnFoci;
 import thaumcraftextras.items.foci.SpeedFoci;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
@@ -76,6 +77,12 @@ public class ItemRegister {
 		
 		xpExtractor = new XPExtractor(Config.xpExtractorId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.xpExtractorTexture);
 		LanguageRegistry.addName(xpExtractor, TCELocalization.xpExtractor);
+		
+		returnFoci = new ReturnFoci(Config.returnFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.returnFociTexture);
+		LanguageRegistry.addName(returnFoci,  TCELocalization.returnFoci);
+		
+		exchangeFoci = new ExchangeFoci(Config.exchangeFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.exchangeFociTexture);
+		LanguageRegistry.addName(exchangeFoci,  TCELocalization.exchangeFoci);
 	}
 	
 	public static void recipe()
@@ -103,4 +110,6 @@ public class ItemRegister {
 	public static Item speedFoci;
 	public static Item pechFoci;
 	public static Item xpFoci;
+	public static Item returnFoci;
+	public static Item exchangeFoci;
 }

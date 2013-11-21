@@ -18,6 +18,7 @@ public class Config {
 	        earthBlockId = config.getBlock("earthBlock", 227).getInt();
 	        waterBlockId = config.getBlock("waterBlock", 228).getInt();
 	        lightBlockId = config.getBlock("lightBlock", 229).getInt();
+	        ignisFuelBlockId = config.getBlock("ignisFuelBlock", 330).getInt();
 	        cactusBlockId = config.getBlock("cactusBlock", 331).getInt();
 
 	        pechTradeTier1Id = config.getItem("pechTradeTier1", 12225).getInt();
@@ -39,6 +40,8 @@ public class Config {
 	        speedFociId = config.getItem("speedFoci", 13233).getInt();
 	        pechFociId = config.getItem("pechFoci", 13234).getInt();
 	        xpFociId = config.getItem("xpFoci", 13235).getInt();
+	        returnFociId = config.getItem("returnFoci", 13256).getInt();
+	        exchangeFociId = config.getItem("exchangeFoci", 13257).getInt();
 
 	        lightShardId = config.getItem("lightShard", 14201).getInt();
 	        emptyShardId = config.getItem("emptyShard", 14202).getInt();
@@ -58,6 +61,8 @@ public class Config {
 	    	magicTrade = config.get(Configuration.CATEGORY_GENERAL, "magicTrade", true).getBoolean(magicTrade);
 	    	xpFoci = config.get(Configuration.CATEGORY_GENERAL, "xpFoci", true).getBoolean(xpFoci);
 	    	xpExtractor = config.get(Configuration.CATEGORY_GENERAL, "xpExtractor", true).getBoolean(xpExtractor);
+	    	returnFoci = config.get(Configuration.CATEGORY_GENERAL, "returnFoci", true).getBoolean(returnFoci);
+	    	exchangeFoci = config.get(Configuration.CATEGORY_GENERAL, "exchangeFoci", true).getBoolean(exchangeFoci);
 
 	        config.save();
 }
@@ -83,6 +88,7 @@ public class Config {
     public static int magicTradeTier4Id;
     public static int magicTradeTier5Id;
     public static int ignisFuelId;
+    public static int ignisFuelBlockId;
     
     public static int enderFociId;
     public static int arrowFociId;  
@@ -90,6 +96,8 @@ public class Config {
     public static int speedFociId;
     public static int pechFociId;
     public static int xpFociId;
+    public static int returnFociId;
+    public static int exchangeFociId;
     
     public static int lightShardId;
     public static int emptyShardId;
@@ -109,4 +117,6 @@ public class Config {
     public static boolean earthBlock;
     public static boolean xpExtractor;
     public static boolean xpFoci;
+    public static boolean returnFoci;
+    public static boolean exchangeFoci;
 }

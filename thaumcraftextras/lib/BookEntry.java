@@ -20,4 +20,6 @@ public class BookEntry
 	public static String xpExtractorEntry = "After you discovered a way to extract experience from yourself you found out you can also do this with an wand focus.";
 	public static String xpFociEntry = "You discovered a way to extract experience from yourself. You can now give your experience to other people and all have fun with it.";
 	public static String ignisFuelEntry = "You discovered a way to infuse coal with flint to make a magic kind of fuel.";
+	public static String exchangeFociEntry = "You discovered a way to change blocks to another block of the same kind.";
+	public static String returnFociEntry = "You discovered a way to teleport back to your spawnpoint.";
 }

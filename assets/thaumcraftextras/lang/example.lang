@@ -16,6 +16,8 @@ tce.tag.Wand Focus: Speed=
 tce.tag.Wand Focus: Pech Summon=
 tce.tag.Wand Focus: Experience=
 tce.tag.Ignis Fuel=
+tce.tag.Wand Focus: Exchange=
+tce.tag.Wand Focus: Return=
 
 ------Thauminomicon Entry------
 tce.text.Thaumcraft Extras=
@@ -35,3 +37,5 @@ tce.text.Wand Focus: Speed=
 tce.text.Wand Focus: Pech Summon=
 tce.text.Wand Focus: Experience=
 tce.text.Ignis Fuel=
+tce.text.Wand Focus: Exchange=
+tce.text.Wand Focus: Return=

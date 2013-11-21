@@ -17,6 +17,9 @@ tce.tag.Wand Focus: Pech Summon=Summon a magic creature.
 tce.tag.Experience Extractor=Get on my level.
 tce.tag.Wand Focus: Experience=Always have one with you.
 tce.tag.Ignis Fuel=A magic fuel source.
+tce.tag.Wand Focus: Exchange=I give this, i get that
+tce.tag.Wand Focus: Return=Return my beloved.
+
 ------Thauminomicon Entry------
 tce.text.Thaumcraft Extras=You found out that there is a lot more in Thaumcraft then you expected. They call this Thaumcraft Extras.
 tce.text.Shard Infusion=You discovered a way to mix shards and create new onces. This will help you creating new magic items and blocks.
@@ -36,3 +39,5 @@ tce.text.Wand Focus: Pech Summon=You found a way to summon this mysterious creat
 tce.text.Experience Extractor=You discovered a way to extract experience from yourself. You can now give your experience to other people and all have fun with it.
 tce.text.Wand Focus: Experience=After you discovered a way to extract experience from yourself you found out you can also do this with an wand focus.
 tce.text.Ignis Fuel=You discovered a way to infuse coal with flint to make a magic kind of fuel.
+tce.text.Wand Focus: Exchange=You discovered a way to change blocks to another block of the same kind.
+tce.text.Wand Focus: Return=You discovered a way to teleport back to your spawnpoint.

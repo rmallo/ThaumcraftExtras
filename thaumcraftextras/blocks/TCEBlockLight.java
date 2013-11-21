@@ -16,6 +16,7 @@ public class TCEBlockLight extends Block{
 		super(id, Material.rock);
 		setCreativeTab(CreativeTabRegister.tabMain);
 		setLightValue(1.0F);
+		setHardness(1.0F);
 	}
 
 

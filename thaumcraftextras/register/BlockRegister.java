@@ -2,6 +2,7 @@ package thaumcraftextras.register;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCactus;
+import net.minecraft.item.ItemStack;
 import thaumcraftextras.blocks.TCEBlock;
 import thaumcraftextras.blocks.TCEBlockAir;
 import thaumcraftextras.blocks.TCEBlockEarth;
@@ -47,11 +48,14 @@ public class BlockRegister {
 		cactusBlock = new TCECactus(Config.cactusBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.cactusBlockTexture);
 		GameRegistry.registerBlock(cactusBlock, "CactusBlock");
 		LanguageRegistry.addName(cactusBlock, TCELocalization.CactusBlock);
+		
+		ignisFuelBlock = new TCEBlock(Config.ignisFuelBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.IgnisFuelBlockTexture);
+		GameRegistry.registerBlock(ignisFuelBlock, "IgnisFuelBlock");
+		LanguageRegistry.addName(ignisFuelBlock, TCELocalization.IgnisFuelBlock);
 	}
 	
 	public static void recipe()
 	{
-		
 	}
 	
 	public static void oreDictionary()
@@ -64,5 +68,6 @@ public class BlockRegister {
 	public static Block waterBlock;
 	public static Block earthBlock;
 	public static Block lightBlock;
-	public static Block cactusBlock;	
+	public static Block cactusBlock;
+	public static Block ignisFuelBlock;
 }
