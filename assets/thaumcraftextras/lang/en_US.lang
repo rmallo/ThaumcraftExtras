@@ -18,7 +18,10 @@ tce.tag.Experience Extractor=Introspection made easy
 tce.tag.Wand Focus: Experience=Magical memory extraction
 tce.tag.Ignis Fuel=Sparks and Fire
 tce.tag.Wand Focus: Exchange=I give this, I get that
-tce.tag.Wand Focus: Return=Return my beloved.
+tce.tag.Wand Focus: Return=Bring it back, start anew
+tce.tag.Wand Focus: Smelting=Peaceful fire
+tce.tag.Wand Focus: Dispel=For when cows just won't do
+tce.tag.Wand Focus: Destroy=From nothing, to nothing
 
 ------Thauminomicon Entry------
 tce.text.Thaumcraft Extras=You found out that there is a lot more in Thaumcraft then you expected. They call this Thaumcraft Extras.
@@ -43,3 +46,6 @@ tce.text.Wand Focus: Experience=Further refinements to your crystal have allowed
 tce.text.Ignis Fuel=Coal can be refined and purified with a combination of Flint and Ignis, greatly extending its efficiency. Nine peices can also be crafted normally into a rough block, which is handy for storage and extended burn periods.
 tce.text.Wand Focus: Exchange=This focus allows you to scramble the molecular structure of certain blocks, making them morph through some of their variants, primarily changing the colour of clay, wool and wood, and changing the quality of stone bricks. 
 tce.text.Wand Focus: Return=This focus allows you ride the highway of the afterlife, sending you to your spawn point instantaneously.
+tce.text.Wand Focus: Smelting=This Focus makes your wand burn like a forge, melting, smelting and purifying all that it touches. The smelted block will remain in the world, unless it results in an item, which will fall to the floor.
+tce.text.Wand Focus: Dispel=This focus works like a massive shot of fine milk to your veins, purging poisons, illness, and all other maladies. 
+tce.text.Wand Focus: Destroy=This focus harnesses Perdito in its purest form, utterly anniahlating the blocks it is used on. While this could be a helpful tool for mass excavation, extreme care must be taken with its indiscriminate nature.
