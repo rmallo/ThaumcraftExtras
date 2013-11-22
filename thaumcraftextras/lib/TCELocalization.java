@@ -25,7 +25,10 @@ public class TCELocalization {
 	public static String xpFociTexture = "xpFoci";
 	public static String returnFociTexture = "returnFoci";
 	public static String exchangeFociTexture = "exchangeFoci";
-	
+	public static String smeltingFociTexture = "smeltingFoci";
+	public static String dispelFociTexture = "dispelFoci";
+	public static String destroyFociTexture = "destroyFoci";
+
 	/** Block Texture Name */
 	public static String ResearchBlockTexture = "researchblock";
 	public static String IgnisFuelBlockTexture = "ignisfuelblock";
@@ -70,6 +73,9 @@ public class TCELocalization {
 	public static String xpFoci = "Wand Focus: Experience";
 	public static String returnFoci = "Wand Focus: Return";
 	public static String exchangeFoci = "Wand Focus: Exchange";
+	public static String smeltingFoci = "Wand Focus: Smelting";
+	public static String dispelFoci = "Wand Focus: Dispel";
+	public static String destroyFoci = "Wand Focus: Destroy";
 
 	/** Basic Blocks*/
 	public static String ResearchBlock = "Research Block";

@@ -22,4 +22,7 @@ public class BookEntry
 	public static String ignisFuelEntry = "You discovered a way to infuse coal with flint to make a magic kind of fuel.";
 	public static String exchangeFociEntry = "You discovered a way to change blocks to another block of the same kind.";
 	public static String returnFociEntry = "You discovered a way to teleport back to your spawnpoint.";
+	public static String smeltingFociEntry = "You discovered a way to smelt blocks in the world to it's molten form. if the result is an item it will drop else it will change in the world.";
+	public static String dispelFociEntry = "You discovered a way to remove all potion effects.";
+	public static String destroyFociEntry = "You discovered a way to destroy a block without receiving it this can be really handy if you dont want a full inventory off random blocks.";
 }

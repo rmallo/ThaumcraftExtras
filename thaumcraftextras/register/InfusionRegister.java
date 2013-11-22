@@ -14,7 +14,6 @@ import thaumcraftextras.items.ShardItem;
 import thaumcraftextras.items.TCEItem;
 import thaumcraftextras.items.XPShard;
 import thaumcraftextras.items.foci.ArrowFoci;
-import thaumcraftextras.items.foci.EnderFoci;
 import thaumcraftextras.items.foci.HealFoci;
 import thaumcraftextras.items.foci.PechFoci;
 import thaumcraftextras.items.foci.SpeedFoci;

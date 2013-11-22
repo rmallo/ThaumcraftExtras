@@ -27,6 +27,8 @@ public class ResearchAspects {
 	public static AspectList xpFoci = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.LIFE, 1).add(Aspect.LIFE, 10).add(Aspect.EXCHANGE, 5);
 	public static AspectList returnFoci = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.ELDRITCH, 40).add(Aspect.MOTION, 10);
 	public static AspectList exchangeFoci = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.EXCHANGE, 40);
-
+	public static AspectList smeltingFoci = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.EXCHANGE, 40).add(Aspect.FIRE, 10);
+	public static AspectList dispelFoci = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.HEAL, 10).add(Aspect.ORDER, 10);
+	public static AspectList destroyFoci = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.ORDER, 10).add(Aspect.ENTROPY, 10).add(Aspect.DARKNESS, 5);
 
 }

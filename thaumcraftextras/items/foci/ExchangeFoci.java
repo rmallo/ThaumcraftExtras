@@ -60,6 +60,21 @@ public class ExchangeFoci extends ItemFoci {
             			cap = 16;
                 		setBlock(mop, world, player, itemstack);
             		}
+            		else if(blockId == Block.carpet.blockID)
+            		{
+            			cap = 16;
+            			setBlock(mop, world, player, itemstack);
+            		}
+            		else if(blockId == Block.sapling.blockID)
+            		{
+            			cap = 4;
+            			setBlock(mop, world, player, itemstack);
+            		}
+            		else if(blockId == Block.leaves.blockID)
+            		{
+            			cap = 4;
+            			setBlock(mop, world, player, itemstack);
+            		}
                 	}
                 	}
             	}
@@ -75,6 +90,7 @@ public class ExchangeFoci extends ItemFoci {
     		world.setBlockMetadataWithNotify(mop.blockX, mop.blockY, mop.blockZ, nextMeta, 2);
 			if(nextMeta -1 >= cap)
 				world.setBlockMetadataWithNotify(mop.blockX, mop.blockY, mop.blockZ, 0, 2);
+			
         }
 
         @Override

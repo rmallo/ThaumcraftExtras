@@ -131,7 +131,28 @@ public class ThaumonomiconRegister {
 		text = BookEntry.returnFociEntry;
 		research = new ResearchHelper(TCELocalization.returnFoci, "TCE", new AspectList().add(Aspect.FIRE, 10), -2, -4, 3, new ItemStack(ItemRegister.returnFoci)).setParents("Wand Focus: Blink").registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.returnFoci));
-		}	}
+		}	
+		if(Config.smeltingFoci == true)
+		{
+			text = BookEntry.smeltingFociEntry;
+			research = new ResearchHelper(TCELocalization.smeltingFoci, "TCE", new AspectList().add(Aspect.FIRE, 10), -2, 4, 3, new ItemStack(ItemRegister.smeltingFoci)).setParents("Wand Focus: Exchange").registerResearchItem();
+			research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.smeltingFoci));
+		}
+		if(Config.dispelFoci == true)
+		{
+			text = BookEntry.dispelFociEntry;
+			research = new ResearchHelper(TCELocalization.dispelFoci, "TCE", new AspectList().add(Aspect.FIRE, 10), -4, -3, 3, new ItemStack(ItemRegister.dispelFoci)).setParents("Wand Focus: Speed").registerResearchItem();
+			research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.dispelFoci));
+		}
+		
+		if(Config.destroyFoci == true)
+		{
+			text = BookEntry.destroyFociEntry;
+			research = new ResearchHelper(TCELocalization.destroyFoci, "TCE", new AspectList().add(Aspect.FIRE, 10), -3, 3, 3, new ItemStack(ItemRegister.destroyFoci)).setParents("Wand Focus: Exchange").registerResearchItem();
+			research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.destroyFoci));
+		}
+		
+	}
 	
 	public static void addPage()
 	{

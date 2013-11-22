@@ -6,12 +6,15 @@ import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.items.TCEItem;
 import thaumcraftextras.items.XPExtractor;
 import thaumcraftextras.items.foci.ArrowFoci;
+import thaumcraftextras.items.foci.DestroyFoci;
+import thaumcraftextras.items.foci.DispelFoci;
 import thaumcraftextras.items.foci.EnderFoci;
 import thaumcraftextras.items.foci.ExchangeFoci;
 import thaumcraftextras.items.foci.ExperienceFoci;
 import thaumcraftextras.items.foci.HealFoci;
 import thaumcraftextras.items.foci.PechFoci;
 import thaumcraftextras.items.foci.ReturnFoci;
+import thaumcraftextras.items.foci.SmeltingFoci;
 import thaumcraftextras.items.foci.SpeedFoci;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
@@ -83,6 +86,15 @@ public class ItemRegister {
 		
 		exchangeFoci = new ExchangeFoci(Config.exchangeFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.exchangeFociTexture);
 		LanguageRegistry.addName(exchangeFoci,  TCELocalization.exchangeFoci);
+		
+		smeltingFoci = new SmeltingFoci(Config.smeltingFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.smeltingFociTexture);
+		LanguageRegistry.addName(smeltingFoci,  TCELocalization.smeltingFoci);
+		
+		dispelFoci = new DispelFoci(Config.dispelFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.dispelFociTexture);
+		LanguageRegistry.addName(dispelFoci,  TCELocalization.dispelFoci);
+	
+		destroyFoci = new DestroyFoci(Config.destroyFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.destroyFociTexture);
+		LanguageRegistry.addName(destroyFoci,  TCELocalization.destroyFoci);
 	}
 	
 	public static void recipe()
@@ -112,4 +124,7 @@ public class ItemRegister {
 	public static Item xpFoci;
 	public static Item returnFoci;
 	public static Item exchangeFoci;
+	public static Item smeltingFoci;
+	public static Item dispelFoci;
+	public static Item destroyFoci;
 }

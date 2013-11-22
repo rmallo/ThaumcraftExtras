@@ -1,47 +1,43 @@
 package thaumcraftextras.items.foci;
 
+import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.common.items.wands.ItemWandCasting;
 
-public class ReturnFoci extends ItemFoci {
+public class DispelFoci extends ItemFoci {
 
-        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 1200);
+        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 500);
 
-        public ReturnFoci(int i) {
+        public DispelFoci(int i) {
                 super(i);
         }
 
         @Override
         public ItemStack onFocusRightClick(ItemStack itemstack, World world, EntityPlayer player, MovingObjectPosition movingobjectposition) {
             ItemWandCasting wand = (ItemWandCasting)itemstack.getItem();
-            if(player.getBedLocation() == null)
-            	return itemstack;
-            	
             if (wand.consumeAllVis(itemstack, player, getVisCost(), true)) {
-        
-            	int bedX = player.getBedLocation().posX;
-            	int bedY = player.getBedLocation().posY;
-            	int bedZ = player.getBedLocation().posZ;
-            	player.setPosition(bedX, bedY, bedZ);
+        	if(!world.isRemote)
+        	{
+        		player.clearActivePotions();
+        	}
             }
-      		return itemstack;
+    		return itemstack;
+
         }
 
         @Override
         public String getSortingHelper(ItemStack itemstack) {
-                return "RETURN";
+                return "DISPEL";
         }
 
         @Override
         public int getFocusColor() {
-                return 0xCC0066;
+                return 0x663333;
         }
 
         @Override
@@ -53,7 +49,7 @@ public class ReturnFoci extends ItemFoci {
         public AspectList getVisCost() {
                 return visUsage;
         }
-        
+
 		@Override
 		public boolean acceptsEnchant(int id) {
 			return false;

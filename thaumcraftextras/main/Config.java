@@ -42,6 +42,9 @@ public class Config {
 	        xpFociId = config.getItem("xpFoci", 13235).getInt();
 	        returnFociId = config.getItem("returnFoci", 13256).getInt();
 	        exchangeFociId = config.getItem("exchangeFoci", 13257).getInt();
+	        smeltingFociId = config.getItem("smeltingFoci", 13258).getInt();
+	        dispelFociId = config.getItem("dispelFoci", 13259).getInt();
+	        destroyFociId = config.getItem("destoryFoci", 13260).getInt();
 
 	        lightShardId = config.getItem("lightShard", 14201).getInt();
 	        emptyShardId = config.getItem("emptyShard", 14202).getInt();
@@ -63,8 +66,10 @@ public class Config {
 	    	xpExtractor = config.get(Configuration.CATEGORY_GENERAL, "xpExtractor", true).getBoolean(xpExtractor);
 	    	returnFoci = config.get(Configuration.CATEGORY_GENERAL, "returnFoci", true).getBoolean(returnFoci);
 	    	exchangeFoci = config.get(Configuration.CATEGORY_GENERAL, "exchangeFoci", true).getBoolean(exchangeFoci);
-
-	        config.save();
+	    	smeltingFoci = config.get(Configuration.CATEGORY_GENERAL, "smeltingFoci", true).getBoolean(smeltingFoci);
+	    	dispelFoci = config.get(Configuration.CATEGORY_GENERAL, "dispelFoci", true).getBoolean(dispelFoci);
+	    	destroyFoci = config.get(Configuration.CATEGORY_GENERAL, "destroyFoci", true).getBoolean(destroyFoci);
+	    	config.save();
 }
 	
     public static int researchBlockId;
@@ -98,6 +103,9 @@ public class Config {
     public static int xpFociId;
     public static int returnFociId;
     public static int exchangeFociId;
+    public static int smeltingFociId;
+    public static int dispelFociId;
+    public static int destroyFociId;
     
     public static int lightShardId;
     public static int emptyShardId;
@@ -119,4 +127,7 @@ public class Config {
     public static boolean xpFoci;
     public static boolean returnFoci;
     public static boolean exchangeFoci;
+    public static boolean dispelFoci;
+    public static boolean smeltingFoci;
+    public static boolean destroyFoci;
 }

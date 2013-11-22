@@ -19,7 +19,9 @@ tce.tag.Wand Focus: Experience=Always have one with you.
 tce.tag.Ignis Fuel=A magic fuel source.
 tce.tag.Wand Focus: Exchange=I give this, i get that
 tce.tag.Wand Focus: Return=Return my beloved.
-
+tce.tag.Wand Focus: Smelting=Smelting Blocks.
+tce.tag.Wand Focus: Dispel=Remove the curse.
+tce.tag.Wanf Focus: Destroy=Destroy it all.
 ------Thauminomicon Entry------
 tce.text.Thaumcraft Extras=You found out that there is a lot more in Thaumcraft then you expected. They call this Thaumcraft Extras.
 tce.text.Shard Infusion=You discovered a way to mix shards and create new onces. This will help you creating new magic items and blocks.
@@ -41,3 +43,6 @@ tce.text.Wand Focus: Experience=After you discovered a way to extract experience
 tce.text.Ignis Fuel=You discovered a way to infuse coal with flint to make a magic kind of fuel.
 tce.text.Wand Focus: Exchange=You discovered a way to change blocks to another block of the same kind.
 tce.text.Wand Focus: Return=You discovered a way to teleport back to your spawnpoint.
+tce.text.Wand Focus: Smelting=You discovered a way to smelt blocks in the world to it's molten form. if the result is an item it will drop else it will change in the world.
+tce.text.Wand Focus: Dispel=You discovered a way to remove all potion effects.
+tce.text.Wand Focus: Destroy=You discovered a way to destroy a block without receiving it this can be really handy if you dont want a full inventory off random blocks.
