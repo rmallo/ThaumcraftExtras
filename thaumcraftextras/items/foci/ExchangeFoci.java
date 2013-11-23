@@ -2,6 +2,7 @@ package thaumcraftextras.items.foci;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -9,6 +10,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.items.wands.ItemWandCasting;
 
 public class ExchangeFoci extends ItemFoci {
@@ -32,17 +34,17 @@ public class ExchangeFoci extends ItemFoci {
             		{
                 	if(blockId == Block.stoneBrick.blockID)
             		{
-            		cap = 4;
+            		cap = 3;
             		setBlock(mop, world, player, itemstack);
             		}
             		else if(blockId == Block.wood.blockID)
             		{
-            			cap = 4;
+            			cap = 3;
                 		setBlock(mop, world, player, itemstack);
             		}
             		else if(blockId == Block.planks.blockID)
             		{
-            			cap = 4;
+            			cap = 3;
             			setBlock(mop, world, player, itemstack);
             		}
             		else if(blockId == Block.sandStone.blockID)
@@ -67,32 +69,91 @@ public class ExchangeFoci extends ItemFoci {
             		}
             		else if(blockId == Block.sapling.blockID)
             		{
-            			cap = 4;
+            			cap = 3;
             			setBlock(mop, world, player, itemstack);
             		}
             		else if(blockId == Block.leaves.blockID)
             		{
-            			cap = 4;
+            			cap = 3;
             			setBlock(mop, world, player, itemstack);
             		}
-                	}
+            		else if(blockId == Block.blockNetherQuartz.blockID)
+            		{
+            			cap = 3;
+            			setBlock(mop, world, player, itemstack);
+            		}
+            		else if(blockId == Block.woodSingleSlab.blockID)
+            		{
+            			cap = 3;
+            			setBlock(mop, world, player, itemstack);	
+            		}
+            		else if(blockId == Block.woodDoubleSlab.blockID)
+            		{
+            			cap = 3;
+            			setBlock(mop, world, player, itemstack);
+            		}
+            		else if(blockId == Block.stoneSingleSlab.blockID)
+            		{
+            			cap = 6;
+            			setBlock(mop, world, player, itemstack);
+            		}
+            		else if(blockId == ConfigBlocks.blockCandle.blockID)
+            		{
+            			cap = 15;
+            			setBlock(mop, world, player, itemstack);
+            		}
+            		else if(blockId == Block.plantRed.blockID)
+            		{
+            			type = 0;
+            			ChangeBlockType(mop, world, player, itemstack);
+            		}
+            		else if(blockId == Block.plantYellow.blockID)
+            		{
+            			type = 1;
+            			ChangeBlockType(mop, world, player, itemstack);
+            		}
+            		else if(blockId == Block.cobblestone.blockID)
+            		{
+            			type = 2;
+            			ChangeBlockType(mop, world, player, itemstack);
+            		}
+            		else if(blockId == Block.cobblestoneMossy.blockID)
+            		{
+            			type = 3;
+                		ChangeBlockType(mop, world, player, itemstack);
+            		}
+            		}
                 	}
             	}
             	
       		return itemstack;
         }
         private static int cap;
+        private static int type;
+        
         
         public static void setBlock(MovingObjectPosition mop, World world, EntityPlayer player, ItemStack itemstack)
         {
     		int nextMeta = world.getBlockMetadata(mop.blockX, mop.blockY, mop.blockZ) + 1;
-    	
+    		
     		world.setBlockMetadataWithNotify(mop.blockX, mop.blockY, mop.blockZ, nextMeta, 2);
 			if(nextMeta -1 >= cap)
 				world.setBlockMetadataWithNotify(mop.blockX, mop.blockY, mop.blockZ, 0, 2);
 			
         }
-
+        
+        public static void ChangeBlockType(MovingObjectPosition mop, World world, EntityPlayer player, ItemStack itemstack)
+        {           
+        	if(type == 0)
+        		world.setBlock(mop.blockX, mop.blockY, mop.blockZ, Block.plantYellow.blockID);
+        	if(type == 1)
+        		world.setBlock(mop.blockX, mop.blockY, mop.blockZ, Block.plantRed.blockID);
+        	if(type == 2)
+        		world.setBlock(mop.blockX, mop.blockY, mop.blockZ, Block.cobblestoneMossy.blockID);
+        	if(type == 3)
+        		world.setBlock(mop.blockX, mop.blockY, mop.blockZ, Block.cobblestone.blockID);
+        
+        }
         @Override
         public String getSortingHelper(ItemStack itemstack) {
                 return "EXCHANGE";

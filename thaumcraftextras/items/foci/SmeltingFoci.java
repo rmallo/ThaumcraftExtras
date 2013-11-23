@@ -14,7 +14,7 @@ import thaumcraft.common.items.wands.ItemWandCasting;
 
 public class SmeltingFoci extends ItemFoci {
 
-        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 20).add(Aspect.FIRE, 10);
+        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 50).add(Aspect.FIRE, 60);
 
         public SmeltingFoci(int i) {
                 super(i);
@@ -39,15 +39,6 @@ public class SmeltingFoci extends ItemFoci {
         }
         private static int block;
         
-        /*
-        public static void setBlock(MovingObjectPosition mop, World world, EntityPlayer player, ItemStack itemstack)
-        {
-            int blockId = world.getBlockId(mop.blockX, mop.blockY, mop.blockZ);
-
-        	world.setBlock(mop.blockX, mop.blockY, mop.blockZ, block);
-        }
-        */
-        
         public static void setSmeltingResult(MovingObjectPosition mop, World world, EntityPlayer player, ItemStack itemstack)
         {
             int blockId = world.getBlockId(mop.blockX, mop.blockY, mop.blockZ);
@@ -60,13 +51,15 @@ public class SmeltingFoci extends ItemFoci {
             }
             else if(sResult != null) 
             {
+            	int meta = sResult.getItemDamage();
         		world.setBlock(mop.blockX, mop.blockY, mop.blockZ, 0);
-        		player.inventory.addItemStackToInventory(new ItemStack(sResult.itemID, 1, 0));
+        		player.inventory.addItemStackToInventory(new ItemStack(sResult.itemID, 1, meta));
             }
         	else if (sResult != block)
         	{
         		return;
         	}
+
         }
         @Override
         public String getSortingHelper(ItemStack itemstack) {

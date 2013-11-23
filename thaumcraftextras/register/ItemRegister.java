@@ -95,6 +95,7 @@ public class ItemRegister {
 	
 		destroyFoci = new DestroyFoci(Config.destroyFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.destroyFociTexture);
 		LanguageRegistry.addName(destroyFoci,  TCELocalization.destroyFoci);
+	
 	}
 	
 	public static void recipe()
@@ -127,4 +128,5 @@ public class ItemRegister {
 	public static Item smeltingFoci;
 	public static Item dispelFoci;
 	public static Item destroyFoci;
+	public static Item debugFoci;
 }
