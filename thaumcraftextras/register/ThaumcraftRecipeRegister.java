@@ -1,8 +1,10 @@
 package thaumcraftextras.register;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.ConfigCategory;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
@@ -10,7 +12,7 @@ import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.config.ConfigResearch;
-import thaumcraftextras.lib.ResearchAspects;
+import thaumcraftextras.lib.CraftingAspects;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
 
@@ -20,7 +22,7 @@ public class ThaumcraftRecipeRegister {
 	{
 	if(Config.pechTrade == true)
 	{
-	pechTradeTier1 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier1), ResearchAspects.pechTradeTier1, new Object[]{
+	pechTradeTier1 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier1), CraftingAspects.pechTradeTier1, new Object[]{
 		"XXX",
 		"XIX",
 		"XXX",
@@ -29,7 +31,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.pechTrade == true)
 	{
-	pechTradeTier2 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier2), ResearchAspects.pechTradeTier2, new Object[]{
+	pechTradeTier2 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier2), CraftingAspects.pechTradeTier2, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -37,7 +39,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.pechTrade == true)
 	{
-	pechTradeTier3 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier3), ResearchAspects.pechTradeTier3, new Object[]{
+	pechTradeTier3 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier3), CraftingAspects.pechTradeTier3, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -45,7 +47,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.pechTrade == true)
 	{
-	pechTradeTier4 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier4), ResearchAspects.pechTradeTier4, new Object[]{
+	pechTradeTier4 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier4), CraftingAspects.pechTradeTier4, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -53,7 +55,7 @@ public class ThaumcraftRecipeRegister {
 	
 	if(Config.pechTrade == true)
 	{
-	pechTradeTier5 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier5), ResearchAspects.pechTradeTier5, new Object[]{
+	pechTradeTier5 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier5), CraftingAspects.pechTradeTier5, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -61,7 +63,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.magicTrade == true)
 	{
-	magicTradeTier1 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier1), ResearchAspects.magicTradeTier1, new Object[]{
+	magicTradeTier1 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier1), CraftingAspects.magicTradeTier1, new Object[]{
 		"XXX",
 		"XIX",
 		"XXX",
@@ -70,7 +72,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.magicTrade == true)
 	{
-	magicTradeTier2 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier2), ResearchAspects.magicTradeTier2, new Object[]{
+	magicTradeTier2 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier2), CraftingAspects.magicTradeTier2, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -78,7 +80,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.magicTrade == true)
 	{
-	magicTradeTier3 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier3), ResearchAspects.magicTradeTier3, new Object[]{
+	magicTradeTier3 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier3), CraftingAspects.magicTradeTier3, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -86,14 +88,14 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.magicTrade == true)
 	{
-	magicTradeTier4 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier4), ResearchAspects.magicTradeTier4, new Object[]{
+	magicTradeTier4 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier4), CraftingAspects.magicTradeTier4, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
 		'X', ItemRegister.magicTradeTier3});
 	}
 	if(Config.magicTrade == true)
-	magicTradeTier5 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier5),	ResearchAspects.magicTradeTier5,  new Object[]{
+	magicTradeTier5 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier5),	CraftingAspects.magicTradeTier5,  new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -103,7 +105,7 @@ public class ThaumcraftRecipeRegister {
 	if(Config.enderFoci == true)
 	{
 	enderFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.enderFoci, new ItemStack(ItemRegister.enderFoci),4 , 
-			ResearchAspects.enderFoci, 
+			CraftingAspects.enderFoci, 
 			new ItemStack(Item.enderPearl), new ItemStack[]{
 		new ItemStack(Item.netherQuartz), new ItemStack(Item.netherrackBrick), new ItemStack(Item.netherQuartz),
 		new ItemStack(Item.netherrackBrick), new ItemStack(Item.netherQuartz), new ItemStack(Item.netherrackBrick), 
@@ -112,7 +114,7 @@ public class ThaumcraftRecipeRegister {
 	if(Config.arrowFoci == true)
 	{
 	arrowFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.arrowFoci, new ItemStack(ItemRegister.arrowFoci),4 , 
-			ResearchAspects.arrowFoci, 
+			CraftingAspects.arrowFoci, 
 		new ItemStack(Item.bow), new ItemStack[]{
 		new ItemStack(Item.netherQuartz), new ItemStack(Item.arrow), new ItemStack(Item.netherQuartz),
 		new ItemStack(Item.arrow), new ItemStack(Item.netherQuartz), new ItemStack(Item.arrow), 
@@ -121,7 +123,7 @@ public class ThaumcraftRecipeRegister {
 	if(Config.healFoci == true)
 	{
 	healFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.healFoci, new ItemStack(ItemRegister.healFoci),10 , 
-			ResearchAspects.healFoci, 
+			CraftingAspects.healFoci, 
 			new ItemStack(Item.appleGold), new ItemStack[]{
 			new ItemStack(Item.netherQuartz), new ItemStack(Item.paper), new ItemStack(Item.netherQuartz),
 			new ItemStack(Item.paper), new ItemStack(Item.netherQuartz), new ItemStack(Item.paper), 
@@ -130,26 +132,17 @@ public class ThaumcraftRecipeRegister {
 	if(Config.speedFoci == true)
 	{
 	speedFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.speedFoci, new ItemStack(ItemRegister.speedFoci),4 , 
-			ResearchAspects.speedFoci, 
+			CraftingAspects.speedFoci, 
 			new ItemStack(Item.bootsLeather), new ItemStack[]{
 			new ItemStack(Item.netherQuartz), new ItemStack(Item.feather), new ItemStack(Item.netherQuartz),
 			new ItemStack(Item.feather), new ItemStack(Item.netherQuartz), new ItemStack(Item.feather), 
 			new ItemStack(Item.netherQuartz), new ItemStack(Item.feather)});
 	}
-	if(Config.pechFoci == true)
-	{
-	pechFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.pechFoci, new ItemStack(ItemRegister.pechFoci),4 , 
-			ResearchAspects.pechFoci, 
-			new ItemStack(ConfigItems.itemFocusPech), new ItemStack[]{
-			new ItemStack(Item.netherQuartz), new ItemStack(ConfigItems.itemManaBean), new ItemStack(Item.netherQuartz),
-			new ItemStack(ConfigItems.itemManaBean), new ItemStack(Item.netherQuartz), new ItemStack(ConfigItems.itemManaBean), 
-			new ItemStack(Item.netherQuartz), new ItemStack(ConfigItems.itemManaBean)});
-	}
 	
 	if(Config.xpFoci == true)
 	{
 	xpFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.xpFoci, new ItemStack(ItemRegister.xpFoci),4 , 
-			ResearchAspects.xpFoci, 
+			CraftingAspects.xpFoci, 
 			new ItemStack(ItemRegister.xpExtractor), new ItemStack[]{
 			new ItemStack(Item.netherQuartz), new ItemStack(InfusionRegister.xpShard), new ItemStack(Item.netherQuartz),
 			new ItemStack(InfusionRegister.xpShard), new ItemStack(Item.netherQuartz), new ItemStack(InfusionRegister.xpShard), 
@@ -158,7 +151,7 @@ public class ThaumcraftRecipeRegister {
 	
 	if(Config.xpExtractor == true)
 	{
-		xpExtractor = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.xpExtractor, new ItemStack(ItemRegister.xpExtractor),	ResearchAspects.xpExtractor,  new Object[]{
+		xpExtractor = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.xpExtractor, new ItemStack(ItemRegister.xpExtractor),	CraftingAspects.xpExtractor,  new Object[]{
 			"YIY",
 			"IXI",
 			"YIY",
@@ -170,7 +163,7 @@ public class ThaumcraftRecipeRegister {
 	if(Config.returnFoci == true)
 	{
 		returnFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.returnFoci, new ItemStack(ItemRegister.returnFoci),4,
-			ResearchAspects.returnFoci,
+			CraftingAspects.returnFoci,
 			new ItemStack(ItemRegister.enderFoci), new ItemStack[]{
 			new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz),
 			new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), 
@@ -180,8 +173,8 @@ public class ThaumcraftRecipeRegister {
 	if(Config.exchangeFoci == true)
 	{
 		exchangeFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.exchangeFoci, new ItemStack(ItemRegister.exchangeFoci),4,
-			ResearchAspects.exchangeFoci,
-			new ItemStack(ItemRegister.pechFoci), new ItemStack[]{
+			CraftingAspects.exchangeFoci,
+			new ItemStack(ItemRegister.pechTradeTier4), new ItemStack[]{
 			new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.pechTradeTier2), new ItemStack(Item.netherQuartz),
 			new ItemStack(ItemRegister.pechTradeTier2), new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.pechTradeTier2), 
 			new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.pechTradeTier2)});
@@ -189,7 +182,7 @@ public class ThaumcraftRecipeRegister {
 	if(Config.smeltingFoci == true)
 	{
 		smeltingFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.smeltingFoci, new ItemStack(ItemRegister.smeltingFoci),4,
-				ResearchAspects.smeltingFoci,
+				CraftingAspects.smeltingFoci,
 				new ItemStack(ItemRegister.exchangeFoci), new ItemStack[]{
 				new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.magicTradeTier1), new ItemStack(Item.netherQuartz),
 				new ItemStack(ItemRegister.magicTradeTier1), new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.magicTradeTier1), 
@@ -198,7 +191,7 @@ public class ThaumcraftRecipeRegister {
 	if(Config.dispelFoci == true)
 	{
 		dispelFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.dispelFoci, new ItemStack(ItemRegister.dispelFoci),4,
-				ResearchAspects.dispelFoci,
+				CraftingAspects.dispelFoci,
 				new ItemStack(ItemRegister.speedFoci), new ItemStack[]{
 				new ItemStack(Item.netherQuartz), new ItemStack(Item.sugar), new ItemStack(Item.netherQuartz),
 				new ItemStack(Item.sugar), new ItemStack(Item.netherQuartz), new ItemStack(Item.sugar), 
@@ -208,13 +201,24 @@ public class ThaumcraftRecipeRegister {
 	if(Config.destroyFoci == true)
 	{
 	destroyFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.destroyFoci, new ItemStack(ItemRegister.destroyFoci),4,
-			ResearchAspects.destroyFoci,
+			CraftingAspects.destroyFoci,
 			new ItemStack(ItemRegister.exchangeFoci), new ItemStack[]{
 			new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz),
 			new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), 
 			new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl)});
 	}
-		ignisFuel = ThaumcraftApi.addArcaneCraftingRecipe("Ignis Fuel", new ItemStack(ItemRegister.ignisFuel),	ResearchAspects.ignisFuel,  new Object[]{
+	
+	if(Config.freezeFoci == true)
+	{
+	freezeFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.freezeFoci, new ItemStack(ItemRegister.freezeFoci),4,
+			CraftingAspects.freezeFoci,
+			new ItemStack(ConfigItems.itemFocusFrost), new ItemStack[]{
+			new ItemStack(Block.ice), new ItemStack(Item.snowball), new ItemStack(Block.ice),
+			new ItemStack(Item.snowball), new ItemStack(Block.ice), new ItemStack(Item.snowball), 
+			new ItemStack(Block.ice), new ItemStack(Item.snowball)});
+	}
+	
+		ignisFuel = ThaumcraftApi.addArcaneCraftingRecipe("Ignis Fuel", new ItemStack(ItemRegister.ignisFuel),	CraftingAspects.ignisFuel,  new Object[]{
 			"Y  ",
 			"X  ",
 			"   ",
@@ -253,4 +257,5 @@ public class ThaumcraftRecipeRegister {
 	public static InfusionRecipe smeltingFoci;
 	public static InfusionRecipe dispelFoci;
 	public static InfusionRecipe destroyFoci;
+	public static InfusionRecipe freezeFoci;
 }

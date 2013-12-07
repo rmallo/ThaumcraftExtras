@@ -1,44 +1,52 @@
 package thaumcraftextras.items.foci;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.world.World;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.common.Thaumcraft;
 import thaumcraft.common.items.wands.ItemWandCasting;
+import thaumcraft.common.lib.Utils;
 
-public class DestroyFoci extends ItemFoci {
-
-        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 20);
+public class DestroyFoci extends ItemFoci {	 
+	
+        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 35).add(Aspect.ENTROPY, 35);
 
         public DestroyFoci(int i) {
                 super(i);
         }
         
         @Override
-        public ItemStack onFocusRightClick(ItemStack itemstack, World world, EntityPlayer player, MovingObjectPosition mop) {
-    		if(mop == null)
-				return itemstack;
-        	ItemWandCasting wand = (ItemWandCasting)itemstack.getItem();
-            int blockId = world.getBlockId(mop.blockX, mop.blockY, mop.blockZ);
-    		
-            	if(player.canPlayerEdit(mop.blockX, mop.blockY, mop.blockZ, mop.sideHit, itemstack)){
-                	if (wand.consumeAllVis(itemstack, player, getVisCost(), true)) {
-            		if(!world.isRemote)
-            		{
-            			if(blockId != Block.bedrock.blockID)
-            				world.setBlock(mop.blockX, mop.blockY, mop.blockZ, 0);
-                	}
-                	}
-            	}
-            	
-      		return itemstack;
+        public boolean isUseItem() {
+                return true;
         }
-  
+        
+		@Override
+        public void onUsingFocusTick(ItemStack itemstack, EntityPlayer player, int time) {  
+        	ItemWandCasting wand = (ItemWandCasting)itemstack.getItem();
+            MovingObjectPosition pos = Utils.getTargetBlock(player.worldObj, player, false);
+            if(pos != null)
+            {
+                	if (wand.consumeAllVis(itemstack, player, getVisCost(), true)) 
+                	{
+                		int blockId = player.worldObj.getBlockId(pos.blockX, pos.blockY, pos.blockZ);
+                		if(blockId != 0 && player.worldObj.getBlockId(pos.blockX, pos.blockY, pos.blockZ) != Block.bedrock.blockID)
+                		{
+                			if(!player.worldObj.isRemote)
+                			{
+                        				player.worldObj.setBlock(pos.blockX, pos.blockY, pos.blockZ, 0);      			
+                			}
+                			if(player.worldObj.isRemote)
+                                Thaumcraft.proxy.beamCont(player.worldObj, player, pos.blockX + 0.5, pos.blockY + 0.5, pos.blockZ + 0.5, 2, 0x000033, true, 0F, null, 1);
+                		}
+                	}
+            }
+		}
 
         @Override
         public String getSortingHelper(ItemStack itemstack) {
@@ -47,7 +55,7 @@ public class DestroyFoci extends ItemFoci {
 
         @Override
         public int getFocusColor() {
-                return 0x00CC99;
+                return 0x000000;
         }
 
         @Override

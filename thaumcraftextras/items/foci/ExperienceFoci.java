@@ -28,8 +28,7 @@ public class ExperienceFoci extends ItemFoci {
 					{
 						if(!world.isRemote)
 						{
-							player.experienceLevel = player.experienceLevel - 5;
-							player.inventory.addItemStackToInventory(new ItemStack(InfusionRegister.xpShard));
+							Experience(player);
 							return itemstack;
 						}
 						return itemstack;
@@ -39,6 +38,12 @@ public class ExperienceFoci extends ItemFoci {
 			return itemstack;
         }
 
+        public static void Experience(EntityPlayer player)
+        {
+        	player.addExperienceLevel(-5);
+			player.inventory.addItemStackToInventory(new ItemStack(InfusionRegister.xpShard));
+        }
+        
         @Override
         public String getSortingHelper(ItemStack itemstack) {
                 return "XP";

@@ -26,8 +26,23 @@ public class TCEBlockEarth extends Block{
 	@Override
 	  public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity)
 	    {
-	        if (!world.isRemote)
-	        {
+	        if (!world.isRemote &&
+	    		world.getBlockId(x -1, y +1, z) == 0  &&
+	    		    	world.getBlockId(x +1, y +1, z) == 0 &&
+	    		    	world.getBlockId(x, y +1, z -1) == 0 &&
+	    		    	world.getBlockId(x, y +1, z +1) == 0 &&
+
+	    		    	world.getBlockId(x -1, y, z) == 0 &&
+	    		    	world.getBlockId(x +1, y , z) == 0 &&
+	    		    	world.getBlockId(x, y , z -1) == 0 &&
+	    		    	world.getBlockId(x, y, z +1) == 0 &&
+	    		    	
+	    		    	world.getBlockId(x -1, y +2, z) == 0 &&
+	    		    	world.getBlockId(x +1, y +2, z) == 0 &&
+	    		    	world.getBlockId(x, y +2, z -1) == 0 &&
+	    		    	world.getBlockId(x, y +2, z +1) == 0)
+	    		{
+	    			
 	        	world.setBlock(x -1, y +1, z, BlockRegister.cactusBlock.blockID);
 	        	world.setBlock(x +1, y +1, z, BlockRegister.cactusBlock.blockID);
 	        	world.setBlock(x, y +1, z -1, BlockRegister.cactusBlock.blockID);
@@ -48,8 +63,22 @@ public class TCEBlockEarth extends Block{
 	@Override
     public void onEntityWalking(World world, int x, int y, int z, Entity entity) 
 	{
-		  if (!world.isRemote)
-	        {
+        if (!world.isRemote &&
+    		world.getBlockId(x -1, y +1, z) == 0  &&
+    		    	world.getBlockId(x +1, y +1, z) == 0 &&
+    		    	world.getBlockId(x, y +1, z -1) == 0 &&
+    		    	world.getBlockId(x, y +1, z +1) == 0 &&
+
+    		    	world.getBlockId(x -1, y, z) == 0 &&
+    		    	world.getBlockId(x +1, y , z) == 0 &&
+    		    	world.getBlockId(x, y , z -1) == 0 &&
+    		    	world.getBlockId(x, y, z +1) == 0 &&
+    		    	
+    		    	world.getBlockId(x -1, y +2, z) == 0 &&
+    		    	world.getBlockId(x +1, y +2, z) == 0 &&
+    		    	world.getBlockId(x, y +2, z -1) == 0 &&
+    		    	world.getBlockId(x, y +2, z +1) == 0)
+    		{
 	        	world.setBlock(x -1, y +1, z, BlockRegister.cactusBlock.blockID);
 	        	world.setBlock(x +1, y +1, z, BlockRegister.cactusBlock.blockID);
 	        	world.setBlock(x, y +1, z -1, BlockRegister.cactusBlock.blockID);

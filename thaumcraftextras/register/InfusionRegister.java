@@ -92,6 +92,16 @@ public class InfusionRegister {
 			'X', Item.coal	,
 			'I', ConfigItems.itemShard});
 		}
+		if(Config.enderBlock = true)
+		{
+		enderBlock = ThaumcraftApi.addArcaneCraftingRecipe("Ender Block", new ItemStack(BlockRegister.enderBlock), new AspectList().add(Aspect.ENTROPY, 18), new Object[]{
+			"   ",
+			"XI ",
+			"   ",
+			'X', Item.enderPearl,
+			'I', Block.stoneBrick});
+		}
+		
 		}
 	
 
@@ -100,6 +110,8 @@ public class InfusionRegister {
 	public static ShapedArcaneRecipe waterBlock;
 	public static ShapedArcaneRecipe earthBlock;
 	public static ShapedArcaneRecipe lightBlock;
+	public static ShapedArcaneRecipe enderBlock;
+	
 	public static ShapedArcaneRecipe lightShardRecipe;
 	
 	public static Item lightShard;

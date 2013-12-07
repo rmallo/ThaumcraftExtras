@@ -13,6 +13,7 @@ public class ModRegister {
     	ItemRegister.load();
     	AspectRegister.addAspects();
     	ItemRegister.recipe();
+    	EntityRegister.load();
     	InfusionRegister.load();
     	InfusionRegister.recipe();
     	ThaumcraftRecipeRegister.load();

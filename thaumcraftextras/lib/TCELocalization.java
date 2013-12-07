@@ -21,13 +21,14 @@ public class TCELocalization {
 	public static String arrowFociTexture = "arrowFoci";
 	public static String healFociTexture = "healFoci";
 	public static String speedFociTexture = "speedFoci";
-	public static String pechFociTexture = "pechFoci";
 	public static String xpFociTexture = "xpFoci";
 	public static String returnFociTexture = "returnFoci";
 	public static String exchangeFociTexture = "exchangeFoci";
 	public static String smeltingFociTexture = "smeltingFoci";
 	public static String dispelFociTexture = "dispelFoci";
 	public static String destroyFociTexture = "destroyFoci";
+	public static String shieldFociTexture = "shieldFoci";
+	public static String freezeFociTexture = "freezeFoci";
 
 	/** Block Texture Name */
 	public static String ResearchBlockTexture = "researchblock";
@@ -39,7 +40,11 @@ public class TCELocalization {
 	public static String WaterBlockTexture = "waterblock";
 	public static String EarthBlockTexture = "earthblock";
 	public static String LightBlockTexture = "lightblock";
-
+	public static String EnderBlockTexture = "enderblock";
+	public static String TeleporterBlockTexture = "teleportblock";
+	
+	public static String TeslaBlockTexture = "teslablock";
+	
 	/** Infusion Shards Textures */
 	public static String lightShardTexture = "lightshard";
 	public static String emptyShardTexture = "emptyshard";
@@ -51,17 +56,17 @@ public class TCELocalization {
 	public static String TCETabIcon = "textures/tabs/tce.png";
 	
 	/** Item Name */
-	public static String PechTradeTier1 = "Pech Trade Tier 1";
-	public static String PechTradeTier2 = "Pech Trade Tier 2";
-	public static String PechTradeTier3 = "Pech Trade Tier 3";
-	public static String PechTradeTier4 = "Pech Trade Tier 4";
-	public static String PechTradeTier5 = "Pech Trade Tier 5";
+	public static String PechTradeTier1 = "Essence of Greed Tier 1";
+	public static String PechTradeTier2 = "Essence of Greed Tier 2";
+	public static String PechTradeTier3 = "Essence of Greed Tier 3";
+	public static String PechTradeTier4 = "Essence of Greed Tier 4";
+	public static String PechTradeTier5 = "Essence of Greed Tier 5";
 
-	public static String MagicTradeTier1 = "Magic Trade Tier 1";
-	public static String MagicTradeTier2 = "Magic Trade Tier 2";
-	public static String MagicTradeTier3 = "Magic Trade Tier 3";
-	public static String MagicTradeTier4 = "Magic Trade Tier 4";
-	public static String MagicTradeTier5 = "Magic Trade Tier 5";
+	public static String MagicTradeTier1 = "Essence of Magic Tier 1";
+	public static String MagicTradeTier2 = "Essence of Magic Tier 2";
+	public static String MagicTradeTier3 = "Essence of Magic Tier 3";
+	public static String MagicTradeTier4 = "Essence of Magic Tier 4";
+	public static String MagicTradeTier5 = "Essence of Magic Tier 5";
 	public static String xpExtractor = "Experience Extractor";
 	public static String IgnisFuel = "Ignis Fuel";
 
@@ -69,13 +74,14 @@ public class TCELocalization {
 	public static String arrowFoci = "Wand Focus: Arrow";
 	public static String healFoci = "Wand Focus: Heal";
 	public static String speedFoci = "Wand Focus: Speed";
-	public static String pechFoci = "Wand Focus: Pech Summon";
 	public static String xpFoci = "Wand Focus: Experience";
 	public static String returnFoci = "Wand Focus: Return";
 	public static String exchangeFoci = "Wand Focus: Exchange";
 	public static String smeltingFoci = "Wand Focus: Smelting";
 	public static String dispelFoci = "Wand Focus: Dispel";
 	public static String destroyFoci = "Wand Focus: Destroy";
+	public static String shieldFoci = "Wand Focus: Shield";
+	public static String freezeFoci = "Wand Focus: Freeze";
 
 	/** Basic Blocks*/
 	public static String ResearchBlock = "Research Block";
@@ -92,8 +98,10 @@ public class TCELocalization {
 	public static String EarthBlock = "Earth Block";
 	public static String WaterBlock = "Water Block";
 	public static String LightBlock = "Light Block";
-
-
+	public static String EnderBlock = "Ender Block";
+	public static String TeleporterBlock = "Teleporter";
+	public static String teslaBlock = "Tesla";
+	
 	/** Edited Blocks */
 	public static String CactusBlock = "Cactus";
 	public static String cactusBlockTexture = "cactus";

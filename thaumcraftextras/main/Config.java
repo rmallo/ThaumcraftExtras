@@ -20,6 +20,9 @@ public class Config {
 	        lightBlockId = config.getBlock("lightBlock", 229).getInt();
 	        ignisFuelBlockId = config.getBlock("ignisFuelBlock", 330).getInt();
 	        cactusBlockId = config.getBlock("cactusBlock", 331).getInt();
+	        enderBlockId = config.getBlock("enderBlock", 332).getInt();
+	        //teslaBlockId = config.getBlock("teslaBlock", 333).getInt();
+	       // teleporterBlockId = config.getBlock("teleporterBlock", 365).getInt();
 
 	        pechTradeTier1Id = config.getItem("pechTradeTier1", 12225).getInt();
 	        pechTradeTier2Id = config.getItem("pechTradeTier2", 12226).getInt();
@@ -38,13 +41,13 @@ public class Config {
 	        arrowFociId = config.getItem("arrowFoci", 13231).getInt();
 	        healFociId = config.getItem("healFoci", 13232).getInt();
 	        speedFociId = config.getItem("speedFoci", 13233).getInt();
-	        pechFociId = config.getItem("pechFoci", 13234).getInt();
 	        xpFociId = config.getItem("xpFoci", 13235).getInt();
 	        returnFociId = config.getItem("returnFoci", 13256).getInt();
 	        exchangeFociId = config.getItem("exchangeFoci", 13257).getInt();
 	        smeltingFociId = config.getItem("smeltingFoci", 13258).getInt();
 	        dispelFociId = config.getItem("dispelFoci", 13259).getInt();
 	        destroyFociId = config.getItem("destoryFoci", 13260).getInt();
+	        freezeFociId = config.getItem("freezeFoci", 13263).getInt();
 
 	        lightShardId = config.getItem("lightShard", 14201).getInt();
 	        emptyShardId = config.getItem("emptyShard", 14202).getInt();
@@ -55,7 +58,6 @@ public class Config {
 	    	arrowFoci = config.get(Configuration.CATEGORY_GENERAL, "arrowFoci", true).getBoolean(arrowFoci);
 	    	healFoci = config.get(Configuration.CATEGORY_GENERAL, "healFoci", true).getBoolean(healFoci);
 	    	speedFoci = config.get(Configuration.CATEGORY_GENERAL, "speedFoci", true).getBoolean(speedFoci);
-	    	pechFoci = config.get(Configuration.CATEGORY_GENERAL, "pechFoci", true).getBoolean(pechFoci);
 	    	fireBlock = config.get(Configuration.CATEGORY_GENERAL, "fireBlock", true).getBoolean(fireBlock);
 	    	earthBlock = config.get(Configuration.CATEGORY_GENERAL, "earthBlock", true).getBoolean(earthBlock);
 	    	waterBlock = config.get(Configuration.CATEGORY_GENERAL, "waterBlock", true).getBoolean(waterBlock);
@@ -69,6 +71,9 @@ public class Config {
 	    	smeltingFoci = config.get(Configuration.CATEGORY_GENERAL, "smeltingFoci", true).getBoolean(smeltingFoci);
 	    	dispelFoci = config.get(Configuration.CATEGORY_GENERAL, "dispelFoci", true).getBoolean(dispelFoci);
 	    	destroyFoci = config.get(Configuration.CATEGORY_GENERAL, "destroyFoci", true).getBoolean(destroyFoci);
+	    	freezeFoci = config.get(Configuration.CATEGORY_GENERAL, "freezeFoci", true).getBoolean(freezeFoci);
+	    	enderBlock = config.get(Configuration.CATEGORY_GENERAL, "enderBlock", true).getBoolean(enderBlock);
+
 	    	config.save();
 }
 	
@@ -80,6 +85,9 @@ public class Config {
     public static int lightBlockId;
     //public static int darkBlockId;
     public static int cactusBlockId;
+    public static int enderBlockId;
+	//public static int teleporterBlockId;
+    public static int teslaBlockId;
     
     public static int pechTradeTier1Id;
     public static int pechTradeTier2Id;
@@ -99,14 +107,14 @@ public class Config {
     public static int arrowFociId;  
     public static int healFociId;
     public static int speedFociId;
-    public static int pechFociId;
     public static int xpFociId;
     public static int returnFociId;
     public static int exchangeFociId;
     public static int smeltingFociId;
     public static int dispelFociId;
     public static int destroyFociId;
-    
+    public static int freezeFociId;
+
     public static int lightShardId;
     public static int emptyShardId;
     public static int xpShardId;
@@ -116,7 +124,6 @@ public class Config {
     public static boolean arrowFoci;
     public static boolean healFoci;
     public static boolean speedFoci;
-    public static boolean pechFoci;
     public static boolean pechTrade;
     public static boolean magicTrade;
     public static boolean fireBlock;
@@ -130,4 +137,6 @@ public class Config {
     public static boolean dispelFoci;
     public static boolean smeltingFoci;
     public static boolean destroyFoci;
+    public static boolean freezeFoci;
+    public static boolean enderBlock;    
 }

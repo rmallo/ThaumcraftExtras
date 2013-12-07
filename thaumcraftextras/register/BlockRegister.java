@@ -1,15 +1,15 @@
 package thaumcraftextras.register;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockCactus;
-import net.minecraft.item.ItemStack;
 import thaumcraftextras.blocks.TCEBlock;
 import thaumcraftextras.blocks.TCEBlockAir;
 import thaumcraftextras.blocks.TCEBlockEarth;
+import thaumcraftextras.blocks.TCEBlockEnder;
 import thaumcraftextras.blocks.TCEBlockFire;
 import thaumcraftextras.blocks.TCEBlockLight;
 import thaumcraftextras.blocks.TCEBlockWater;
 import thaumcraftextras.blocks.TCECactus;
+import thaumcraftextras.blocks.TCETesla;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
@@ -49,9 +49,25 @@ public class BlockRegister {
 		GameRegistry.registerBlock(cactusBlock, "CactusBlock");
 		LanguageRegistry.addName(cactusBlock, TCELocalization.CactusBlock);
 		
+		enderBlock = new TCEBlockEnder(Config.enderBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.EnderBlockTexture);
+		GameRegistry.registerBlock(enderBlock, "EnderBlock");
+		LanguageRegistry.addName(enderBlock, TCELocalization.EnderBlock);
+		
 		ignisFuelBlock = new TCEBlock(Config.ignisFuelBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.IgnisFuelBlockTexture);
 		GameRegistry.registerBlock(ignisFuelBlock, "IgnisFuelBlock");
 		LanguageRegistry.addName(ignisFuelBlock, TCELocalization.IgnisFuelBlock);
+		
+		/*
+		teleporterBlock = new TCETeleporter(Config.teleporterBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.TeleporterBlock);
+		GameRegistry.registerBlock(teleporterBlock, "TeleporterBlock");
+		LanguageRegistry.addName(teleporterBlock, TCELocalization.TeleporterBlock);
+		*/
+		
+		/*
+		teslaBlock = new TCETesla(Config.teslaBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.TeslaBlockTexture);
+		GameRegistry.registerBlock(teslaBlock, "TeslaBlock");
+		LanguageRegistry.addName(teslaBlock, TCELocalization.teslaBlock);
+		*/
 	}
 	
 	public static void recipe()
@@ -69,5 +85,8 @@ public class BlockRegister {
 	public static Block earthBlock;
 	public static Block lightBlock;
 	public static Block cactusBlock;
+	public static Block enderBlock;
 	public static Block ignisFuelBlock;
+	public static Block teleporterBlock;
+	public static Block teslaBlock;
 }

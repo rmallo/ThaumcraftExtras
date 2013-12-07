@@ -28,7 +28,7 @@ public class PechFoci extends ItemFoci {
             	{
             	Random rand = new Random();
             	ep = new EntityPech(world);
-                ep.setLocationAndAngles(player.posX+0.5, player.posY+1, player.posZ+ 0.5,(float)(rand.nextInt(15)* 360) / 16f,0f);              
+            	ep.setPosition(player.posX, player.posY, player.posZ);
                 world.spawnEntityInWorld(ep);
             	}
             }

@@ -1,13 +1,8 @@
 package thaumcraftextras.main;
 
 import net.minecraftforge.common.MinecraftForge;
-import thaumcraftextras.register.AspectRegister;
-import thaumcraftextras.register.BlockRegister;
-import thaumcraftextras.register.CreativeTabRegister;
-import thaumcraftextras.register.ItemRegister;
+import thaumcraftextras.register.GuiHandler;
 import thaumcraftextras.register.ModRegister;
-import thaumcraftextras.register.ThaumcraftRecipeRegister;
-import thaumcraftextras.register.ThaumonomiconRegister;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -18,8 +13,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
-@Mod(modid = "ThaumcraftExtras", name = "ThaumcraftExtras", version = "0.3.2" ,dependencies = "required-after:Thaumcraft")
+@Mod(modid = "ThaumcraftExtras", name = "ThaumcraftExtras", version = "0.4.1" ,dependencies = "required-after:Thaumcraft")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class Main {
 	
@@ -42,6 +38,7 @@ public class Main {
     public void load(FMLInitializationEvent evt)
     {
     	proxy.load();
+        //NetworkRegistry.instance().registerGuiHandler(this, new GuiHandler());
         ModRegister.load();
     	MinecraftForge.EVENT_BUS.register(this);            
     }

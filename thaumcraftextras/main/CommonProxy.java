@@ -1,5 +1,11 @@
 package thaumcraftextras.main;
 
+import thaumcraftextras.register.ParticleRegister;
+import net.minecraft.client.particle.EntityFlameFX;
+import net.minecraft.client.particle.EntityHeartFX;
+import net.minecraft.client.particle.EntityPortalFX;
+import net.minecraft.client.particle.EntitySmokeFX;
+import net.minecraft.client.particle.EntitySnowShovelFX;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -9,8 +15,8 @@ public class CommonProxy {
 	
 	public void load()
 	{
-    	registerParticles();
         registerRenderInformation();
+        registerParticles();
 	}
 	
     public void registerRenderInformation()
@@ -24,9 +30,9 @@ public class CommonProxy {
         return null;
     }
     
-	public void registerParticles()
-	{
-	}
-	
+    public void registerParticles()
+    {
+  
+    }
 }
 

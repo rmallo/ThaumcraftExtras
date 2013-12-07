@@ -1,5 +1,7 @@
 package thaumcraftextras.items.foci;
 
+import java.util.Random;
+
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -11,10 +13,11 @@ import net.minecraft.world.World;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.common.items.wands.ItemWandCasting;
+import thaumcraftextras.register.ParticleRegister;
 
 public class SmeltingFoci extends ItemFoci {
 
-        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 50).add(Aspect.FIRE, 60);
+        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 0).add(Aspect.FIRE, 0);
 
         public SmeltingFoci(int i) {
                 super(i);
@@ -32,6 +35,7 @@ public class SmeltingFoci extends ItemFoci {
             		if(!world.isRemote)
             		{
                     	setSmeltingResult(mop, world, player, itemstack);
+                    	
             		}
                 	}
             	}
@@ -42,18 +46,41 @@ public class SmeltingFoci extends ItemFoci {
         public static void setSmeltingResult(MovingObjectPosition mop, World world, EntityPlayer player, ItemStack itemstack)
         {
             int blockId = world.getBlockId(mop.blockX, mop.blockY, mop.blockZ);
-            ItemStack block = new ItemStack(blockId, 1, 0);
+            ItemStack block = new ItemStack(blockId, 1, world.getBlockMetadata(mop.blockX, mop.blockY, mop.blockZ));
             ItemStack blockAir = new ItemStack(blockId, 1, 0);
             ItemStack sResult = FurnaceRecipes.smelting().getSmeltingResult(block);
+            
             if(sResult != null  && sResult.getItem() instanceof ItemBlock)
             {
-            	world.setBlock(mop.blockX, mop.blockY, mop.blockZ, sResult.itemID);
+            	world.setBlock(mop.blockX, mop.blockY, mop.blockZ, sResult.itemID, sResult.getItemDamage(), 2);
+            	if(blockId != 0)
+    			{
+    			for (int i = 0; i < 4; ++i)
+                {
+    				{
+             		 Random rand2 = new Random();
+             		 ParticleRegister.spawnParticle("flame", world, mop.blockX, mop.blockY + rand2.nextDouble() * 0.5D, mop.blockZ, rand2.nextGaussian(), 0.5D, rand2.nextGaussian());
+    				}
+    			}
+    			}
             }
             else if(sResult != null) 
             {
             	int meta = sResult.getItemDamage();
-        		world.setBlock(mop.blockX, mop.blockY, mop.blockZ, 0);
+        		if(blockId != 0)
+    			{
+    			for (int i = 0; i < 4; ++i)
+                {
+    				{
+             		 Random rand2 = new Random();
+             		 ParticleRegister.spawnParticle("flame", world, mop.blockX, mop.blockY + rand2.nextDouble() * 0.5D, mop.blockZ, rand2.nextGaussian(), 0.5D, rand2.nextGaussian());
+    				}
+    			}
+    			world.setBlock(mop.blockX, mop.blockY, mop.blockZ, 0);
         		player.inventory.addItemStackToInventory(new ItemStack(sResult.itemID, 1, meta));
+    			
+    			}
+        		
             }
         	else if (sResult != block)
         	{

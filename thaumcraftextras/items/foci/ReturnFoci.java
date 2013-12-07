@@ -12,7 +12,7 @@ import thaumcraft.common.items.wands.ItemWandCasting;
 
 public class ReturnFoci extends ItemFoci {
 
-        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 1200);
+        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 2400);
 
         public ReturnFoci(int i) {
                 super(i);
