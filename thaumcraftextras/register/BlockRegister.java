@@ -7,9 +7,10 @@ import thaumcraftextras.blocks.TCEBlockEarth;
 import thaumcraftextras.blocks.TCEBlockEnder;
 import thaumcraftextras.blocks.TCEBlockFire;
 import thaumcraftextras.blocks.TCEBlockLight;
+import thaumcraftextras.blocks.TCEBlockResearch;
 import thaumcraftextras.blocks.TCEBlockWater;
 import thaumcraftextras.blocks.TCECactus;
-import thaumcraftextras.blocks.TCETesla;
+import thaumcraftextras.blocks.ThaumiumGlass;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
@@ -21,7 +22,7 @@ public class BlockRegister {
 	public static void load()
 	{
 
-		researchBlock = new TCEBlock(Config.researchBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ResearchBlockTexture);
+		researchBlock = new TCEBlockResearch(Config.researchBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ResearchBlockTexture);
 		GameRegistry.registerBlock(researchBlock, "ResearchBlock");
 		LanguageRegistry.addName(researchBlock, TCELocalization.ResearchBlock);
 		
@@ -56,6 +57,10 @@ public class BlockRegister {
 		ignisFuelBlock = new TCEBlock(Config.ignisFuelBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.IgnisFuelBlockTexture);
 		GameRegistry.registerBlock(ignisFuelBlock, "IgnisFuelBlock");
 		LanguageRegistry.addName(ignisFuelBlock, TCELocalization.IgnisFuelBlock);
+			
+		thaumiumGlass = new ThaumiumGlass(Config.thaumiumGlassId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ThaumiumGlassTexture);
+		GameRegistry.registerBlock(thaumiumGlass, "ThaumiumGlass");
+		LanguageRegistry.addName(thaumiumGlass, TCELocalization.ThaumiumGlass);
 		
 		/*
 		teleporterBlock = new TCETeleporter(Config.teleporterBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.TeleporterBlock);
@@ -89,4 +94,6 @@ public class BlockRegister {
 	public static Block ignisFuelBlock;
 	public static Block teleporterBlock;
 	public static Block teslaBlock;
+	public static Block thaumiumGlass;
+	public static Block blockBreaker;
 }

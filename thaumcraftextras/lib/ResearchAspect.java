@@ -23,6 +23,7 @@ public class ResearchAspect {
 	public static AspectList dispelFociResearch = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.HEAL, 10).add(Aspect.ORDER, 10).add(Aspect.AURA, 5);
 	public static AspectList destroyFociResearch = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.ORDER, 10).add(Aspect.ENTROPY, 10).add(Aspect.DARKNESS, 5);
 	public static AspectList freezeFociResearch = new AspectList().add(Aspect.MAGIC, 10).add(Aspect.ORDER, 10).add(Aspect.MOTION, 10).add(Aspect.TRAVEL, 5).add(Aspect.ICE, 10).add(Aspect.WEAPON, 10);
+	public static AspectList beamExchangeFociResearch = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.EXCHANGE, 40).add(Aspect.MECHANISM, 5);
 
 	public static AspectList waterBlockResearch = new AspectList().add(Aspect.MAGIC, 10).add(Aspect.WATER, 10);
 	public static AspectList airBlockResearch = new AspectList().add(Aspect.AIR, 10).add(Aspect.MAGIC, 10);
@@ -30,5 +31,12 @@ public class ResearchAspect {
 	public static AspectList fireBlockResearch = new AspectList().add(Aspect.FIRE, 10).add(Aspect.MAGIC, 10);
 	public static AspectList lightBlockResearch = new AspectList().add(Aspect.LIGHT, 10).add(Aspect.MAGIC, 10);
 	public static AspectList enderBlockResearch = new AspectList().add(Aspect.MAGIC, 10).add(Aspect.ENTROPY, 10).add(Aspect.ELDRITCH, 10).add(Aspect.MOTION, 10).add(Aspect.TRAVEL, 5);
+
+	
+	public static AspectList ironRodResearch = new AspectList().add(Aspect.MAGIC, 5).add(Aspect.METAL, 10);
+	public static AspectList goldRodResearch = new AspectList().add(Aspect.MAGIC, 10).add(Aspect.GREED, 10);
+	public static AspectList diamondRodResearch = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.METAL, 10).add(Aspect.GREED, 10).add(Aspect.CRYSTAL, 10);
+
+	public static AspectList wandRodResearch = new AspectList().add(Aspect.MAGIC, 15).add(Aspect.METAL, 10).add(Aspect.GREED, 10).add(Aspect.CRYSTAL, 10).add(Aspect.MOTION, 10).add(Aspect.CRAFT, 5);
 
 }

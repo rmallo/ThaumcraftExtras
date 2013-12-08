@@ -5,15 +5,15 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.world.World;
 import thaumcraftextras.helpers.IconHelper;
 import thaumcraftextras.register.CreativeTabRegister;
 
-public class TCEBlockLight extends Block{
+public class ThaumiumGlass extends Block{
 
-	public TCEBlockLight(int id) {
+	public ThaumiumGlass(int id) {
 		super(id, Material.rock);
 		setCreativeTab(CreativeTabRegister.tabMain);
-		setLightValue(1.0F);
 		setHardness(1.0F);
 	}
 
@@ -34,6 +34,7 @@ public class TCEBlockLight extends Block{
     {
         return false;
     }
+
 
 	@Override
     public void registerIcons(IconRegister par1IconRegister) 

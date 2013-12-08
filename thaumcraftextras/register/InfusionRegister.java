@@ -36,16 +36,16 @@ public class InfusionRegister {
 	
 	public static void recipe()
 	{
-		airBlock = ThaumcraftApi.addArcaneCraftingRecipe("Air Block", new ItemStack(BlockRegister.airBlock), new AspectList().add(Aspect.AIR, 18), new Object[]{
+		airBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.AirBlock, new ItemStack(BlockRegister.airBlock), new AspectList().add(Aspect.AIR, 18), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
-			'X', ConfigItems.itemShard,
+			'X', new ItemStack(ConfigItems.itemShard.itemID, 0, 0),
 			'I', Block.stoneBrick});
 		
 		if(Config.lightBlock = true)
 		{
-		lightBlock = ThaumcraftApi.addArcaneCraftingRecipe("Light Block", new ItemStack(BlockRegister.lightBlock), new AspectList().add(Aspect.FIRE, 2).add(Aspect.AIR, 2), new Object[]{
+		lightBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.LightBlock, new ItemStack(BlockRegister.lightBlock), new AspectList().add(Aspect.FIRE, 2).add(Aspect.AIR, 2), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
@@ -55,7 +55,7 @@ public class InfusionRegister {
 		
 		if(Config.waterBlock = true)
 		{
-		waterBlock = ThaumcraftApi.addArcaneCraftingRecipe("Water Block", new ItemStack(BlockRegister.waterBlock), new AspectList().add(Aspect.WATER, 18), new Object[]{
+		waterBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.EarthBlock, new ItemStack(BlockRegister.waterBlock), new AspectList().add(Aspect.WATER, 18), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
@@ -65,7 +65,7 @@ public class InfusionRegister {
 		
 		if(Config.earthBlock = true)
 		{
-		earthBlock = ThaumcraftApi.addArcaneCraftingRecipe("Earth Block", new ItemStack(BlockRegister.earthBlock), new AspectList().add(Aspect.EARTH, 18), new Object[]{
+		earthBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.EarthBlock, new ItemStack(BlockRegister.earthBlock), new AspectList().add(Aspect.EARTH, 18), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
@@ -75,7 +75,7 @@ public class InfusionRegister {
 		
 		if(Config.fireBlock = true)
 		{
-		fireBlock = ThaumcraftApi.addArcaneCraftingRecipe("Fire Block", new ItemStack(BlockRegister.fireBlock), new AspectList().add(Aspect.FIRE, 18), new Object[]{
+		fireBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.FireBlock, new ItemStack(BlockRegister.fireBlock), new AspectList().add(Aspect.FIRE, 18), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
@@ -85,16 +85,17 @@ public class InfusionRegister {
 		
 		if(Config.lightBlock = true)
 		{
-		lightShardRecipe = ThaumcraftApi.addArcaneCraftingRecipe("Light Shard", new ItemStack(lightShard), new AspectList().add(Aspect.AIR, 2).add(Aspect.FIRE, 2), new Object[]{
+		lightShardRecipe = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.lightShard, new ItemStack(lightShard), new AspectList().add(Aspect.AIR, 2).add(Aspect.FIRE, 2), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
 			'X', Item.coal	,
-			'I', ConfigItems.itemShard});
+			'I', new ItemStack(ConfigItems.itemShard, 0, 0)});
 		}
+		
 		if(Config.enderBlock = true)
 		{
-		enderBlock = ThaumcraftApi.addArcaneCraftingRecipe("Ender Block", new ItemStack(BlockRegister.enderBlock), new AspectList().add(Aspect.ENTROPY, 18), new Object[]{
+		enderBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.EnderBlock, new ItemStack(BlockRegister.enderBlock), new AspectList().add(Aspect.ENTROPY, 18), new Object[]{
 			"   ",
 			"XI ",
 			"   ",

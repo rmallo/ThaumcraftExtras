@@ -51,34 +51,34 @@ public class ThaumonomiconRegister {
 		if(Config.enderFoci = true)
 		{
 		text = "1";
-		research = new ResearchHelper(TCELocalization.enderFoci, "TCE", ResearchAspect.enderFociResearch, -2, -2, 3, new ItemStack(ItemRegister.enderFoci)).setParents("Wand Focus: Arrow").registerResearchItem();
+		research = new ResearchHelper(TCELocalization.enderFoci, "TCE", ResearchAspect.enderFociResearch, -2, -2, 3, new ItemStack(ItemRegister.enderFoci)).setParents("Wand Focus: Arrow").setHidden().registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.enderFoci));
 		}
 		
 		if(Config.healFoci == true)
 		{
 		text = "1";
-		research = new ResearchHelper(TCELocalization.healFoci, "TCE", ResearchAspect.healFociResearch, -3, -2, 3, new ItemStack(ItemRegister.healFoci)).setParents("Wand Focus: Arrow").registerResearchItem();
+		research = new ResearchHelper(TCELocalization.healFoci, "TCE", ResearchAspect.healFociResearch, -3, -2, 3, new ItemStack(ItemRegister.healFoci)).setParents("Wand Focus: Arrow").setHidden().registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.healFoci));
 		}
 		
 		if(Config.speedFoci == true)
 		{
 		text = "1";	
-		research = new ResearchHelper(TCELocalization.speedFoci, "TCE", ResearchAspect.speedFociResearch, -4, -2, 3, new ItemStack(ItemRegister.speedFoci)).setParents("Wand Focus: Arrow").registerResearchItem();
+		research = new ResearchHelper(TCELocalization.speedFoci, "TCE", ResearchAspect.speedFociResearch, -4, -2, 3, new ItemStack(ItemRegister.speedFoci)).setParents("Wand Focus: Arrow").setHidden().registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.speedFoci));
 		}
 		if(Config.xpExtractor == true)
 		{
 		text = "1";
-		research = new ResearchHelper(TCELocalization.xpExtractor, "TCE", ResearchAspect.xpExtractorResearch, -5, 1, 3, new ItemStack(ItemRegister.xpExtractor)).setParents("Wand Focus: Arrow").registerResearchItem();
+		research = new ResearchHelper(TCELocalization.xpExtractor, "TCE", ResearchAspect.xpExtractorResearch, -5, 1, 3, new ItemStack(ItemRegister.xpExtractor)).setParents("Wand Focus: Arrow").setHidden().registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.xpExtractor));
 		}
 		
 		if(Config.xpFoci == true)
 		{
 		text = "1";
-		research = new ResearchHelper(TCELocalization.xpFoci, "TCE", ResearchAspect.xpFociResearch, -6, 1, 3, new ItemStack(ItemRegister.xpFoci)).setParents("Experience Extractor").registerResearchItem();
+		research = new ResearchHelper(TCELocalization.xpFoci, "TCE", ResearchAspect.xpFociResearch, -6, 1, 3, new ItemStack(ItemRegister.xpFoci)).setParents("Experience Extractor").setHidden().registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.xpFoci));
 		}
 		
@@ -135,35 +135,36 @@ public class ThaumonomiconRegister {
 		if(Config.exchangeFoci == true)
 		{
 		text = "1";
-		research = new ResearchHelper(TCELocalization.exchangeFoci, "TCE",  ResearchAspect.exchangeFociResearch, -3, 2, 3, new ItemStack(ItemRegister.exchangeFoci)).setParents("Wand Focus: Arrow").registerResearchItem();
-		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.exchangeFoci));
+		research = new ResearchHelper(TCELocalization.exchangeFoci, "TCE",  ResearchAspect.exchangeFociResearch, -3, 2, 3, new ItemStack(ItemRegister.exchangeFoci)).setParents("Wand Focus: Arrow").setHidden().registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.exchangeFoci), new ResearchPage(ThaumcraftRecipeRegister.beamExchangeFoci));
 		}
 		
 		if(Config.returnFoci == true)
 		{
 		text = "1";
-		research = new ResearchHelper(TCELocalization.returnFoci, "TCE", ResearchAspect.returnFociResearch, -2, -3, 3, new ItemStack(ItemRegister.returnFoci)).setParents("Wand Focus: Blink").registerResearchItem();
+		research = new ResearchHelper(TCELocalization.returnFoci, "TCE", ResearchAspect.returnFociResearch, -4, 2, 3, new ItemStack(ItemRegister.returnFoci)).setParents("Wand Focus: Arrow").setHidden().registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.returnFoci));
 		}	
 		
 		if(Config.smeltingFoci == true)
 		{
 		text = "1";
-		research = new ResearchHelper(TCELocalization.smeltingFoci, "TCE", ResearchAspect.smeltingFociResearch, -3, 3, 3, new ItemStack(ItemRegister.smeltingFoci)).setParents("Wand Focus: Exchange").registerResearchItem();
+		research = new ResearchHelper(TCELocalization.smeltingFoci, "TCE", ResearchAspect.smeltingFociResearch, -2, 2, 3, new ItemStack(ItemRegister.smeltingFoci)).setParents("Wand Focus: Arrow").setHidden().registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.smeltingFoci));
 		}
+		
 		
 		if(Config.dispelFoci == true)
 		{
 		text = "1";
-		research = new ResearchHelper(TCELocalization.dispelFoci, "TCE", ResearchAspect.dispelFociResearch, -5, -1, 3, new ItemStack(ItemRegister.dispelFoci)).setParents("Wand Focus: Arrow").registerResearchItem();
+		research = new ResearchHelper(TCELocalization.dispelFoci, "TCE", ResearchAspect.dispelFociResearch, -5, -1, 3, new ItemStack(ItemRegister.dispelFoci)).setParents("Wand Focus: Arrow").setHidden().registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.dispelFoci));
 		}
 		
 		if(Config.destroyFoci == true)
 		{
 		text = "1";
-		research = new ResearchHelper(TCELocalization.destroyFoci, "TCE", ResearchAspect.destroyFociResearch, -4, 2, 3, new ItemStack(ItemRegister.destroyFoci)).setParents("Wand Focus: Exchange").registerResearchItem();
+		research = new ResearchHelper(TCELocalization.destroyFoci, "THAUMATURGY", ResearchAspect.destroyFociResearch, -2, -4, -3, new ItemStack(ItemRegister.destroyFoci)).setParents("FOCUSEXCAVATION").setHidden().registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.destroyFoci));
 		}
 		
@@ -174,6 +175,9 @@ public class ThaumonomiconRegister {
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.freezeFoci));
 		}
 		
+		text = "1";
+		research = new ResearchHelper("Wand Rods", "THAUMATURGY", ResearchAspect.wandRodResearch, -9, 1, 3, new ItemStack(ItemRegister.goldRodItem)).setParents("ROD_greatwood").setHidden().registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.ironRod), new ResearchPage(ThaumcraftRecipeRegister.goldRod), new ResearchPage(ThaumcraftRecipeRegister.diamondRod));
 	}
 	
 	public static void addPage()

@@ -23,6 +23,7 @@ tce.tag.Wand Focus: Dispel=For when cows just won't do
 tce.tag.Wand Focus: Destroy=From nothing, to nothing
 tce.tag.Wand Focus: Freeze=In your experimentation, you have discovered a block that seems to barely adhere to the laws of dimensions, and is ready to lash out its teleporting energy at the tiniest provocation. Touching it (right click) will teleport you to a random location nearby, and the effect will be greater if you stack another above or below it.
 tce.tag.Ender Block=Locomotive Randomisation
+tce.tag.Wand Rods=Started from the bottom, now where here
 ------Thauminomicon Entry------
 tce.text.Thaumcraft Extras=You found out that there is a lot more in Thaumcraft then you expected. They call this Thaumcraft Extras.
 tce.text.Shard Infusion=You have discovered a method to refine Air Shards by combining them with coal. Doing so makes them radiate a powerful light. Youre sure that uses for this strange material will become obvious with time, but their strange nature makes them unsuitable for creating clusters.
@@ -48,3 +49,9 @@ tce.text.Wand Focus: Dispel=This focus works like a massive shot of fine milk to
 tce.text.Wand Focus: Destroy=This focus harnesses Perdito in its purest form, utterly anniahlating the blocks it is used on. While this could be a helpful tool for mass excavation, extreme care must be taken with its indiscriminate nature.
 tce.text.Wand Focus: Freeze=This wand focus is a more refined version of a standard Frost focus, spewing a gaseous mist of ice instead of a solid projectile. It clings to most enemies and solidifies, freezing them in an immobilising crust of frost. 
 tce.text.Ender Block=In your experimentation, you have discovered a block that seems to barely adhere to the laws of dimensions, and is ready to lash out its teleporting energy at the tiniest provocation. Touching it (right click) will teleport you to a random location nearby, and the effect will be greater if you stack another above or below it.
+tce.text.Wand Rods=While you where researching wand rods you found out there is something that will help you a lot making wands these rods are tiered with different materials and act better on each level of material it is made from.
+------Items------
+item.Wand.ultimate.rod=Ultimate
+item.Wand.iron.rod=Iron
+item.Wand.gold.rod=Gold
+item.Wand.diamond.rod=Diamond

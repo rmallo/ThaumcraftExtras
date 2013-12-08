@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ConfigCategory;
+import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
@@ -12,6 +13,7 @@ import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.config.ConfigResearch;
+import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.lib.CraftingAspects;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
@@ -218,6 +220,40 @@ public class ThaumcraftRecipeRegister {
 			new ItemStack(Block.ice), new ItemStack(Item.snowball)});
 	}
 	
+	if(Config.beamExchangeFoci == true)
+	{
+	beamExchangeFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.beamExchangeFoci, new ItemStack(ItemRegister.beamExchangeFoci),4,
+			CraftingAspects.beamExchangeFoci,
+			new ItemStack(ItemRegister.exchangeFoci), new ItemStack[]{
+			new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.pechTradeTier2), new ItemStack(Item.netherQuartz),
+			new ItemStack(ItemRegister.pechTradeTier2), new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.pechTradeTier2), 
+			new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.pechTradeTier2)});
+	}
+	
+	ironRod = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.ironRod, new ItemStack(ItemRegister.ironRodItem), CraftingAspects.ironRod, new Object[]{
+		"   ",
+		" X ",
+		"X  ",
+		'X', Item.ingotIron});
+	
+	goldRod = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.goldRod, new ItemStack(ItemRegister.goldRodItem), CraftingAspects.goldRod, new Object[]{
+		"   ",
+		" X ",
+		"X  ",
+		'X', Item.ingotGold});
+	
+	diamondRod = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.diamondRod, new ItemStack(ItemRegister.diamondRodItem), CraftingAspects.diamondRod, new Object[]{
+		"   ",
+		" X ",
+		"X  ",
+		'X', Item.diamond});
+	
+	diamondRod = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.diamondRod, new ItemStack(ItemRegister.diamondRodItem), CraftingAspects.diamondRod, new Object[]{
+		"   ",
+		" X ",
+		"X  ",
+		'X', Item.diamond});
+	
 		ignisFuel = ThaumcraftApi.addArcaneCraftingRecipe("Ignis Fuel", new ItemStack(ItemRegister.ignisFuel),	CraftingAspects.ignisFuel,  new Object[]{
 			"Y  ",
 			"X  ",
@@ -231,6 +267,13 @@ public class ThaumcraftRecipeRegister {
 		"XXX",
 		"XXX",
 		'X', ItemRegister.ignisFuel});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.thaumiumGlass, 8), new Object[] {
+		"XIX",
+		"III",
+		"XIX",
+		'X', new ItemStack(ConfigItems.itemResource, 1, 2),
+		'I', Block.glass});
 	}
     
 	public static ShapedArcaneRecipe pechTradeTier1;
@@ -245,6 +288,11 @@ public class ThaumcraftRecipeRegister {
 	public static ShapedArcaneRecipe magicTradeTier5;
 	public static ShapedArcaneRecipe xpExtractor;
 	public static ShapedArcaneRecipe ignisFuel;
+	public static ShapedArcaneRecipe ironRod;
+	public static ShapedArcaneRecipe goldRod;
+	public static ShapedArcaneRecipe diamondRod;
+	public static ShapedArcaneRecipe copperRod;
+	public static ShapedArcaneRecipe tinRod;
 	
 	public static InfusionRecipe enderFoci;
 	public static InfusionRecipe arrowFoci;
@@ -258,4 +306,5 @@ public class ThaumcraftRecipeRegister {
 	public static InfusionRecipe dispelFoci;
 	public static InfusionRecipe destroyFoci;
 	public static InfusionRecipe freezeFoci;
+	public static InfusionRecipe beamExchangeFoci;
 }

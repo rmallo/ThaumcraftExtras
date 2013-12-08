@@ -30,5 +30,11 @@ public class CraftingAspects {
 	public static AspectList dispelFoci = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.HEAL, 10).add(Aspect.ORDER, 10);
 	public static AspectList destroyFoci = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.ORDER, 10).add(Aspect.ENTROPY, 10).add(Aspect.DARKNESS, 5);
 	public static AspectList freezeFoci = new AspectList().add(Aspect.MAGIC, 10).add(Aspect.ICE, 10).add(Aspect.WEAPON, 10).add(Aspect.WATER, 10);
+	public static AspectList beamExchangeFoci = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.EXCHANGE, 40);
+	
+	public static AspectList ironRod = new AspectList().add(Aspect.ORDER, 5).add(Aspect.ENTROPY, 5);
+	public static AspectList goldRod = new AspectList().add(Aspect.ORDER, 10).add(Aspect.ENTROPY, 10);
+	public static AspectList diamondRod = new AspectList().add(Aspect.ORDER, 20).add(Aspect.ENTROPY, 20);
+
 
 }

@@ -21,8 +21,9 @@ public class Config {
 	        ignisFuelBlockId = config.getBlock("ignisFuelBlock", 330).getInt();
 	        cactusBlockId = config.getBlock("cactusBlock", 331).getInt();
 	        enderBlockId = config.getBlock("enderBlock", 332).getInt();
-	        //teslaBlockId = config.getBlock("teslaBlock", 333).getInt();
-	       // teleporterBlockId = config.getBlock("teleporterBlock", 365).getInt();
+	        thaumiumGlassId = config.getBlock("thaumiumGlass", 333).getInt();
+	        //teslaBlockId = config.getBlock("teslaBlock", 335).getInt();
+	       // teleporterBlockId = config.getBlock("teleporterBlock", 366).getInt();
 
 	        pechTradeTier1Id = config.getItem("pechTradeTier1", 12225).getInt();
 	        pechTradeTier2Id = config.getItem("pechTradeTier2", 12226).getInt();
@@ -36,6 +37,11 @@ public class Config {
 	        magicTradeTier4Id = config.getItem("magicTradeTier4", 12233).getInt();
 	        magicTradeTier5Id = config.getItem("magicTradeTier5", 12234).getInt();
 	        ignisFuelId = config.getItem("ignisFuel", 12235).getInt();
+	        ultimateRodId = config.getItem("ultimateRod", 12236).getInt();
+	        ironRodId = config.getItem("ironRod", 12237).getInt();
+	        goldRodId = config.getItem("goldRod", 12238).getInt();
+	        diamondRodId = config.getItem("diamondRod", 12239).getInt();
+	        emeraldRodId = config.getItem("emeraldRod", 12240).getInt();
 
 	        enderFociId = config.getItem("enderFoci", 13230).getInt();
 	        arrowFociId = config.getItem("arrowFoci", 13231).getInt();
@@ -48,6 +54,7 @@ public class Config {
 	        dispelFociId = config.getItem("dispelFoci", 13259).getInt();
 	        destroyFociId = config.getItem("destoryFoci", 13260).getInt();
 	        freezeFociId = config.getItem("freezeFoci", 13263).getInt();
+	        beamExchangeFociId = config.getItem("beamExchangeFoci", 13264).getInt();
 
 	        lightShardId = config.getItem("lightShard", 14201).getInt();
 	        emptyShardId = config.getItem("emptyShard", 14202).getInt();
@@ -73,6 +80,7 @@ public class Config {
 	    	destroyFoci = config.get(Configuration.CATEGORY_GENERAL, "destroyFoci", true).getBoolean(destroyFoci);
 	    	freezeFoci = config.get(Configuration.CATEGORY_GENERAL, "freezeFoci", true).getBoolean(freezeFoci);
 	    	enderBlock = config.get(Configuration.CATEGORY_GENERAL, "enderBlock", true).getBoolean(enderBlock);
+	    	beamExchangeFoci = config.get(Configuration.CATEGORY_GENERAL, "beamExchangeFoci", true).getBoolean(beamExchangeFoci);
 
 	    	config.save();
 }
@@ -88,7 +96,8 @@ public class Config {
     public static int enderBlockId;
 	//public static int teleporterBlockId;
     public static int teslaBlockId;
-    
+	public static int thaumiumGlassId;    
+	
     public static int pechTradeTier1Id;
     public static int pechTradeTier2Id;
     public static int pechTradeTier3Id;
@@ -102,7 +111,12 @@ public class Config {
     public static int magicTradeTier5Id;
     public static int ignisFuelId;
     public static int ignisFuelBlockId;
-    
+    public static int ultimateRodId;
+    public static int ironRodId;
+	public static int goldRodId;
+	public static int diamondRodId;
+	public static int emeraldRodId;
+
     public static int enderFociId;
     public static int arrowFociId;  
     public static int healFociId;
@@ -114,7 +128,8 @@ public class Config {
     public static int dispelFociId;
     public static int destroyFociId;
     public static int freezeFociId;
-
+    public static int beamExchangeFociId;
+    
     public static int lightShardId;
     public static int emptyShardId;
     public static int xpShardId;
@@ -138,5 +153,6 @@ public class Config {
     public static boolean smeltingFoci;
     public static boolean destroyFoci;
     public static boolean freezeFoci;
-    public static boolean enderBlock;    
-}
+    public static boolean enderBlock;
+	public static boolean beamExchangeFoci;
+	}

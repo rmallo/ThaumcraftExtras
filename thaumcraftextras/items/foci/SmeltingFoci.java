@@ -17,7 +17,7 @@ import thaumcraftextras.register.ParticleRegister;
 
 public class SmeltingFoci extends ItemFoci {
 
-        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 0).add(Aspect.FIRE, 0);
+        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 50).add(Aspect.FIRE, 0);
 
         public SmeltingFoci(int i) {
                 super(i);
@@ -35,7 +35,6 @@ public class SmeltingFoci extends ItemFoci {
             		if(!world.isRemote)
             		{
                     	setSmeltingResult(mop, world, player, itemstack);
-                    	
             		}
                 	}
             	}
@@ -77,17 +76,25 @@ public class SmeltingFoci extends ItemFoci {
     				}
     			}
     			world.setBlock(mop.blockX, mop.blockY, mop.blockZ, 0);
-        		player.inventory.addItemStackToInventory(new ItemStack(sResult.itemID, 1, meta));
-    			
+    			dropBlockAsItem(world, mop.blockX, mop.blockY, mop.blockZ, new ItemStack(sResult.itemID, 1, meta));
     			}
-        		
             }
         	else if (sResult != block)
         	{
         		return;
         	}
-
         }
+        
+        public static void dropBlockAsItem(World world, int x, int y, int z, ItemStack itemstack)
+        {
+            float f = 0.7F;
+            double d0 = (double)(world.rand.nextFloat() * f) + (double)(1.0F - f) * 0.5D;
+            double d1 = (double)(world.rand.nextFloat() * f) + (double)(1.0F - f) * 0.5D;
+            double d2 = (double)(world.rand.nextFloat() * f) + (double)(1.0F - f) * 0.5D;
+            EntityItem entityitem = new EntityItem(world, (double)x + d0, (double)y + d1, (double)z + d2, itemstack);
+            world.spawnEntityInWorld(entityitem);
+        }
+        
         @Override
         public String getSortingHelper(ItemStack itemstack) {
                 return "SMELTING";

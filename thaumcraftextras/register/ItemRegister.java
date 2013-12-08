@@ -1,11 +1,19 @@
 package thaumcraftextras.register;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.oredict.OreDictionary;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.wands.WandRod;
+import thaumcraft.common.items.wands.WandRodPrimalOnUpdate;
 import thaumcraftextras.helpers.FuelHelper;
 import thaumcraftextras.helpers.MainHelper;
+import thaumcraftextras.items.RodItem;
 import thaumcraftextras.items.TCEItem;
 import thaumcraftextras.items.XPExtractor;
 import thaumcraftextras.items.foci.ArrowFoci;
+import thaumcraftextras.items.foci.BeamExchangeFoci;
 import thaumcraftextras.items.foci.DestroyFoci;
 import thaumcraftextras.items.foci.DispelFoci;
 import thaumcraftextras.items.foci.EnderFoci;
@@ -13,7 +21,6 @@ import thaumcraftextras.items.foci.ExchangeFoci;
 import thaumcraftextras.items.foci.ExperienceFoci;
 import thaumcraftextras.items.foci.FreezeFoci;
 import thaumcraftextras.items.foci.HealFoci;
-import thaumcraftextras.items.foci.PechFoci;
 import thaumcraftextras.items.foci.ReturnFoci;
 import thaumcraftextras.items.foci.SmeltingFoci;
 import thaumcraftextras.items.foci.SpeedFoci;
@@ -60,7 +67,6 @@ public class ItemRegister {
 		magicTradeTier5 = new TCEItem(Config.magicTradeTier5Id).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.MagicTradeTier5Texture);
 		LanguageRegistry.addName(magicTradeTier5, TCELocalization.MagicTradeTier5);
 		
-		
 		enderFoci = new EnderFoci(Config.enderFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.enderFociTexture);
 		LanguageRegistry.addName(enderFoci, TCELocalization.enderFoci);
 		
@@ -96,6 +102,31 @@ public class ItemRegister {
 		
 		freezeFoci = new FreezeFoci(Config.freezeFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.freezeFociTexture);
 		LanguageRegistry.addName(freezeFoci,  TCELocalization.freezeFoci);
+		
+		beamExchangeFoci = new BeamExchangeFoci(Config.beamExchangeFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.beamExchangeFociTexture);
+		LanguageRegistry.addName(beamExchangeFoci,  TCELocalization.beamExchangeFoci);
+		
+		/** Special Wands */
+		ultimateRodItem = new RodItem(Config.ultimateRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ultimateRodTexture);
+        ultimateRod = new WandRod("ultimate", 999, new ItemStack(ultimateRodItem), 999, new WandRodPrimalOnUpdate(Aspect.ORDER),  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_ultimate.png"));
+        LanguageRegistry.addName(ultimateRodItem, "Ultimate Rod");
+        
+        /** Tier Rods */
+		ironRodItem = new RodItem(Config.ironRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ironRodTexture);
+        ironRod = new WandRod("iron", 60, new ItemStack(ironRodItem), 12,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_iron.png"));
+        LanguageRegistry.addName(ironRodItem, "Iron Rod");
+        
+		goldRodItem = new RodItem(Config.goldRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.goldRodTexture);
+        goldRod = new WandRod("gold", 80, new ItemStack(goldRodItem), 24,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_gold.png"));
+        LanguageRegistry.addName(goldRodItem, "Gold Rod");
+        
+		diamondRodItem = new RodItem(Config.diamondRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.diamondRodTexture);
+        diamondRod = new WandRod("diamond", 200, new ItemStack(diamondRodItem), 50,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_diamond.png"));
+        LanguageRegistry.addName(diamondRodItem, "Diamond Rod");
+        
+		emeraldRodItem = new RodItem(Config.emeraldRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.emeraldRodTexture);
+        emeraldRod = new WandRod("emerald", 190, new ItemStack(emeraldRodItem), 45,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_emerald.png"));
+        LanguageRegistry.addName(emeraldRodItem, "Emerald Rod");
 	}
 	
 	public static void recipe()
@@ -128,4 +159,17 @@ public class ItemRegister {
 	public static Item dispelFoci;
 	public static Item destroyFoci;
 	public static Item freezeFoci;
+	public static Item beamExchangeFoci;
+	
+	public static WandRod ultimateRod;
+	public static WandRod ironRod;
+	public static WandRod goldRod;
+	public static WandRod diamondRod;
+	public static WandRod emeraldRod;
+	
+	public static Item ultimateRodItem;
+	public static Item ironRodItem;
+	public static Item goldRodItem;
+	public static Item diamondRodItem;
+	public static Item emeraldRodItem;
 }

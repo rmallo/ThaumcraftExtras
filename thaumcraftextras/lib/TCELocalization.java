@@ -29,6 +29,7 @@ public class TCELocalization {
 	public static String destroyFociTexture = "destroyFoci";
 	public static String shieldFociTexture = "shieldFoci";
 	public static String freezeFociTexture = "freezeFoci";
+	public static String beamExchangeFociTexture = "beamexchangeFoci";
 
 	/** Block Texture Name */
 	public static String ResearchBlockTexture = "researchblock";
@@ -41,6 +42,8 @@ public class TCELocalization {
 	public static String EarthBlockTexture = "earthblock";
 	public static String LightBlockTexture = "lightblock";
 	public static String EnderBlockTexture = "enderblock";
+	public static String ThaumiumGlassTexture = "thaumiumglass";
+	
 	public static String TeleporterBlockTexture = "teleportblock";
 	
 	public static String TeslaBlockTexture = "teslablock";
@@ -82,11 +85,28 @@ public class TCELocalization {
 	public static String destroyFoci = "Wand Focus: Destroy";
 	public static String shieldFoci = "Wand Focus: Shield";
 	public static String freezeFoci = "Wand Focus: Freeze";
+	public static String beamExchangeFoci = "Wand Focus: Beam Exchange";
+	
+	
+	public static String ultimateRod = "Ultimate Rod";
+	public static String ultimateRodTexture = "ultimaterod";
+	
+	public static String ironRod = "Iron Rod";
+	public static String ironRodTexture = "ironrod";
+	
+	public static String goldRod = "Gold Rod";
+	public static String goldRodTexture = "goldrod";
+	
+	public static String diamondRod = "Diamond Rod";
+	public static String diamondRodTexture = "diamondrod";
+
+	public static String emeraldRodTexture = "emeraldrod";
 
 	/** Basic Blocks*/
 	public static String ResearchBlock = "Research Block";
 	public static String IgnisFuelBlock = "Ignis Fuel Block";
-	
+	public static String ThaumiumGlass = "Thaumium Glass";
+
 	/** Infusion Shards */
 	public static String lightShard = "Light Shard";
 	public static String emptyShard = "Empty Shard";
