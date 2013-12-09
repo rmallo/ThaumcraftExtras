@@ -1,6 +1,10 @@
 package thaumcraftextras.items;
 
+import java.awt.Color;
+
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import thaumcraftextras.helpers.IconHelper;
 import thaumcraftextras.register.CreativeTabRegister;
 
@@ -17,4 +21,5 @@ public class ShardItem extends RodItem{
 	{
         itemIcon = IconHelper.forItem(par1IconRegister, this);
 	}	
+	
 }

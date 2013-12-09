@@ -3,6 +3,7 @@ package thaumcraftextras.register;
 import net.minecraft.block.Block;
 import thaumcraftextras.blocks.TCEBlock;
 import thaumcraftextras.blocks.TCEBlockAir;
+import thaumcraftextras.blocks.TCEBlockColor;
 import thaumcraftextras.blocks.TCEBlockEarth;
 import thaumcraftextras.blocks.TCEBlockEnder;
 import thaumcraftextras.blocks.TCEBlockFire;
@@ -62,6 +63,11 @@ public class BlockRegister {
 		GameRegistry.registerBlock(thaumiumGlass, "ThaumiumGlass");
 		LanguageRegistry.addName(thaumiumGlass, TCELocalization.ThaumiumGlass);
 		
+		//colorBlock = new TCEBlockColor(Config.colorBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ColorBlockTexture);
+		//GameRegistry.registerBlock(colorBlock, "ColorBlock");
+		//LanguageRegistry.addName(colorBlock, TCELocalization.colorBlock);
+		
+		
 		/*
 		teleporterBlock = new TCETeleporter(Config.teleporterBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.TeleporterBlock);
 		GameRegistry.registerBlock(teleporterBlock, "TeleporterBlock");
@@ -95,5 +101,5 @@ public class BlockRegister {
 	public static Block teleporterBlock;
 	public static Block teslaBlock;
 	public static Block thaumiumGlass;
-	public static Block blockBreaker;
+	//public static Block colorBlock;
 }

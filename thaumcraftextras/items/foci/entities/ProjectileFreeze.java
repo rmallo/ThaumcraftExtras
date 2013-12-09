@@ -36,15 +36,6 @@ public class ProjectileFreeze extends EntityThrowable
         {
             	EntityLivingBase hit = (EntityLivingBase)mop.entityHit;
             	hit.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 20*10, 100));
-            	
-            	if(mop.entityHit != null)
-            	{
-              	 for (int i = 0; i < 32; ++i)
-                 {
-              		 Random rand2 = new Random();
-                     ParticleRegister.spawnParticle("snowballpoof", worldObj, this.posX, this.posY + rand2.nextDouble() * 0.0D, this.posZ, rand2.nextGaussian(), 0.2D, rand2.nextGaussian());
-                 }
-            	}
         }
                
 

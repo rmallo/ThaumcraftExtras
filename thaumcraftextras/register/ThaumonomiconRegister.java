@@ -177,7 +177,7 @@ public class ThaumonomiconRegister {
 		
 		text = "1";
 		research = new ResearchHelper("Wand Rods", "THAUMATURGY", ResearchAspect.wandRodResearch, -9, 1, 3, new ItemStack(ItemRegister.goldRodItem)).setParents("ROD_greatwood").setHidden().registerResearchItem();
-		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.ironRod), new ResearchPage(ThaumcraftRecipeRegister.goldRod), new ResearchPage(ThaumcraftRecipeRegister.diamondRod));
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.ironRod), new ResearchPage(ThaumcraftRecipeRegister.goldRod), new ResearchPage(ThaumcraftRecipeRegister.diamondRod), new ResearchPage(ThaumcraftRecipeRegister.emeraldRod));
 	}
 	
 	public static void addPage()

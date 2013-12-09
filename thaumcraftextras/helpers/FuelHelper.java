@@ -12,7 +12,7 @@ public class FuelHelper implements IFuelHandler {
 		else if(fuel.itemID == ConfigItems.itemShard.itemID)
 			return 1700;
 		else if(fuel.itemID == BlockRegister.ignisFuelBlock.blockID)
-			return 15300;
+			return 28800;
 		else
 			return 0;
 }

@@ -17,7 +17,7 @@ import thaumcraftextras.register.ParticleRegister;
 
 public class SmeltingFoci extends ItemFoci {
 
-        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 50).add(Aspect.FIRE, 0);
+        private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 50).add(Aspect.FIRE, 50);
 
         public SmeltingFoci(int i) {
                 super(i);

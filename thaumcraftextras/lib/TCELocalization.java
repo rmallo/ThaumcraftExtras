@@ -43,9 +43,9 @@ public class TCELocalization {
 	public static String LightBlockTexture = "lightblock";
 	public static String EnderBlockTexture = "enderblock";
 	public static String ThaumiumGlassTexture = "thaumiumglass";
-	
+	public static String ColorBlockTexture = "colorblock";
+
 	public static String TeleporterBlockTexture = "teleportblock";
-	
 	public static String TeslaBlockTexture = "teslablock";
 	
 	/** Infusion Shards Textures */
@@ -87,7 +87,8 @@ public class TCELocalization {
 	public static String freezeFoci = "Wand Focus: Freeze";
 	public static String beamExchangeFoci = "Wand Focus: Beam Exchange";
 	
-	
+	public static String pouch = "Colored Focus Pouch";
+
 	public static String ultimateRod = "Ultimate Rod";
 	public static String ultimateRodTexture = "ultimaterod";
 	
@@ -101,6 +102,7 @@ public class TCELocalization {
 	public static String diamondRodTexture = "diamondrod";
 
 	public static String emeraldRodTexture = "emeraldrod";
+	public static String emeraldRod = "Emerald Rod";
 
 	/** Basic Blocks*/
 	public static String ResearchBlock = "Research Block";
@@ -121,7 +123,8 @@ public class TCELocalization {
 	public static String EnderBlock = "Ender Block";
 	public static String TeleporterBlock = "Teleporter";
 	public static String teslaBlock = "Tesla";
-	
+	public static String colorBlock = "Color block";
+
 	/** Edited Blocks */
 	public static String CactusBlock = "Cactus";
 	public static String cactusBlockTexture = "cactus";

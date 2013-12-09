@@ -22,6 +22,7 @@ public class Config {
 	        cactusBlockId = config.getBlock("cactusBlock", 331).getInt();
 	        enderBlockId = config.getBlock("enderBlock", 332).getInt();
 	        thaumiumGlassId = config.getBlock("thaumiumGlass", 333).getInt();
+	       // colorBlockId = config.getBlock("colorBlock", 555).getInt();
 	        //teslaBlockId = config.getBlock("teslaBlock", 335).getInt();
 	       // teleporterBlockId = config.getBlock("teleporterBlock", 366).getInt();
 
@@ -60,6 +61,7 @@ public class Config {
 	        emptyShardId = config.getItem("emptyShard", 14202).getInt();
 	        xpShardId = config.getItem("xpShard", 14203).getInt();
 	        xpExtractorId = config.getItem("xpExtractor", 14204).getInt();
+	        colorPouchId = config.getItem("colorPouch", 14205).getInt();
 
 	        enderFoci = config.get(Configuration.CATEGORY_GENERAL, "enderFoci", true).getBoolean(enderFoci);
 	    	arrowFoci = config.get(Configuration.CATEGORY_GENERAL, "arrowFoci", true).getBoolean(arrowFoci);
@@ -97,6 +99,7 @@ public class Config {
 	//public static int teleporterBlockId;
     public static int teslaBlockId;
 	public static int thaumiumGlassId;    
+	public static int colorBlockId;
 	
     public static int pechTradeTier1Id;
     public static int pechTradeTier2Id;
@@ -134,6 +137,7 @@ public class Config {
     public static int emptyShardId;
     public static int xpShardId;
     public static int xpExtractorId;
+    public static int colorPouchId;
     
     public static boolean enderFoci;
     public static boolean arrowFoci;

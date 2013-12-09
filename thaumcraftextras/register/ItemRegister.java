@@ -3,12 +3,13 @@ package thaumcraftextras.register;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.wands.WandRod;
+import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.items.wands.WandRodPrimalOnUpdate;
 import thaumcraftextras.helpers.FuelHelper;
 import thaumcraftextras.helpers.MainHelper;
+import thaumcraftextras.items.FocusPouchColor;
 import thaumcraftextras.items.RodItem;
 import thaumcraftextras.items.TCEItem;
 import thaumcraftextras.items.XPExtractor;
@@ -106,6 +107,9 @@ public class ItemRegister {
 		beamExchangeFoci = new BeamExchangeFoci(Config.beamExchangeFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.beamExchangeFociTexture);
 		LanguageRegistry.addName(beamExchangeFoci,  TCELocalization.beamExchangeFoci);
 		
+		pouch = new FocusPouchColor(Config.colorPouchId).setCreativeTab(CreativeTabRegister.tabMain);
+		LanguageRegistry.addName(pouch,  TCELocalization.pouch);
+
 		/** Special Wands */
 		ultimateRodItem = new RodItem(Config.ultimateRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ultimateRodTexture);
         ultimateRod = new WandRod("ultimate", 999, new ItemStack(ultimateRodItem), 999, new WandRodPrimalOnUpdate(Aspect.ORDER),  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_ultimate.png"));
@@ -113,19 +117,19 @@ public class ItemRegister {
         
         /** Tier Rods */
 		ironRodItem = new RodItem(Config.ironRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ironRodTexture);
-        ironRod = new WandRod("iron", 60, new ItemStack(ironRodItem), 12,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_iron.png"));
+        ironRod = new WandRod("iron", 65, new ItemStack(ironRodItem), 12,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_iron.png"));
         LanguageRegistry.addName(ironRodItem, "Iron Rod");
         
 		goldRodItem = new RodItem(Config.goldRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.goldRodTexture);
-        goldRod = new WandRod("gold", 80, new ItemStack(goldRodItem), 24,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_gold.png"));
+        goldRod = new WandRod("gold", 60, new ItemStack(goldRodItem), 24,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_gold.png"));
         LanguageRegistry.addName(goldRodItem, "Gold Rod");
         
 		diamondRodItem = new RodItem(Config.diamondRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.diamondRodTexture);
-        diamondRod = new WandRod("diamond", 200, new ItemStack(diamondRodItem), 50,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_diamond.png"));
+        diamondRod = new WandRod("diamond", 90, new ItemStack(diamondRodItem), 50,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_diamond.png"));
         LanguageRegistry.addName(diamondRodItem, "Diamond Rod");
         
 		emeraldRodItem = new RodItem(Config.emeraldRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.emeraldRodTexture);
-        emeraldRod = new WandRod("emerald", 190, new ItemStack(emeraldRodItem), 45,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_emerald.png"));
+        emeraldRod = new WandRod("emerald", 80, new ItemStack(emeraldRodItem), 45,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_emerald.png"));
         LanguageRegistry.addName(emeraldRodItem, "Emerald Rod");
 	}
 	
@@ -133,6 +137,7 @@ public class ItemRegister {
 	{
 	}
 	
+	public static Item pouch;
 	public static Item pechTradeTier1;
 	public static Item pechTradeTier2;
 	public static Item pechTradeTier3;

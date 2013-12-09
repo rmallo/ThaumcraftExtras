@@ -35,6 +35,7 @@ public class CraftingAspects {
 	public static AspectList ironRod = new AspectList().add(Aspect.ORDER, 5).add(Aspect.ENTROPY, 5);
 	public static AspectList goldRod = new AspectList().add(Aspect.ORDER, 10).add(Aspect.ENTROPY, 10);
 	public static AspectList diamondRod = new AspectList().add(Aspect.ORDER, 20).add(Aspect.ENTROPY, 20);
+	public static AspectList emeraldRod = new AspectList().add(Aspect.ORDER, 20).add(Aspect.ENTROPY, 20);
 
 
 }

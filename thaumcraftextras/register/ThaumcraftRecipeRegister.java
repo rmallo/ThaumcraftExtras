@@ -254,6 +254,12 @@ public class ThaumcraftRecipeRegister {
 		"X  ",
 		'X', Item.diamond});
 	
+	emeraldRod = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.emeraldRod, new ItemStack(ItemRegister.emeraldRodItem), CraftingAspects.emeraldRod, new Object[]{
+		"   ",
+		" X ",
+		"X  ",
+		'X', Item.emerald});
+	
 		ignisFuel = ThaumcraftApi.addArcaneCraftingRecipe("Ignis Fuel", new ItemStack(ItemRegister.ignisFuel),	CraftingAspects.ignisFuel,  new Object[]{
 			"Y  ",
 			"X  ",
@@ -291,6 +297,8 @@ public class ThaumcraftRecipeRegister {
 	public static ShapedArcaneRecipe ironRod;
 	public static ShapedArcaneRecipe goldRod;
 	public static ShapedArcaneRecipe diamondRod;
+	public static ShapedArcaneRecipe emeraldRod;
+	
 	public static ShapedArcaneRecipe copperRod;
 	public static ShapedArcaneRecipe tinRod;
 	
