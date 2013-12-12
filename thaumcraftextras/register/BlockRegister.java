@@ -1,6 +1,9 @@
 package thaumcraftextras.register;
 
+import java.awt.Color;
+
 import net.minecraft.block.Block;
+import thaumcraftextras.blocks.ColoredThaumiumBlock;
 import thaumcraftextras.blocks.TCEBlock;
 import thaumcraftextras.blocks.TCEBlockAir;
 import thaumcraftextras.blocks.TCEBlockColor;
@@ -62,8 +65,8 @@ public class BlockRegister {
 		thaumiumGlass = new ThaumiumGlass(Config.thaumiumGlassId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ThaumiumGlassTexture);
 		GameRegistry.registerBlock(thaumiumGlass, "ThaumiumGlass");
 		LanguageRegistry.addName(thaumiumGlass, TCELocalization.ThaumiumGlass);
-		
-		//colorBlock = new TCEBlockColor(Config.colorBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ColorBlockTexture);
+		 
+		//colorBlock = new ColoredThaumiumBlock(Config.colorBlockId);
 		//GameRegistry.registerBlock(colorBlock, "ColorBlock");
 		//LanguageRegistry.addName(colorBlock, TCELocalization.colorBlock);
 		
@@ -101,5 +104,5 @@ public class BlockRegister {
 	public static Block teleporterBlock;
 	public static Block teslaBlock;
 	public static Block thaumiumGlass;
-	//public static Block colorBlock;
+	public static ColoredThaumiumBlock colorBlock;
 }

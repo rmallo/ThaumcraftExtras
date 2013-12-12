@@ -24,7 +24,7 @@ public class ThaumcraftRecipeRegister {
 	{
 	if(Config.pechTrade == true)
 	{
-	pechTradeTier1 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier1), CraftingAspects.pechTradeTier1, new Object[]{
+	pechTradeTier1 = ThaumcraftApi.addArcaneCraftingRecipe("Essence of Greed", new ItemStack(ItemRegister.pechTradeTier1), CraftingAspects.pechTradeTier1, new Object[]{
 		"XXX",
 		"XIX",
 		"XXX",
@@ -33,7 +33,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.pechTrade == true)
 	{
-	pechTradeTier2 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier2), CraftingAspects.pechTradeTier2, new Object[]{
+	pechTradeTier2 = ThaumcraftApi.addArcaneCraftingRecipe("Essence of Greed", new ItemStack(ItemRegister.pechTradeTier2), CraftingAspects.pechTradeTier2, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -41,7 +41,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.pechTrade == true)
 	{
-	pechTradeTier3 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier3), CraftingAspects.pechTradeTier3, new Object[]{
+	pechTradeTier3 = ThaumcraftApi.addArcaneCraftingRecipe("Essence of Greed", new ItemStack(ItemRegister.pechTradeTier3), CraftingAspects.pechTradeTier3, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -49,7 +49,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.pechTrade == true)
 	{
-	pechTradeTier4 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier4), CraftingAspects.pechTradeTier4, new Object[]{
+	pechTradeTier4 = ThaumcraftApi.addArcaneCraftingRecipe("Essence of Greed", new ItemStack(ItemRegister.pechTradeTier4), CraftingAspects.pechTradeTier4, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -57,7 +57,7 @@ public class ThaumcraftRecipeRegister {
 	
 	if(Config.pechTrade == true)
 	{
-	pechTradeTier5 = ThaumcraftApi.addArcaneCraftingRecipe("Pech Trade", new ItemStack(ItemRegister.pechTradeTier5), CraftingAspects.pechTradeTier5, new Object[]{
+	pechTradeTier5 = ThaumcraftApi.addArcaneCraftingRecipe("Essence of Greed", new ItemStack(ItemRegister.pechTradeTier5), CraftingAspects.pechTradeTier5, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -65,7 +65,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.magicTrade == true)
 	{
-	magicTradeTier1 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier1), CraftingAspects.magicTradeTier1, new Object[]{
+	magicTradeTier1 = ThaumcraftApi.addArcaneCraftingRecipe("Essence of Magic", new ItemStack(ItemRegister.magicTradeTier1), CraftingAspects.magicTradeTier1, new Object[]{
 		"XXX",
 		"XIX",
 		"XXX",
@@ -74,7 +74,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.magicTrade == true)
 	{
-	magicTradeTier2 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier2), CraftingAspects.magicTradeTier2, new Object[]{
+	magicTradeTier2 = ThaumcraftApi.addArcaneCraftingRecipe("Essence of Magic", new ItemStack(ItemRegister.magicTradeTier2), CraftingAspects.magicTradeTier2, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -82,7 +82,7 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.magicTrade == true)
 	{
-	magicTradeTier3 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier3), CraftingAspects.magicTradeTier3, new Object[]{
+	magicTradeTier3 = ThaumcraftApi.addArcaneCraftingRecipe("Essence of Magic", new ItemStack(ItemRegister.magicTradeTier3), CraftingAspects.magicTradeTier3, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -90,14 +90,14 @@ public class ThaumcraftRecipeRegister {
 	}
 	if(Config.magicTrade == true)
 	{
-	magicTradeTier4 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier4), CraftingAspects.magicTradeTier4, new Object[]{
+	magicTradeTier4 = ThaumcraftApi.addArcaneCraftingRecipe("Essence of Magic", new ItemStack(ItemRegister.magicTradeTier4), CraftingAspects.magicTradeTier4, new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
 		'X', ItemRegister.magicTradeTier3});
 	}
 	if(Config.magicTrade == true)
-	magicTradeTier5 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Trade", new ItemStack(ItemRegister.magicTradeTier5),	CraftingAspects.magicTradeTier5,  new Object[]{
+	magicTradeTier5 = ThaumcraftApi.addArcaneCraftingRecipe("Essence of Magic", new ItemStack(ItemRegister.magicTradeTier5),	CraftingAspects.magicTradeTier5,  new Object[]{
 		"XXX",
 		"XXX",
 		"XXX",
@@ -260,7 +260,7 @@ public class ThaumcraftRecipeRegister {
 		"X  ",
 		'X', Item.emerald});
 	
-		ignisFuel = ThaumcraftApi.addArcaneCraftingRecipe("Ignis Fuel", new ItemStack(ItemRegister.ignisFuel),	CraftingAspects.ignisFuel,  new Object[]{
+		ignisFuel = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.IgnisFuel, new ItemStack(ItemRegister.ignisFuel),	CraftingAspects.ignisFuel,  new Object[]{
 			"Y  ",
 			"X  ",
 			"   ",

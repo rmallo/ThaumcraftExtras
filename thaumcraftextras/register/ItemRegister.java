@@ -5,11 +5,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.wands.WandRod;
-import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.items.wands.WandRodPrimalOnUpdate;
 import thaumcraftextras.helpers.FuelHelper;
 import thaumcraftextras.helpers.MainHelper;
-import thaumcraftextras.items.FocusPouchColor;
 import thaumcraftextras.items.RodItem;
 import thaumcraftextras.items.TCEItem;
 import thaumcraftextras.items.XPExtractor;
@@ -106,9 +104,6 @@ public class ItemRegister {
 		
 		beamExchangeFoci = new BeamExchangeFoci(Config.beamExchangeFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.beamExchangeFociTexture);
 		LanguageRegistry.addName(beamExchangeFoci,  TCELocalization.beamExchangeFoci);
-		
-		pouch = new FocusPouchColor(Config.colorPouchId).setCreativeTab(CreativeTabRegister.tabMain);
-		LanguageRegistry.addName(pouch,  TCELocalization.pouch);
 
 		/** Special Wands */
 		ultimateRodItem = new RodItem(Config.ultimateRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ultimateRodTexture);
@@ -165,6 +160,7 @@ public class ItemRegister {
 	public static Item destroyFoci;
 	public static Item freezeFoci;
 	public static Item beamExchangeFoci;
+	public static Item beamHealFoci;
 	
 	public static WandRod ultimateRod;
 	public static WandRod ironRod;

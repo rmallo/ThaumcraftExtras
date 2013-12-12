@@ -15,6 +15,7 @@ import thaumcraft.common.Thaumcraft;
 import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.items.wands.ItemWandCasting;
 import thaumcraft.common.lib.Utils;
+import thaumcraftextras.register.ItemRegister;
 import thaumcraftextras.register.ParticleRegister;
 
 public class BeamExchangeFoci extends ItemFoci {	 
@@ -154,8 +155,10 @@ public class BeamExchangeFoci extends ItemFoci {
 
     		world.setBlockMetadataWithNotify(mop.blockX, mop.blockY, mop.blockZ, nextMeta, 2);
 			if(nextMeta -1 >= cap)
-				world.setBlockMetadataWithNotify(mop.blockX, mop.blockY, mop.blockZ, 0, 2);
-			
+			{
+				
+					world.setBlockMetadataWithNotify(mop.blockX, mop.blockY, mop.blockZ, 0, 2);
+			}	
 			if(blockId != 0)
 			{
 			for (int i = 0; i < 4; ++i)

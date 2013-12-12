@@ -30,6 +30,7 @@ public class TCELocalization {
 	public static String shieldFociTexture = "shieldFoci";
 	public static String freezeFociTexture = "freezeFoci";
 	public static String beamExchangeFociTexture = "beamexchangeFoci";
+	public static String beamHealFociTexture = "beamhealFoci";
 
 	/** Block Texture Name */
 	public static String ResearchBlockTexture = "researchblock";
@@ -86,7 +87,8 @@ public class TCELocalization {
 	public static String shieldFoci = "Wand Focus: Shield";
 	public static String freezeFoci = "Wand Focus: Freeze";
 	public static String beamExchangeFoci = "Wand Focus: Beam Exchange";
-	
+	public static String beamHealFoci = "Wand Focus: Beam Heal";
+
 	public static String pouch = "Colored Focus Pouch";
 
 	public static String ultimateRod = "Ultimate Rod";

@@ -41,23 +41,30 @@ public class TCEBlockResearch extends Block{
             ((ItemWandCasting) wand.getItem()).storeAllVis(wand, new AspectList().add(Aspect.AIR, amount).add(Aspect.EARTH, amount).add(Aspect.FIRE, amount).add(Aspect.WATER, amount).add(Aspect.ORDER, amount).add(Aspect.ENTROPY, amount));
             par3List.add(wand);
             
-            amount = 6000;
+            amount = 65*100;
             wand = new ItemStack(ConfigItems.itemWandCasting);
             ((ItemWandCasting) wand.getItem()).setRod(wand, ItemRegister.ironRod);
             ((ItemWandCasting) wand.getItem()).setCap(wand, ConfigItems.WAND_CAP_THAUMIUM);
             ((ItemWandCasting) wand.getItem()).storeAllVis(wand, new AspectList().add(Aspect.AIR, amount).add(Aspect.EARTH, amount).add(Aspect.FIRE, amount).add(Aspect.WATER, amount).add(Aspect.ORDER, amount).add(Aspect.ENTROPY, amount));
             par3List.add(wand);
             
-            amount = 8000;
+            amount = 60*100;
             wand = new ItemStack(ConfigItems.itemWandCasting);
             ((ItemWandCasting) wand.getItem()).setRod(wand, ItemRegister.goldRod);
             ((ItemWandCasting) wand.getItem()).setCap(wand, ConfigItems.WAND_CAP_THAUMIUM);
             ((ItemWandCasting) wand.getItem()).storeAllVis(wand, new AspectList().add(Aspect.AIR, amount).add(Aspect.EARTH, amount).add(Aspect.FIRE, amount).add(Aspect.WATER, amount).add(Aspect.ORDER, amount).add(Aspect.ENTROPY, amount));
             par3List.add(wand);
             
-            amount = 20000;
+            amount = 90*100;
             wand = new ItemStack(ConfigItems.itemWandCasting);
             ((ItemWandCasting) wand.getItem()).setRod(wand, ItemRegister.diamondRod);
+            ((ItemWandCasting) wand.getItem()).setCap(wand, ConfigItems.WAND_CAP_THAUMIUM);
+            ((ItemWandCasting) wand.getItem()).storeAllVis(wand, new AspectList().add(Aspect.AIR, amount).add(Aspect.EARTH, amount).add(Aspect.FIRE, amount).add(Aspect.WATER, amount).add(Aspect.ORDER, amount).add(Aspect.ENTROPY, amount));
+            par3List.add(wand);
+            
+            amount = 80*100;
+            wand = new ItemStack(ConfigItems.itemWandCasting);
+            ((ItemWandCasting) wand.getItem()).setRod(wand, ItemRegister.emeraldRod);
             ((ItemWandCasting) wand.getItem()).setCap(wand, ConfigItems.WAND_CAP_THAUMIUM);
             ((ItemWandCasting) wand.getItem()).storeAllVis(wand, new AspectList().add(Aspect.AIR, amount).add(Aspect.EARTH, amount).add(Aspect.FIRE, amount).add(Aspect.WATER, amount).add(Aspect.ORDER, amount).add(Aspect.ENTROPY, amount));
             par3List.add(wand);

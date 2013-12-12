@@ -61,7 +61,6 @@ public class Config {
 	        emptyShardId = config.getItem("emptyShard", 14202).getInt();
 	        xpShardId = config.getItem("xpShard", 14203).getInt();
 	        xpExtractorId = config.getItem("xpExtractor", 14204).getInt();
-	        colorPouchId = config.getItem("colorPouch", 14205).getInt();
 
 	        enderFoci = config.get(Configuration.CATEGORY_GENERAL, "enderFoci", true).getBoolean(enderFoci);
 	    	arrowFoci = config.get(Configuration.CATEGORY_GENERAL, "arrowFoci", true).getBoolean(arrowFoci);
@@ -132,7 +131,7 @@ public class Config {
     public static int destroyFociId;
     public static int freezeFociId;
     public static int beamExchangeFociId;
-    
+
     public static int lightShardId;
     public static int emptyShardId;
     public static int xpShardId;

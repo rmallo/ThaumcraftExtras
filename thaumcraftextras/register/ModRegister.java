@@ -7,12 +7,12 @@ public class ModRegister {
 
 	public static void load()
 	{
+    	AspectRegister.addAspects();
+    	ItemRegister.load();
+    	ItemRegister.recipe();
     	BlockRegister.load();
     	BlockRegister.recipe();
     	BlockRegister.oreDictionary();
-    	ItemRegister.load();
-    	AspectRegister.addAspects();
-    	ItemRegister.recipe();
     	EntityRegister.load();
     	InfusionRegister.load();
     	InfusionRegister.recipe();
