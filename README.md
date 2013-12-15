@@ -9,7 +9,6 @@ INFO
 Thaumcraft Extras is created by wasliebob.
 Thaumcraft Extras is an addon for Azanor's Thaumcraft.
 
-
 ================
 KNOWN BUGS
 ================
