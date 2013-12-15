@@ -230,35 +230,34 @@ public class ThaumcraftRecipeRegister {
 			new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.pechTradeTier2)});
 	}
 	
-	ironRod = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.ironRod, new ItemStack(ItemRegister.ironRodItem), CraftingAspects.ironRod, new Object[]{
-		"   ",
-		" X ",
+	ironRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.ironRodItem), CraftingAspects.ironRod, new Object[]{
+		"  X",
+		" I ",
 		"X  ",
-		'X', Item.ingotIron});
+		'X', Item.ingotIron,
+		'I', Item.stick});
 	
-	goldRod = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.goldRod, new ItemStack(ItemRegister.goldRodItem), CraftingAspects.goldRod, new Object[]{
-		"   ",
-		" X ",
+	goldRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.goldRodItem), CraftingAspects.goldRod, new Object[]{
+		"  X",
+		" I ",
 		"X  ",
-		'X', Item.ingotGold});
+		'X', Item.ingotGold,
+		'I', Item.stick});
 	
-	diamondRod = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.diamondRod, new ItemStack(ItemRegister.diamondRodItem), CraftingAspects.diamondRod, new Object[]{
-		"   ",
-		" X ",
+	diamondRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.diamondRodItem), CraftingAspects.diamondRod, new Object[]{
+		"  X",
+		" I ",
 		"X  ",
-		'X', Item.diamond});
+		'X', Item.diamond,
+		'I', Item.stick});
 	
-	diamondRod = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.diamondRod, new ItemStack(ItemRegister.diamondRodItem), CraftingAspects.diamondRod, new Object[]{
-		"   ",
-		" X ",
-		"X  ",
-		'X', Item.diamond});
 	
-	emeraldRod = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.emeraldRod, new ItemStack(ItemRegister.emeraldRodItem), CraftingAspects.emeraldRod, new Object[]{
-		"   ",
-		" X ",
+	emeraldRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.emeraldRodItem), CraftingAspects.emeraldRod, new Object[]{
+		"  X",
+		" I ",
 		"X  ",
-		'X', Item.emerald});
+		'X', Item.emerald,
+		'I', Item.stick});
 	
 		ignisFuel = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.IgnisFuel, new ItemStack(ItemRegister.ignisFuel),	CraftingAspects.ignisFuel,  new Object[]{
 			"Y  ",

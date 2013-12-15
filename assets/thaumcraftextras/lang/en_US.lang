@@ -21,7 +21,7 @@ tce.tag.Wand Focus: Return=Bring it back, start a new
 tce.tag.Wand Focus: Smelting=Peaceful fire
 tce.tag.Wand Focus: Dispel=For when cows just won't do
 tce.tag.Wand Focus: Destroy=From nothing, to nothing
-tce.tag.Wand Focus: Freeze=In your experimentation, you have discovered a block that seems to barely adhere to the laws of dimensions, and is ready to lash out its teleporting energy at the tiniest provocation. Touching it (right click) will teleport you to a random location nearby, and the effect will be greater if you stack another above or below it.
+tce.tag.Wand Focus: Freeze=Remorseless Winter
 tce.tag.Ender Block=Locomotive Randomisation
 tce.tag.Wand Rods=Started from the bottom, now where here
 ------Thauminomicon Entry------
@@ -55,3 +55,4 @@ item.Wand.ultimate.rod=Ultimate
 item.Wand.iron.rod=Iron
 item.Wand.gold.rod=Gold
 item.Wand.diamond.rod=Diamond
+item.Wand.emerald.rod=Emerald

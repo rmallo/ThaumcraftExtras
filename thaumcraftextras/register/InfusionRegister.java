@@ -36,7 +36,7 @@ public class InfusionRegister {
 	
 	public static void recipe()
 	{
-		airBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.AirBlock, new ItemStack(BlockRegister.airBlock), new AspectList().add(Aspect.AIR, 18), new Object[]{
+		airBlock = ThaumcraftApi.addArcaneCraftingRecipe("Block Infusion", new ItemStack(BlockRegister.airBlock), new AspectList().add(Aspect.AIR, 18), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
@@ -85,7 +85,7 @@ public class InfusionRegister {
 		
 		if(Config.lightBlock = true)
 		{
-		lightShardRecipe = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.lightShard, new ItemStack(lightShard), new AspectList().add(Aspect.AIR, 2).add(Aspect.FIRE, 2), new Object[]{
+		lightShardRecipe = ThaumcraftApi.addArcaneCraftingRecipe("Shard Infusion", new ItemStack(lightShard), new AspectList().add(Aspect.AIR, 2).add(Aspect.FIRE, 2), new Object[]{
 			"   ",
 			"XI ",
 			"   ",
