@@ -19,6 +19,6 @@ This all will not be removed from the mod because i am sure this will be fixed.
 ================
 CREDITS
 ================
-Wasliebob: Creator of the Thaumcraft Extras.
-TechMac: Making almost all textures for Thaumcraft Extras.
-Translators: Translating Thaumcraft Extras to theire language.
+Wasliebob: Creator of the Thaumcraft Extras. 
+TechMac: Making almost all textures for Thaumcraft Extras. 
+Translators: Translating Thaumcraft Extras to theire language. 
