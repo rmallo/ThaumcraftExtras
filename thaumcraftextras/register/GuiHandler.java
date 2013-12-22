@@ -3,9 +3,12 @@ package thaumcraftextras.register;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import thaumcraftextras.blocks.container.ContainerTeleporter;
-import thaumcraftextras.blocks.gui.GuiTeleporter;
-import thaumcraftextras.blocks.tileEntity.TileEntityTeleporter;
+import thaumcraftextras.blocks.container.ContainerColor;
+import thaumcraftextras.blocks.container.ContainerInfusion;
+import thaumcraftextras.blocks.gui.GuiColor;
+import thaumcraftextras.blocks.gui.GuiInfuseInfo;
+import thaumcraftextras.blocks.tileEntity.TileEntityColor;
+import thaumcraftextras.blocks.tileEntity.TileEntityInfusion;
 import cpw.mods.fml.common.network.IGuiHandler;
 
 
@@ -16,7 +19,9 @@ public class GuiHandler implements IGuiHandler {
         {
                 TileEntity tileEntity = world.getBlockTileEntity(x, y, z);
                 if(id == 0)
-                    return new ContainerTeleporter((TileEntityTeleporter) tileEntity, player.inventory);       
+                	return new ContainerInfusion((TileEntityInfusion) tileEntity, player.inventory);
+                //if(id == 1)
+                	//return new ContainerColor((TileEntityColor) tileEntity, player.inventory);
                 else
                 	return false;
         }
@@ -28,7 +33,9 @@ public class GuiHandler implements IGuiHandler {
         {
                 TileEntity tileEntity = world.getBlockTileEntity(x, y, z);
                 if(id == 0)
-                    return new GuiTeleporter((TileEntityTeleporter) tileEntity, player.inventory);
+                	return new GuiInfuseInfo((TileEntityInfusion) tileEntity, player.inventory);
+                //if(id == 1)
+                	//return new GuiColor((TileEntityColor) tileEntity, player.inventory);
                 else 
                 	return false;
         }

@@ -1,98 +1,116 @@
 package thaumcraftextras.blocks.tileEntity;
 
+import java.awt.List;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 
-public class TileEntityTeleporter extends TileEntity implements IInventory
+public class TileEntityColor extends TileEntity implements IInventory
 {
 	private ItemStack ItemStacks[];
-
-
+	
 	private boolean isActive;
 
 
 	public int front;
 
-	public TileEntityTeleporter()
+	public TileEntityColor()
 	{	
-         ItemStacks = new ItemStack[3];
+      ItemStacks = new ItemStack[3];
 	}
 
 	@Override
 	public int getSizeInventory() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	
 	@Override
 	public ItemStack getStackInSlot(int i) {
-		// TODO Auto-generated method stub
-		return null;
+			return null;
 	}
 
 	@Override
 	public ItemStack decrStackSize(int i, int j) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public ItemStack getStackInSlotOnClosing(int i) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void setInventorySlotContents(int i, ItemStack itemstack) {
-		// TODO Auto-generated method stub
-		
+	public void setInventorySlotContents(int i, ItemStack itemstack) 
+	{		
 	}
 
 	@Override
 	public String getInvName() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public boolean isInvNameLocalized() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public int getInventoryStackLimit() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer entityplayer) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public void openChest() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void closeChest() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	public static String color;
+	
+	
+	public static void setColor(String colorN)
+	{
+		color = colorN;
+	}
+	
+	public String getColor(World world, int x, int y, int z)
+	{
+	     TileEntityColor tile = (TileEntityColor)world.getBlockTileEntity(x, y, z);
+	     if(tile.color == "red")
+	     {
+	    	 return tile.color;
+	     }
+	     return tile.color;
+	}
+	   @Override
+	   public void writeToNBT(NBTTagCompound tag)
+	   {
+		   super.writeToNBT(tag);
+		   tag.setString("1", color);
+	   }
 
+	   @Override
+	   public void readFromNBT(NBTTagCompound tag)
+	   {
+		  super.readFromNBT(tag);
+	      this.color = tag.getString("1");
+	   }
 }

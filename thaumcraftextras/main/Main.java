@@ -14,11 +14,12 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "ThaumcraftExtras", name = "ThaumcraftExtras", version = "0.5.1" ,dependencies = "required-after:Thaumcraft")
+@Mod(modid = "ThaumcraftExtras", name = "ThaumcraftExtras", version = "0.6.1" ,dependencies = "required-after:Thaumcraft")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
+
 public class Main {
-	
     @SidedProxy(clientSide = "thaumcraftextras.client.ClientProxy", serverSide = "thaumcraftextras.main.CommonProxy")
     public static CommonProxy proxy;
  
@@ -38,9 +39,12 @@ public class Main {
     public void load(FMLInitializationEvent evt)
     {
     	proxy.load();
-        //NetworkRegistry.instance().registerGuiHandler(this, new GuiHandler());
+        NetworkRegistry.instance().registerGuiHandler(this, new GuiHandler());
+        GameRegistry.registerTileEntity(thaumcraftextras.blocks.tileEntity.TileEntityInfusion.class, "0");
+    	GameRegistry.registerTileEntity(thaumcraftextras.blocks.tileEntity.TileEntityColor.class, "1");
+    	GameRegistry.registerTileEntity(thaumcraftextras.blocks.tileEntity.TileEntityWarded.class, "2");
         ModRegister.load();
-    	MinecraftForge.EVENT_BUS.register(this);            
+    	MinecraftForge.EVENT_BUS.register(this); 
     }
 
     @PostInit

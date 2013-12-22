@@ -175,9 +175,20 @@ public class ThaumonomiconRegister {
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.freezeFoci));
 		}
 		
+		if(Config.confusionFoci == true)
+		{
+		text = "1";
+		research = new ResearchHelper(TCELocalization.confusionFoci, "TCE", ResearchAspect.confusionFociResearch, -5, 0, 3, new ItemStack(ItemRegister.confusionFoci)).setParents("Wand Focus: Arrow").setHidden().registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.confusionFoci));
+		}
+		
 		text = "1";
 		research = new ResearchHelper("Wand Rods", "THAUMATURGY", ResearchAspect.wandRodResearch, -9, 1, 3, new ItemStack(ItemRegister.goldRodItem)).setParents("ROD_greatwood").setHidden().registerResearchItem();
-		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.ironRod), new ResearchPage(ThaumcraftRecipeRegister.goldRod), new ResearchPage(ThaumcraftRecipeRegister.diamondRod), new ResearchPage(ThaumcraftRecipeRegister.emeraldRod));
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.ironRod), new ResearchPage(ThaumcraftRecipeRegister.goldRod), new ResearchPage(ThaumcraftRecipeRegister.diamondRod), new ResearchPage(ThaumcraftRecipeRegister.emeraldRod), new ResearchPage(ThaumcraftRecipeRegister.candyRod));
+	
+		text = "1";
+		research = new ResearchHelper("Warded Block", "ARTIFICE", ResearchAspect.wardedBlockResearch, 5, -4, 3, new ItemStack(BlockRegister.wardedBlock, 0, 1)).setParents("ARCANESTONE").setHidden().registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.wardedBlock));
 	}
 	
 	public static void addPage()

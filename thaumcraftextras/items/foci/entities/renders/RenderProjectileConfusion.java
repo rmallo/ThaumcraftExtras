@@ -3,28 +3,28 @@ package thaumcraftextras.items.foci.entities.renders;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
+import thaumcraftextras.items.foci.entities.ProjectileConfusion;
 import thaumcraftextras.items.foci.entities.ProjectileFreeze;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RenderProjectileFreeze extends Render
+public class RenderProjectileConfusion extends Render
 {
-    private static final ResourceLocation arrowTextures = new ResourceLocation("thaumcraftextras:textures/entity/projectilefreeze.png");
+    private static final ResourceLocation arrowTextures = new ResourceLocation("thaumcraftextras:textures/entity/projectileconfusion.png");
 
-    public void renderArrow(ProjectileFreeze par1ProjectileFreeze, double par2, double par4, double par6, float par8, float par9)
+    public void renderArrow(ProjectileConfusion proj, double par2, double par4, double par6, float par8, float par9)
     {
-        this.bindEntityTexture(par1ProjectileFreeze);
+        this.bindEntityTexture(proj);
         GL11.glPushMatrix();
         GL11.glTranslatef((float)par2, (float)par4, (float)par6);
-        GL11.glRotatef(par1ProjectileFreeze.prevRotationYaw + (par1ProjectileFreeze.rotationYaw - par1ProjectileFreeze.prevRotationYaw) * par9 - 90.0F, 0.0F, 1.0F, 0.0F);
-        GL11.glRotatef(par1ProjectileFreeze.prevRotationPitch + (par1ProjectileFreeze.rotationPitch - par1ProjectileFreeze.prevRotationPitch) * par9, 0.0F, 0.0F, 1.0F);
+        GL11.glRotatef(proj.prevRotationYaw + (proj.rotationYaw - proj.prevRotationYaw) * par9 - 90.0F, 0.0F, 1.0F, 0.0F);
+        GL11.glRotatef(proj.prevRotationPitch + (proj.rotationPitch - proj.prevRotationPitch) * par9, 0.0F, 0.0F, 1.0F);
         Tessellator tessellator = Tessellator.instance;
         byte b0 = 0;
         float f2 = 0.0F;
@@ -73,18 +73,18 @@ public class RenderProjectileFreeze extends Render
         GL11.glPopMatrix();
     }
 
-    protected ResourceLocation getArrowTextures(ProjectileFreeze par1ProjectileFreeze)
+    protected ResourceLocation getArrowTextures(ProjectileConfusion proj)
     {
         return arrowTextures;
     }
 
     protected ResourceLocation getEntityTexture(Entity par1Entity)
     {
-        return this.getArrowTextures((ProjectileFreeze)par1Entity);
+        return this.getArrowTextures((ProjectileConfusion)par1Entity);
     }
-
+    
     public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9)
     {
-        this.renderArrow((ProjectileFreeze)par1Entity, par2, par4, par6, par8, par9);
+        this.renderArrow((ProjectileConfusion)par1Entity, par2, par4, par6, par8, par9);
     }
 }

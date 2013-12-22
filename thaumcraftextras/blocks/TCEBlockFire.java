@@ -50,8 +50,6 @@ public class TCEBlockFire extends Block{
 	@Override
     public void registerIcons(IconRegister par1IconRegister)
 	{
-		blockIcon = par1IconRegister.registerIcon("thaumcraftextras:" + TCELocalization.FireBlockTexture + "_side");
-	    topIcon = par1IconRegister.registerIcon("thaumcraftextras:" + TCELocalization.FireBlockTexture + "_top");
-	    bottomIcon = par1IconRegister.registerIcon("thaumcraftextras:" + TCELocalization.FireBlockTexture + "_bottom");	
+        blockIcon = IconHelper.forBlock(par1IconRegister, this);
 	}
-	}
+}

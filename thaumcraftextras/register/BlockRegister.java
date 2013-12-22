@@ -1,12 +1,9 @@
 package thaumcraftextras.register;
 
-import java.awt.Color;
-
 import net.minecraft.block.Block;
-import thaumcraftextras.blocks.ColoredThaumiumBlock;
+import thaumcraftextras.blocks.BlockInfusionInfo;
 import thaumcraftextras.blocks.TCEBlock;
 import thaumcraftextras.blocks.TCEBlockAir;
-import thaumcraftextras.blocks.TCEBlockColor;
 import thaumcraftextras.blocks.TCEBlockEarth;
 import thaumcraftextras.blocks.TCEBlockEnder;
 import thaumcraftextras.blocks.TCEBlockFire;
@@ -14,7 +11,9 @@ import thaumcraftextras.blocks.TCEBlockLight;
 import thaumcraftextras.blocks.TCEBlockResearch;
 import thaumcraftextras.blocks.TCEBlockWater;
 import thaumcraftextras.blocks.TCECactus;
+import thaumcraftextras.blocks.TCEWardedBlock;
 import thaumcraftextras.blocks.ThaumiumGlass;
+import thaumcraftextras.blocks.WardedItemBlock;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
@@ -30,7 +29,7 @@ public class BlockRegister {
 		GameRegistry.registerBlock(researchBlock, "ResearchBlock");
 		LanguageRegistry.addName(researchBlock, TCELocalization.ResearchBlock);
 		
-		fireBlock = new TCEBlockFire(Config.fireBlockId);//.setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.FireBlockTexture);
+		fireBlock = new TCEBlockFire(Config.fireBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.FireBlockTexture);
 		GameRegistry.registerBlock(fireBlock, "FireBlock");
 		LanguageRegistry.addName(fireBlock, TCELocalization.FireBlock);
 		
@@ -66,7 +65,15 @@ public class BlockRegister {
 		GameRegistry.registerBlock(thaumiumGlass, "ThaumiumGlass");
 		LanguageRegistry.addName(thaumiumGlass, TCELocalization.ThaumiumGlass);
 		 
-		//colorBlock = new ColoredThaumiumBlock(Config.colorBlockId);
+		infusionInfo = new BlockInfusionInfo(Config.infusionInfoId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.InfusionInfoTexture);
+		GameRegistry.registerBlock(infusionInfo, "InfusionInfo");
+		LanguageRegistry.addName(infusionInfo, TCELocalization.InfusionInfo);
+		
+		wardedBlock = new TCEWardedBlock(Config.wardedBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.WardedBlockTexture);
+		GameRegistry.registerBlock(wardedBlock, WardedItemBlock.class, (wardedBlock.getUnlocalizedName()).substring(5));
+		LanguageRegistry.addName(wardedBlock, TCELocalization.WardedBlock);
+		
+		//colorBlock = new ColoredThaumiumBlock(Config.colorBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ColorBlockTexture);
 		//GameRegistry.registerBlock(colorBlock, "ColorBlock");
 		//LanguageRegistry.addName(colorBlock, TCELocalization.colorBlock);
 		
@@ -104,5 +111,8 @@ public class BlockRegister {
 	public static Block teleporterBlock;
 	public static Block teslaBlock;
 	public static Block thaumiumGlass;
-	public static ColoredThaumiumBlock colorBlock;
+	public static Block infusionInfo;
+	public static Block wardedBlock;
+	
+	public static Block colorBlock;
 }

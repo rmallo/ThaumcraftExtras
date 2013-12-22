@@ -7,7 +7,9 @@ import net.minecraft.client.particle.EntityPortalFX;
 import net.minecraft.client.particle.EntitySmokeFX;
 import net.minecraft.client.particle.EntitySnowShovelFX;
 import net.minecraft.world.World;
+import thaumcraftextras.items.foci.entities.ProjectileConfusion;
 import thaumcraftextras.items.foci.entities.ProjectileFreeze;
+import thaumcraftextras.items.foci.entities.renders.RenderProjectileConfusion;
 import thaumcraftextras.items.foci.entities.renders.RenderProjectileFreeze;
 import thaumcraftextras.main.CommonProxy;
 import thaumcraftextras.register.ParticleRegister;
@@ -27,7 +29,10 @@ public class ClientProxy extends CommonProxy {
 	public void render()
     {
 		 EntityRegistry.registerGlobalEntityID(ProjectileFreeze.class, "projectileFreeze", EntityRegistry.findGlobalUniqueEntityId());
+		 EntityRegistry.registerGlobalEntityID(ProjectileConfusion.class, "projectileConfusion", EntityRegistry.findGlobalUniqueEntityId());
+
 		 RenderingRegistry.registerEntityRenderingHandler(ProjectileFreeze.class, new RenderProjectileFreeze());
+		 RenderingRegistry.registerEntityRenderingHandler(ProjectileConfusion.class, new RenderProjectileConfusion());
     }
 		
 	@Override

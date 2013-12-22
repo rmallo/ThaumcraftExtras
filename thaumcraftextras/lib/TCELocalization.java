@@ -31,7 +31,8 @@ public class TCELocalization {
 	public static String freezeFociTexture = "freezeFoci";
 	public static String beamExchangeFociTexture = "beamexchangeFoci";
 	public static String beamHealFociTexture = "beamhealFoci";
-
+	public static String confusionFociTexture = "confusionFoci";
+	
 	/** Block Texture Name */
 	public static String ResearchBlockTexture = "researchblock";
 	public static String IgnisFuelBlockTexture = "ignisfuelblock";
@@ -45,7 +46,7 @@ public class TCELocalization {
 	public static String EnderBlockTexture = "enderblock";
 	public static String ThaumiumGlassTexture = "thaumiumglass";
 	public static String ColorBlockTexture = "colorblock";
-
+	public static String InfusionInfoTexture = "infoblock";
 	public static String TeleporterBlockTexture = "teleportblock";
 	public static String TeslaBlockTexture = "teslablock";
 	
@@ -88,6 +89,7 @@ public class TCELocalization {
 	public static String freezeFoci = "Wand Focus: Freeze";
 	public static String beamExchangeFoci = "Wand Focus: Beam Exchange";
 	public static String beamHealFoci = "Wand Focus: Beam Heal";
+	public static String confusionFoci = "Wand Focus: Confusion";
 
 	public static String pouch = "Colored Focus Pouch";
 
@@ -106,11 +108,15 @@ public class TCELocalization {
 	public static String emeraldRodTexture = "emeraldrod";
 	public static String emeraldRod = "Emerald Rod";
 
+	public static String candyRodTexture = "candyrod";
+	public static String candyRod = "Candy Rod";
+	
 	/** Basic Blocks*/
 	public static String ResearchBlock = "Research Block";
 	public static String IgnisFuelBlock = "Ignis Fuel Block";
 	public static String ThaumiumGlass = "Thaumium Glass";
-
+	public static String InfusionInfo = "Thaumcraft Extras Info Block";
+	
 	/** Infusion Shards */
 	public static String lightShard = "Light Shard";
 	public static String emptyShard = "Empty Shard";
@@ -130,4 +136,10 @@ public class TCELocalization {
 	/** Edited Blocks */
 	public static String CactusBlock = "Cactus";
 	public static String cactusBlockTexture = "cactus";
+	
+	/** Specials */
+	public static String WardedBlock = "Warded Block";
+	public static String WardedBlockTexture = "warded";
+	
+	
 }

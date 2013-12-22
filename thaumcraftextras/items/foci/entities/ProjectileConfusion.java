@@ -12,19 +12,19 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
-public class ProjectileFreeze extends EntityThrowable
+public class ProjectileConfusion extends EntityThrowable
 {
-    public ProjectileFreeze(World par1World)
+    public ProjectileConfusion(World par1World)
     {
         super(par1World);
     }
 
-    public ProjectileFreeze(World par1World, EntityLivingBase par2EntityLivingBase)
+    public ProjectileConfusion(World par1World, EntityLivingBase par2EntityLivingBase)
     {
         super(par1World, par2EntityLivingBase);
     }
 
-    public ProjectileFreeze(World par1World, double par2, double par4, double par6)
+    public ProjectileConfusion(World par1World, double par2, double par4, double par6)
     {
         super(par1World, par2, par4, par6);
     }
@@ -35,11 +35,9 @@ public class ProjectileFreeze extends EntityThrowable
         if (mop.entityHit != null && mop.entityHit instanceof EntityLiving)
         {
             	EntityLivingBase hit = (EntityLivingBase)mop.entityHit;
-            	hit.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 20*10, 100));
+            	hit.addPotionEffect(new PotionEffect(Potion.confusion.id, 20*10, 100));
         }
-               
-
-   	 
+   	
         if (!this.worldObj.isRemote)
         {
             this.setDead();

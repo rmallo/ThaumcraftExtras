@@ -230,6 +230,16 @@ public class ThaumcraftRecipeRegister {
 			new ItemStack(Item.netherQuartz), new ItemStack(ItemRegister.pechTradeTier2)});
 	}
 	
+	if(Config.confusionFoci == true)
+	{
+	confusionFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.confusionFoci, new ItemStack(ItemRegister.confusionFoci),4,
+			CraftingAspects.confusionFoci,
+			new ItemStack(ItemRegister.confusionFoci), new ItemStack[]{
+			new ItemStack(Item.netherQuartz), new ItemStack(Item.spiderEye), new ItemStack(Item.netherQuartz),
+			new ItemStack(Item.spiderEye), new ItemStack(Item.netherQuartz), new ItemStack(Item.spiderEye), 
+			new ItemStack(Item.netherQuartz), new ItemStack(Item.spiderEye)});
+	}
+	
 	ironRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.ironRodItem), CraftingAspects.ironRod, new Object[]{
 		"  X",
 		" I ",
@@ -259,13 +269,27 @@ public class ThaumcraftRecipeRegister {
 		'X', Item.emerald,
 		'I', Item.stick});
 	
-		ignisFuel = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.IgnisFuel, new ItemStack(ItemRegister.ignisFuel),	CraftingAspects.ignisFuel,  new Object[]{
-			"Y  ",
-			"X  ",
-			"   ",
-			'X', Item.coal,
-			'Y', Item.flint});
-		
+	candyRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.candyRodItem), CraftingAspects.candyRod, new Object[]{
+		"  X",
+		" I ",
+		"X  ",
+		'X', Item.sugar,
+		'I', Item.bucketMilk});
+	
+	ignisFuel = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.IgnisFuel, new ItemStack(ItemRegister.ignisFuel),	CraftingAspects.ignisFuel,  new Object[]{
+		"Y  ",
+		"X  ",
+		"   ",
+		'X', Item.coal,
+		'Y', Item.flint});
+	
+	
+	wardedBlock = ThaumcraftApi.addArcaneCraftingRecipe("Warded Blocks", new ItemStack(BlockRegister.wardedBlock, 8), CraftingAspects.wardedBlockResearch,  new Object[]{
+		"XYX",
+		"YYY",
+		"XYX",
+		'X', new ItemStack(ConfigItems.itemResource, 1, 2),
+		'Y', Block.stone});
 		
 		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.ignisFuelBlock), new Object[] {
 		"XXX",
@@ -279,6 +303,84 @@ public class ThaumcraftRecipeRegister {
 		"XIX",
 		'X', new ItemStack(ConfigItems.itemResource, 1, 2),
 		'I', Block.glass});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.infusionInfo, 1), new Object[] {
+		"XIX",
+		"IYI",
+		"XIX",
+		'X', new ItemStack(Block.blockRedstone),
+		'I', Item.ingotGold,
+		'Y', Block.glass});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.wardedBlock, 8, 1), new Object[] {
+		"XXX",
+		"XYX",
+		"XXX",
+		'Y', new ItemStack(Item.dyePowder, 1, 1),
+		'X', BlockRegister.wardedBlock});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.wardedBlock, 8, 2), new Object[] {
+		"XXX",
+		"XYX",
+		"XXX",
+		'Y', new ItemStack(Item.dyePowder, 1, 4),
+		'X', BlockRegister.wardedBlock});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.wardedBlock, 8, 3), new Object[] {
+		"XXX",
+		"XYX",
+		"XXX",
+		'Y', new ItemStack(Item.dyePowder, 1, 2),
+		'X', BlockRegister.wardedBlock});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.wardedBlock, 8, 4), new Object[] {
+		"XXX",
+		"XYX",
+		"XXX",
+		'Y', new ItemStack(Item.dyePowder, 1, 11),
+		'X', BlockRegister.wardedBlock});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.wardedBlock, 8, 5), new Object[] {
+		"XXX",
+		"XYX",
+		"XXX",
+		'Y', new ItemStack(Item.dyePowder, 1, 3),
+		'X', BlockRegister.wardedBlock});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.wardedBlock, 8, 6), new Object[] {
+		"XXX",
+		"XYX",
+		"XXX",
+		'Y', new ItemStack(Item.dyePowder, 1, 6),
+		'X', BlockRegister.wardedBlock});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.wardedBlock, 8, 7), new Object[] {
+		"XXX",
+		"XYX",
+		"XXX",
+		'Y', new ItemStack(Item.dyePowder, 1, 8),
+		'X', BlockRegister.wardedBlock});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.wardedBlock, 8, 8), new Object[] {
+		"XXX",
+		"XYX",
+		"XXX",
+		'Y', new ItemStack(Item.dyePowder, 1, 14),
+		'X', BlockRegister.wardedBlock});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.wardedBlock, 8, 9), new Object[] {
+		"XXX",
+		"XYX",
+		"XXX",
+		'Y', new ItemStack(Item.dyePowder, 1, 9),
+		'X', BlockRegister.wardedBlock});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.wardedBlock, 8, 10), new Object[] {
+		"XXX",
+		"XYX",
+		"XXX",
+		'Y', new ItemStack(Item.dyePowder, 1, 5),
+		'X', BlockRegister.wardedBlock});
 	}
     
 	public static ShapedArcaneRecipe pechTradeTier1;
@@ -297,6 +399,8 @@ public class ThaumcraftRecipeRegister {
 	public static ShapedArcaneRecipe goldRod;
 	public static ShapedArcaneRecipe diamondRod;
 	public static ShapedArcaneRecipe emeraldRod;
+	public static ShapedArcaneRecipe candyRod;
+	public static ShapedArcaneRecipe wardedBlock;
 	
 	public static ShapedArcaneRecipe copperRod;
 	public static ShapedArcaneRecipe tinRod;
@@ -314,4 +418,5 @@ public class ThaumcraftRecipeRegister {
 	public static InfusionRecipe destroyFoci;
 	public static InfusionRecipe freezeFoci;
 	public static InfusionRecipe beamExchangeFoci;
+	public static InfusionRecipe confusionFoci;
 }
