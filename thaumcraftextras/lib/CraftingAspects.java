@@ -18,7 +18,7 @@ public class CraftingAspects {
 	public static AspectList magicTradeTier5 = new AspectList().add(Aspect.ORDER, 15);
 	public static AspectList xpExtractor = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.LIFE, 1).add(Aspect.LIFE, 10).add(Aspect.EXCHANGE, 5);
 	public static AspectList ignisFuel = new AspectList().add(Aspect.FIRE, 5);
-	public static AspectList wardedBlockResearch = new AspectList().add(Aspect.MAGIC, 10).add(Aspect.LIFE, 5).add(Aspect.STONE, 5);
+	public static AspectList wardedBlock = new AspectList().add(Aspect.AIR, 10).add(Aspect.ORDER, 5).add(Aspect.FIRE, 5);
 
 	public static AspectList enderFoci = new AspectList().add(Aspect.MAGIC, 50).add(Aspect.ELDRITCH, 50).add(Aspect.ENTROPY, 25);
 	public static AspectList arrowFoci = new AspectList().add(Aspect.MAGIC, 20).add(Aspect.AIR, 20).add(Aspect.WEAPON, 10);
@@ -33,7 +33,8 @@ public class CraftingAspects {
 	public static AspectList freezeFoci = new AspectList().add(Aspect.MAGIC, 10).add(Aspect.ICE, 10).add(Aspect.WEAPON, 10).add(Aspect.WATER, 10);
 	public static AspectList beamExchangeFoci = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.EXCHANGE, 40);
 	public static AspectList confusionFoci = new AspectList().add(Aspect.MAGIC, 10).add(Aspect.SOUL, 10).add(Aspect.DARKNESS, 10).add(Aspect.ELDRITCH, 8);
-	
+	public static AspectList snowFoci = new AspectList().add(Aspect.MAGIC, 10).add(Aspect.WATER, 10).add(Aspect.ICE, 10).add(Aspect.WEAPON, 8);
+
 	public static AspectList ironRod = new AspectList().add(Aspect.ORDER, 5).add(Aspect.ENTROPY, 5);
 	public static AspectList goldRod = new AspectList().add(Aspect.ORDER, 10).add(Aspect.ENTROPY, 10);
 	public static AspectList diamondRod = new AspectList().add(Aspect.ORDER, 20).add(Aspect.ENTROPY, 20);

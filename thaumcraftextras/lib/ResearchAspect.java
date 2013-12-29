@@ -25,6 +25,7 @@ public class ResearchAspect {
 	public static AspectList freezeFociResearch = new AspectList().add(Aspect.MAGIC, 10).add(Aspect.ORDER, 10).add(Aspect.MOTION, 10).add(Aspect.TRAVEL, 5).add(Aspect.ICE, 10).add(Aspect.WEAPON, 10);
 	public static AspectList beamExchangeFociResearch = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.EXCHANGE, 40).add(Aspect.MECHANISM, 5);
 	public static AspectList confusionFociResearch = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.DARKNESS, 10).add(Aspect.POISON, 5).add(Aspect.WEAPON, 10);
+	public static AspectList eventFociResearch = new AspectList().add(Aspect.MAGIC, 25).add(Aspect.FIRE, 10).add(Aspect.AURA, 5).add(Aspect.WEAPON, 10).add(Aspect.CRYSTAL, 10);
 
 	public static AspectList waterBlockResearch = new AspectList().add(Aspect.MAGIC, 10).add(Aspect.WATER, 10);
 	public static AspectList airBlockResearch = new AspectList().add(Aspect.AIR, 10).add(Aspect.MAGIC, 10);

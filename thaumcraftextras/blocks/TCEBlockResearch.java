@@ -33,7 +33,7 @@ public class TCEBlockResearch extends Block{
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List) {
             super.getSubBlocks(par1, par2CreativeTabs, par3List);
-            amount = 99999;
+            amount = 99999*100;
             ItemStack wand;
             wand = new ItemStack(ConfigItems.itemWandCasting);
             ((ItemWandCasting) wand.getItem()).setRod(wand, ItemRegister.ultimateRod);

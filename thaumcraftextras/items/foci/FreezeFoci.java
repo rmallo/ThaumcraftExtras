@@ -40,7 +40,7 @@ public class FreezeFoci extends ItemFoci {
 
         @Override
         public int getFocusColor() {
-                return 0xCCFF66;
+                return 0x00FFFF;
         }
 
         @Override

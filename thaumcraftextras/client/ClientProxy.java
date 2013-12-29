@@ -7,6 +7,7 @@ import net.minecraft.client.particle.EntityPortalFX;
 import net.minecraft.client.particle.EntitySmokeFX;
 import net.minecraft.client.particle.EntitySnowShovelFX;
 import net.minecraft.world.World;
+import thaumcraft.client.renderers.tile.TileArcaneLampRenderer;
 import thaumcraftextras.items.foci.entities.ProjectileConfusion;
 import thaumcraftextras.items.foci.entities.ProjectileFreeze;
 import thaumcraftextras.items.foci.entities.renders.RenderProjectileConfusion;
@@ -14,6 +15,7 @@ import thaumcraftextras.items.foci.entities.renders.RenderProjectileFreeze;
 import thaumcraftextras.main.CommonProxy;
 import thaumcraftextras.register.ParticleRegister;
 import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 
@@ -28,13 +30,13 @@ public class ClientProxy extends CommonProxy {
 	
 	public void render()
     {
-		 EntityRegistry.registerGlobalEntityID(ProjectileFreeze.class, "projectileFreeze", EntityRegistry.findGlobalUniqueEntityId());
-		 EntityRegistry.registerGlobalEntityID(ProjectileConfusion.class, "projectileConfusion", EntityRegistry.findGlobalUniqueEntityId());
+		 //EntityRegistry.registerGlobalEntityID(ProjectileFreeze.class, "projectileFreeze", EntityRegistry.findGlobalUniqueEntityId());
+		 //EntityRegistry.registerGlobalEntityID(ProjectileConfusion.class, "projectileConfusion", EntityRegistry.findGlobalUniqueEntityId());
 
 		 RenderingRegistry.registerEntityRenderingHandler(ProjectileFreeze.class, new RenderProjectileFreeze());
 		 RenderingRegistry.registerEntityRenderingHandler(ProjectileConfusion.class, new RenderProjectileConfusion());
     }
-		
+	
 	@Override
     public World getClientWorld()
     {

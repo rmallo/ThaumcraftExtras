@@ -16,6 +16,7 @@ public class TCELocalization {
 	public static String MagicTradeTier5Texture = "magictradetier5";
 	
 	public static String IgnisFuelTexture = "ignisfuel";
+	public static String WardedUnlockerTexture = "wardedunlocker";
 
 	public static String enderFociTexture = "enderFoci";
 	public static String arrowFociTexture = "arrowFoci";
@@ -32,7 +33,9 @@ public class TCELocalization {
 	public static String beamExchangeFociTexture = "beamexchangeFoci";
 	public static String beamHealFociTexture = "beamhealFoci";
 	public static String confusionFociTexture = "confusionFoci";
-	
+	public static String snowFociTexture = "snowballFoci";
+	public static String fireworkFociTexture = "fireworkFoci";
+
 	/** Block Texture Name */
 	public static String ResearchBlockTexture = "researchblock";
 	public static String IgnisFuelBlockTexture = "ignisfuelblock";
@@ -44,7 +47,6 @@ public class TCELocalization {
 	public static String EarthBlockTexture = "earthblock";
 	public static String LightBlockTexture = "lightblock";
 	public static String EnderBlockTexture = "enderblock";
-	public static String ThaumiumGlassTexture = "thaumiumglass";
 	public static String ColorBlockTexture = "colorblock";
 	public static String InfusionInfoTexture = "infoblock";
 	public static String TeleporterBlockTexture = "teleportblock";
@@ -74,6 +76,7 @@ public class TCELocalization {
 	public static String MagicTradeTier5 = "Essence of Magic Tier 5";
 	public static String xpExtractor = "Experience Extractor";
 	public static String IgnisFuel = "Ignis Fuel";
+	public static String WardedUnlocker = "Warded Unlocker";
 
 	public static String enderFoci = "Wand Focus: Blink";
 	public static String arrowFoci = "Wand Focus: Arrow";
@@ -90,8 +93,8 @@ public class TCELocalization {
 	public static String beamExchangeFoci = "Wand Focus: Beam Exchange";
 	public static String beamHealFoci = "Wand Focus: Beam Heal";
 	public static String confusionFoci = "Wand Focus: Confusion";
-
-	public static String pouch = "Colored Focus Pouch";
+	public static String snowFoci = "Wand Focus: Snowball";
+	public static String fireworkFoci = "Wand Focus: Firework";
 
 	public static String ultimateRod = "Ultimate Rod";
 	public static String ultimateRodTexture = "ultimaterod";
@@ -114,7 +117,6 @@ public class TCELocalization {
 	/** Basic Blocks*/
 	public static String ResearchBlock = "Research Block";
 	public static String IgnisFuelBlock = "Ignis Fuel Block";
-	public static String ThaumiumGlass = "Thaumium Glass";
 	public static String InfusionInfo = "Thaumcraft Extras Info Block";
 	
 	/** Infusion Shards */
@@ -137,9 +139,36 @@ public class TCELocalization {
 	public static String CactusBlock = "Cactus";
 	public static String cactusBlockTexture = "cactus";
 	
+	/** Magic Energy */
+	public static String magicEnergy = "Magicka Energy";
+	public static String me = "MCKE";
+	
+	/** Items */
+	public static String magicCrystal  = "Magic Crystal";
+	public static String magicCrystalTexture  = "magiccrystal";
+
+	/** Blocks */
+	public static String magicCharger = "Magic Charger";
+	public static String magicChargerTexture  = "magiccharger";
+	
+	public static String exchanger = "Exchanger";
+	public static String exchangerTexture  = "exchanger";
+	
 	/** Specials */
 	public static String WardedBlock = "Warded Block";
+	public static String WardedSlab = "Warded Slab";
+	public static String WardedCarpet = "Warded Carpet";
+	public static String WardedWall = "Warded Wall";
+	public static String WardedGlass = "Warded Glass";
+	public static String WardedPilar = "Warded Pilar";
+	public static String WardedCover = "Warded Cover";
+
 	public static String WardedBlockTexture = "warded";
-	
-	
+	public static String WardedSlabTexture = "wardedslab";
+	public static String WardedCarpetTexture = "wardedcarpet";
+	public static String WardedWallTexture = "wardedwall";
+	public static String WardedGlassTexture = "wardedglass";
+	public static String WardedPilarTexture = "wardedpilar";
+	public static String WardedCoverTexture = "wardedcover";
+
 }

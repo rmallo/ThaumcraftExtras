@@ -1,15 +1,11 @@
 package thaumcraftextras.register;
 
-import java.util.Date;
-
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import thaumcraft.api.aspects.Aspect;
-import thaumcraft.api.wands.WandCap;
 import thaumcraft.api.wands.WandRod;
 import thaumcraft.common.items.wands.WandRodPrimalOnUpdate;
-import thaumcraftextras.blocks.container.ContainerInfusion;
 import thaumcraftextras.helpers.FuelHelper;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.items.RodItem;
@@ -27,6 +23,7 @@ import thaumcraftextras.items.foci.FreezeFoci;
 import thaumcraftextras.items.foci.HealFoci;
 import thaumcraftextras.items.foci.ReturnFoci;
 import thaumcraftextras.items.foci.SmeltingFoci;
+import thaumcraftextras.items.foci.SnowballFoci;
 import thaumcraftextras.items.foci.SpeedFoci;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
@@ -113,9 +110,13 @@ public class ItemRegister {
 		confusionFoci = new ConfusionFoci(Config.confusionFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.confusionFociTexture);
 		LanguageRegistry.addName(confusionFoci,  TCELocalization.confusionFoci);
 		
+		snowFoci = new SnowballFoci(Config.snowballFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.snowFociTexture);
+		LanguageRegistry.addName(snowFoci,  TCELocalization.snowFoci);
+		
+		
 		/** Special Wands */
 		ultimateRodItem = new RodItem(Config.ultimateRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ultimateRodTexture);
-        ultimateRod = new WandRod("ultimate", 999, new ItemStack(ultimateRodItem), 999, new WandRodPrimalOnUpdate(Aspect.ORDER),  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_ultimate.png"));
+        ultimateRod = new WandRod("ultimate", 99999, new ItemStack(ultimateRodItem), 999, new WandRodPrimalOnUpdate(Aspect.ORDER),  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_ultimate.png"));
         LanguageRegistry.addName(ultimateRodItem, "Ultimate Rod");
         
         /** Tier Rods */
@@ -162,6 +163,7 @@ public class ItemRegister {
 	public static Item ignisFuel;
 	public static Item xpExtractor;
 	
+	
 	public static Item enderFoci;
 	public static Item arrowFoci;
 	public static Item healFoci;
@@ -176,6 +178,8 @@ public class ItemRegister {
 	public static Item beamExchangeFoci;
 	public static Item beamHealFoci;
 	public static Item confusionFoci;
+	public static Item fireworkFoci;
+	public static Item snowFoci;
 	
 	public static WandRod ultimateRod;
 	public static WandRod ironRod;

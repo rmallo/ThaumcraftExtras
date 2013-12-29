@@ -17,7 +17,7 @@ public class AspectRegister{
 		ThaumcraftApi.registerObjectTag(Config.waterBlockId , -1, new AspectList().add(Aspect.WATER, 4));
 		ThaumcraftApi.registerObjectTag(Config.earthBlockId , -1, new AspectList().add(Aspect.EARTH, 4));
 		ThaumcraftApi.registerObjectTag(Config.enderBlockId , -1, new AspectList().add(Aspect.ENTROPY, 10).add(Aspect.ENTROPY, 5));
-		ThaumcraftApi.registerObjectTag(Config.thaumiumGlassId, -1, new AspectList().add(Aspect.METAL, 5).add(Aspect.METAL, 5).add(Aspect.CRYSTAL, 5));
+		ThaumcraftApi.registerObjectTag(Config.wardedGlassId, -1, new AspectList().add(Aspect.METAL, 5).add(Aspect.METAL, 5).add(Aspect.CRYSTAL, 5));
 		//ThaumcraftApi.registerObjectTag(Config.darkBlockId , -1, new AspectList().add(Aspect.DARKNESS, 18));
 		
 		ThaumcraftApi.registerObjectTag(Config.pechTradeTier1Id, -1, new AspectList().add(Aspect.EXCHANGE, 2).add(Aspect.GREED, 2));

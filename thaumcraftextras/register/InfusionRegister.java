@@ -7,6 +7,7 @@ import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
+import thaumcraft.api.crafting.ShapelessArcaneRecipe;
 import thaumcraft.common.Thaumcraft;
 import thaumcraft.common.config.ConfigItems;
 import thaumcraftextras.helpers.MainHelper;
@@ -36,84 +37,70 @@ public class InfusionRegister {
 	
 	public static void recipe()
 	{
-		airBlock = ThaumcraftApi.addArcaneCraftingRecipe("Block Infusion", new ItemStack(BlockRegister.airBlock), new AspectList().add(Aspect.AIR, 18), new Object[]{
-			"   ",
-			"XI ",
-			"   ",
-			'X', new ItemStack(ConfigItems.itemShard.itemID, 0, 0),
-			'I', Block.stoneBrick});
+		airBlock = ThaumcraftApi.addShapelessArcaneCraftingRecipe("Block Infusion",
+				new ItemStack(BlockRegister.airBlock),
+				new AspectList().add(Aspect.AIR, 18), Block.stoneBrick, 
+				new ItemStack(ConfigItems.itemShard, 1, 0));
 		
 		if(Config.lightBlock = true)
 		{
-		lightBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.LightBlock, new ItemStack(BlockRegister.lightBlock), new AspectList().add(Aspect.FIRE, 2).add(Aspect.AIR, 2), new Object[]{
-			"   ",
-			"XI ",
-			"   ",
-			'X', lightShard,
-			'I', Block.stoneBrick});
+			lightBlock = ThaumcraftApi.addShapelessArcaneCraftingRecipe(TCELocalization.LightBlock, 
+					new ItemStack(BlockRegister.lightBlock), new AspectList().add(Aspect.FIRE, 2).add(Aspect.AIR, 2), 
+					Block.stoneBrick, 
+					lightShard);
 		}
 		
 		if(Config.waterBlock = true)
 		{
-		waterBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.EarthBlock, new ItemStack(BlockRegister.waterBlock), new AspectList().add(Aspect.WATER, 18), new Object[]{
-			"   ",
-			"XI ",
-			"   ",
-			'X', new ItemStack(ConfigItems.itemShard, 2, 2),
-			'I', Block.stoneBrick});
+			waterBlock = ThaumcraftApi.addShapelessArcaneCraftingRecipe(TCELocalization.WaterBlock, 
+					new ItemStack(BlockRegister.waterBlock), new AspectList().add(Aspect.WATER, 2), 
+					Block.stoneBrick, 
+					new ItemStack(ConfigItems.itemShard, 1, 2));
 		}
 		
 		if(Config.earthBlock = true)
 		{
-		earthBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.EarthBlock, new ItemStack(BlockRegister.earthBlock), new AspectList().add(Aspect.EARTH, 18), new Object[]{
-			"   ",
-			"XI ",
-			"   ",
-			'X', new ItemStack(ConfigItems.itemShard, 3, 3),
-			'I', Block.stoneBrick});
+			earthBlock = ThaumcraftApi.addShapelessArcaneCraftingRecipe(TCELocalization.EarthBlock, 
+					new ItemStack(BlockRegister.earthBlock), new AspectList().add(Aspect.EARTH, 2), 
+					Block.stoneBrick, 
+					new ItemStack(ConfigItems.itemShard, 1, 3));
 		}
 		
 		if(Config.fireBlock = true)
 		{
-		fireBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.FireBlock, new ItemStack(BlockRegister.fireBlock), new AspectList().add(Aspect.FIRE, 18), new Object[]{
-			"   ",
-			"XI ",
-			"   ",
-			'X', new ItemStack(ConfigItems.itemShard, 1, 1),
-			'I', Block.stoneBrick});
+			fireBlock = ThaumcraftApi.addShapelessArcaneCraftingRecipe(TCELocalization.FireBlock, 
+					new ItemStack(BlockRegister.fireBlock), new AspectList().add(Aspect.FIRE, 2), 
+					Block.stoneBrick, 
+					new ItemStack(ConfigItems.itemShard, 1, 1));
 		}
 		
 		if(Config.lightBlock = true)
 		{
-		lightShardRecipe = ThaumcraftApi.addArcaneCraftingRecipe("Shard Infusion", new ItemStack(lightShard), new AspectList().add(Aspect.AIR, 2).add(Aspect.FIRE, 2), new Object[]{
-			"   ",
-			"XI ",
-			"   ",
-			'X', Item.coal	,
-			'I', new ItemStack(ConfigItems.itemShard, 0, 0)});
+			lightShardRecipe = ThaumcraftApi.addShapelessArcaneCraftingRecipe("Shard Infusion", 
+					new ItemStack(lightShard), new AspectList().add(Aspect.AIR, 2), 
+					Item.coal, 
+					new ItemStack(ConfigItems.itemShard, 1, 0));
 		}
 		
 		if(Config.enderBlock = true)
 		{
-		enderBlock = ThaumcraftApi.addArcaneCraftingRecipe(TCELocalization.EnderBlock, new ItemStack(BlockRegister.enderBlock), new AspectList().add(Aspect.ENTROPY, 18), new Object[]{
-			"   ",
-			"XI ",
-			"   ",
-			'X', Item.enderPearl,
-			'I', Block.stoneBrick});
+			enderBlock = ThaumcraftApi.addShapelessArcaneCraftingRecipe(TCELocalization.EnderBlock, 
+					new ItemStack(BlockRegister.enderBlock), new AspectList().add(Aspect.ENTROPY, 2), 
+					Block.stoneBrick, 
+					Item.enderPearl);
 		}
 		
 		}
 	
 
-	public static ShapedArcaneRecipe airBlock;
-	public static ShapedArcaneRecipe fireBlock;
-	public static ShapedArcaneRecipe waterBlock;
-	public static ShapedArcaneRecipe earthBlock;
-	public static ShapedArcaneRecipe lightBlock;
-	public static ShapedArcaneRecipe enderBlock;
+	public static ShapelessArcaneRecipe airBlock;
+	public static ShapelessArcaneRecipe fireBlock;
+	public static ShapelessArcaneRecipe waterBlock;
+	public static ShapelessArcaneRecipe earthBlock;
+	public static ShapelessArcaneRecipe lightBlock;
+	public static ShapelessArcaneRecipe enderBlock;
 	
-	public static ShapedArcaneRecipe lightShardRecipe;
+	public static ShapelessArcaneRecipe lightShardRecipe;
 	
 	public static Item lightShard;
 	public static Item xpShard;

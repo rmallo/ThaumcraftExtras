@@ -1,6 +1,9 @@
 package thaumcraftextras.register;
 
+import net.minecraft.item.Item;
+import thaumcraftextras.api.ChargerFunctions;
 import thaumcraftextras.helpers.LanguageConverting;
+import thaumcraftextras.helpers.ModSupportHelper;
 
 
 public class ModRegister {
@@ -16,6 +19,7 @@ public class ModRegister {
     	EntityRegister.load();
     	InfusionRegister.load();
     	InfusionRegister.recipe();
+    	MCKERegister.load();
     	ThaumcraftRecipeRegister.load();
     	CreativeTabRegister.load();
 	}

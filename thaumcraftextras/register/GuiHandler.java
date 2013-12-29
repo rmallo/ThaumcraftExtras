@@ -3,11 +3,14 @@ package thaumcraftextras.register;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import thaumcraftextras.blocks.container.ContainerColor;
+import thaumcraftextras.blocks.container.ContainerCharger;
+import thaumcraftextras.blocks.container.ContainerExchanger;
 import thaumcraftextras.blocks.container.ContainerInfusion;
-import thaumcraftextras.blocks.gui.GuiColor;
+import thaumcraftextras.blocks.gui.GuiCharger;
+import thaumcraftextras.blocks.gui.GuiExchanger;
 import thaumcraftextras.blocks.gui.GuiInfuseInfo;
-import thaumcraftextras.blocks.tileEntity.TileEntityColor;
+import thaumcraftextras.blocks.tileEntity.TileEntityCharger;
+import thaumcraftextras.blocks.tileEntity.TileEntityExchanger;
 import thaumcraftextras.blocks.tileEntity.TileEntityInfusion;
 import cpw.mods.fml.common.network.IGuiHandler;
 
@@ -20,8 +23,10 @@ public class GuiHandler implements IGuiHandler {
                 TileEntity tileEntity = world.getBlockTileEntity(x, y, z);
                 if(id == 0)
                 	return new ContainerInfusion((TileEntityInfusion) tileEntity, player.inventory);
-                //if(id == 1)
-                	//return new ContainerColor((TileEntityColor) tileEntity, player.inventory);
+                if(id == 4)
+                	return new ContainerCharger((TileEntityCharger) tileEntity, player.inventory);
+                if(id == 5)
+                	return new ContainerExchanger((TileEntityExchanger) tileEntity, player.inventory);
                 else
                 	return false;
         }
@@ -34,8 +39,10 @@ public class GuiHandler implements IGuiHandler {
                 TileEntity tileEntity = world.getBlockTileEntity(x, y, z);
                 if(id == 0)
                 	return new GuiInfuseInfo((TileEntityInfusion) tileEntity, player.inventory);
-                //if(id == 1)
-                	//return new GuiColor((TileEntityColor) tileEntity, player.inventory);
+                if(id == 4)
+                	return new GuiCharger((TileEntityCharger) tileEntity, player.inventory);
+                if(id == 5)
+                	return new GuiExchanger((TileEntityExchanger) tileEntity, player.inventory);
                 else 
                 	return false;
         }
