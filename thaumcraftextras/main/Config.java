@@ -29,15 +29,21 @@ public class Config {
 	        wardedWallId = config.getBlock("wardedWall", 338).getInt();
 	        wardedPillarId = config.getBlock("wardedPillar", 339).getInt();
 	        wardedCoverId = config.getBlock("wardedCover", 400).getInt();
+	        hiddenWardedId = config.getBlock("hiddenWarded", 410).getInt();
 
 	        mckChargerId = config.getBlock("mckCharger", 420).getInt();
 	        exchangerId = config.getBlock("exchanger", 421).getInt();
+	        cableId = config.getBlock("cable", 423).getInt();
 
 	        //colorBlockId = config.getBlock("colorBlock", 336).getInt();
 	        //teslaBlockId = config.getBlock("teslaBlock", 337).getInt();
 	       // teleporterBlockId = config.getBlock("teleporterBlock", 368).getInt();
 
 	        magicCrystalId = config.getItem("magicCrystal", 11200).getInt();
+	        magicCrystal2Id = config.getItem("magicCrystal2", 11201).getInt();
+	        magicCrystal3Id = config.getItem("magicCrystal3", 11202).getInt();
+	        magicCrystal4Id = config.getItem("magicCrystal4", 11203).getInt();
+	        magicCrystal5Id = config.getItem("magicCrystal5", 11204).getInt();
 
 	        pechTradeTier1Id = config.getItem("pechTradeTier1", 12225).getInt();
 	        pechTradeTier2Id = config.getItem("pechTradeTier2", 12226).getInt();
@@ -59,6 +65,9 @@ public class Config {
 	        diamondRodId = config.getItem("diamondRod", 12239).getInt();
 	        emeraldRodId = config.getItem("emeraldRod", 12240).getInt();
 	        candyRodId = config.getItem("candyRod", 12241).getInt();
+	        angelRodId = config.getItem("angelRod", 12242).getInt();
+	        devilRodId = config.getItem("devilRod", 12243).getInt();
+	        godRodId = config.getItem("godRod", 12244).getInt();
 
 	        enderFociId = config.getItem("enderFoci", 13230).getInt();
 	        arrowFociId = config.getItem("arrowFoci", 13231).getInt();
@@ -74,11 +83,13 @@ public class Config {
 	        beamExchangeFociId = config.getItem("beamExchangeFoci", 13264).getInt();
 	        confusionFociId = config.getItem("confusionFoci", 13265).getInt();
 	        snowballFociId = config.getItem("snowballFoci", 13266).getInt();
+	        cleanFociId = config.getItem("cleanFoci", 13267).getInt();
 
 	        lightShardId = config.getItem("lightShard", 14201).getInt();
 	        emptyShardId = config.getItem("emptyShard", 14202).getInt();
 	        xpShardId = config.getItem("xpShard", 14203).getInt();
 	        xpExtractorId = config.getItem("xpExtractor", 14204).getInt();
+	        //colorPouchId = config.getItem("colorPouch", 14205).getInt();
 
 	        enderFoci = config.get(Configuration.CATEGORY_GENERAL, "enderFoci", true).getBoolean(enderFoci);
 	    	arrowFoci = config.get(Configuration.CATEGORY_GENERAL, "arrowFoci", true).getBoolean(arrowFoci);
@@ -105,6 +116,7 @@ public class Config {
 	    	wardedBlocks = config.get(Configuration.CATEGORY_GENERAL, "wardedBlocks", true).getBoolean(wardedBlocks);
 	    	wandRods = config.get(Configuration.CATEGORY_GENERAL, "wandRods", true).getBoolean(wandRods);
 	    	ignisFuel = config.get(Configuration.CATEGORY_GENERAL, "ignisFuel", true).getBoolean(ignisFuel);
+	    	cleanFoci = config.get(Configuration.CATEGORY_GENERAL, "cleanFoci", true).getBoolean(cleanFoci);
 
 	    	config.save();
 }
@@ -129,10 +141,18 @@ public class Config {
 	public static int wardedGlassId;
 	public static int wardedPillarId;
 	public static int wardedCoverId;
-
+	public static int hiddenWardedId;
+	
 	public static int magicCrystalId;
+	public static int magicCrystal2Id;
+	public static int magicCrystal3Id;
+	public static int magicCrystal4Id;
+	public static int magicCrystal5Id;
+
+
 	public static int mckChargerId;
 	public static int exchangerId;
+	public static int cableId;
 
     public static int pechTradeTier1Id;
     public static int pechTradeTier2Id;
@@ -148,14 +168,17 @@ public class Config {
     
     public static int ignisFuelId;
     public static int ignisFuelBlockId;
-    
+
     public static int ultimateRodId;
     public static int ironRodId;
 	public static int goldRodId;
 	public static int diamondRodId;
 	public static int emeraldRodId;
 	public static int candyRodId;
-	
+	public static int angelRodId;
+	public static int devilRodId;
+	public static int godRodId;
+
     public static int enderFociId;
     public static int arrowFociId;  
     public static int healFociId;
@@ -170,12 +193,13 @@ public class Config {
     public static int beamExchangeFociId;
     public static int confusionFociId;
     public static int snowballFociId;
+    public static int cleanFociId;
 
     public static int lightShardId;
     public static int emptyShardId;
     public static int xpShardId;
     public static int xpExtractorId;
-    public static int colorPouchId;
+    //public static int colorPouchId;
     
     public static boolean enderFoci;
     public static boolean arrowFoci;
@@ -202,4 +226,5 @@ public class Config {
 	public static boolean wandRods;
 	public static boolean wardedBlocks;
 	public static boolean ignisFuel;
+	public static boolean cleanFoci;
 	}

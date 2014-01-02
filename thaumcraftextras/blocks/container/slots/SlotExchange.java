@@ -17,16 +17,16 @@ public class SlotExchange extends Slot {
 
         @Override
         public boolean isItemValid(ItemStack par1ItemStack) {
-        	return true;
+        	return false;
         }
 
         @Override
         public int getSlotStackLimit() {
-                return 1;
+                return 64;
         }
 
         @Override
         public boolean canTakeStack(EntityPlayer par1EntityPlayer) {
-        	return false;
+        	return true;
         }
 }

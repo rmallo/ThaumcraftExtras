@@ -10,13 +10,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import thaumcraftextras.helpers.IconHelper;
+import thaumcraftextras.main.Config;
 
 public class MagicCrystal extends TCEItem{
 
 	public MagicCrystal(int id) {
 		super(id);
 		setMaxStackSize(1);
-        setMaxDamage(50);
+		setMaxDamage(50);
 	}
 	
 	@Override
@@ -27,14 +28,14 @@ public class MagicCrystal extends TCEItem{
 	
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean id)
-	{
+	{		
 		list.add("Chargeable Crystal");
 	}
 	
 	@Override
 	public void getSubItems(int id, CreativeTabs tabs, List list)
 	{
-		list.add(new ItemStack(id, 1, 50));     
+		list.add(new ItemStack(id, 1, 50));      
 	}
 	
 }

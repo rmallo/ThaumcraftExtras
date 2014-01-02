@@ -1,7 +1,8 @@
 package thaumcraftextras.blocks.tileEntity;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -9,9 +10,11 @@ import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.Packet132TileEntityData;
 import net.minecraft.tileentity.TileEntity;
+import thaumcraftextras.api.functions.ChargerFunctions;
+import thaumcraftextras.api.functions.ExchangerFunctions;
 import cpw.mods.fml.common.network.PacketDispatcher;
 
-public class TileEntityExchanger extends TileEntity implements ISidedInventory
+public class TileEntityExchanger extends TileEntity implements IInventory
 {
     
 	ItemStack ItemStacks[]; 
@@ -22,8 +25,90 @@ public class TileEntityExchanger extends TileEntity implements ISidedInventory
     
     public TileEntityExchanger()
     {
-    	ItemStacks = new ItemStack[2];
+    	ItemStacks = new ItemStack[3];
     	chargeTime = 60;
+    }
+    
+    @Override
+    public void updateEntity()
+    {
+    	if(!this.worldObj.isRemote)
+    	{
+    		if(getStackInSlot(0) != null && getStackInSlot(1) != null)
+    		{
+    			Item inExchangeSlot = getStackInSlot(0).getItem();
+    			Item inBatterySlot = getStackInSlot(1).getItem();
+
+    			ItemStack inExchangeSlotStack = getStackInSlot(0);
+    			ItemStack inBatterySlotStack = getStackInSlot(1);
+
+				Item item;
+				item = inBatterySlot;
+				int getDamage = item.getDamage(inBatterySlotStack);
+
+				if(hashmapContains(inExchangeSlot) && ChargerFunctions.isChargeAble.contains(inBatterySlot) && getDamage >= 1 && getDamage < inBatterySlot.getMaxDamage())
+				{					
+    				if(chargeTime > 0)
+    					chargeTime--;
+    				
+    				if(chargeTime <= 0)
+    				{
+	    				Item item2;
+	    				item2 = inExchangeSlot;
+	    				int getItemDamage = item2.getDamage(inExchangeSlotStack);
+	        					
+	    				if(getItemDamage +1 <= getValue(item2) && ItemStacks[2] != null && getItemDamage != getStackInSlot(2).getItem().getDamage(getStackInSlot(2)))
+	    				{
+							ItemStacks[2] = new ItemStack(inExchangeSlot, ItemStacks[2].stackSize +1, getItemDamage + 1);
+	    					if(ItemStacks[0].stackSize != 1){
+	    						ItemStacks[0] = new ItemStack(inExchangeSlot, ItemStacks[0].stackSize - 1, getItemDamage);
+	    					}else{
+	    						ItemStacks[0] = null;
+	    					}
+	    					item.setDamage(inBatterySlotStack, getDamage + 1);
+	    					chargeTime = 60;
+	    				}
+	    				else if(getItemDamage +1 >= getValue(item2) && ItemStacks[2] != null && getItemDamage != getStackInSlot(2).getItem().getDamage(getStackInSlot(2)))
+	    				{
+	    					ItemStacks[2] = new ItemStack(inExchangeSlot, ItemStacks[2].stackSize +1, 0);
+	    					if(ItemStacks[0].stackSize != 1){
+	    						ItemStacks[0] = new ItemStack(inExchangeSlot, ItemStacks[0].stackSize - 1, getItemDamage);
+	    					}else{
+	    						ItemStacks[0] = null;
+	    					}		    				
+	    					item.setDamage(inBatterySlotStack, getDamage + 1);
+	    					chargeTime = 60;
+	    				}
+	    				else if(getItemDamage +1 <= getValue(item2) && ItemStacks[2] == null)
+	    				{
+	    					ItemStacks[2] = new ItemStack(inExchangeSlot, 1, getItemDamage + 1);
+	    					if(ItemStacks[0].stackSize != 1){
+	    						ItemStacks[0] = new ItemStack(inExchangeSlot, ItemStacks[0].stackSize - 1, getItemDamage);
+	    					}else{
+	    						ItemStacks[0] = null;
+	    					}		    				
+	    					item.setDamage(inBatterySlotStack, getDamage + 1);
+	    					chargeTime = 60;
+	    				}
+	    				else if(getItemDamage +1 >= getValue(item2) && ItemStacks[2] == null)
+	    				{
+	    					ItemStacks[2] = new ItemStack(inExchangeSlot, 1, 0);
+	    					if(ItemStacks[0].stackSize != 1){
+	    						ItemStacks[0] = new ItemStack(inExchangeSlot, ItemStacks[0].stackSize - 1, getItemDamage);
+	    					}else{
+	    						ItemStacks[0] = null;
+	    					}
+	    					item.setDamage(inBatterySlotStack, getDamage + 1);
+	    					chargeTime = 60;
+	    				}
+	    				else
+	    				{
+	    					chargeTime = 60;
+	    				}
+    				}
+				}
+    		}
+    	}
     }
     
 	@Override
@@ -109,7 +194,7 @@ public class TileEntityExchanger extends TileEntity implements ISidedInventory
 	@Override
 	public int getInventoryStackLimit()
 	{
-		return 1;
+		return 64;
 	}
 	
 
@@ -131,10 +216,10 @@ public class TileEntityExchanger extends TileEntity implements ISidedInventory
      public void readFromNBT(NBTTagCompound tagCompound) {
              super.readFromNBT(tagCompound);
             
-             NBTTagList tagList = tagCompound.getTagList("Inventory2");
+             NBTTagList tagList = tagCompound.getTagList("Inventory");
              for (int i = 0; i < tagList.tagCount(); i++) {
                      NBTTagCompound tag = (NBTTagCompound) tagList.tagAt(i);
-                     byte slot = tag.getByte("Slot2");
+                     byte slot = tag.getByte("Slot");
                      if (slot >= 0 && slot < ItemStacks.length) {
                              ItemStacks[slot] = ItemStack.loadItemStackFromNBT(tag);
                      }
@@ -150,12 +235,12 @@ public class TileEntityExchanger extends TileEntity implements ISidedInventory
                      ItemStack stack = ItemStacks[i];
                      if (stack != null) {
                              NBTTagCompound tag = new NBTTagCompound();
-                             tag.setByte("Slot2", (byte) i);
+                             tag.setByte("Slot", (byte) i);
                              stack.writeToNBT(tag);
                              itemList.appendTag(tag);
                      }
              }
-             tagCompound.setTag("Inventory2", itemList);
+             tagCompound.setTag("Inventory", itemList);
      }
      
      @Override
@@ -193,31 +278,20 @@ public class TileEntityExchanger extends TileEntity implements ISidedInventory
          return player.getDistanceSq((double)xCoord + 0.5D, (double)yCoord + 0.5D, (double)zCoord + 0.5D) <= 64D;
  	}
  	
-	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) 
-	{
-        return true;
-	}
+
+	  
+	  public boolean hashmapContains(Item item)
+	  {
+		  return ExchangerFunctions.canExchange.containsKey(item);
+	  }
+	  
+	  public int getValue(Item item)
+	  {
+		  return ExchangerFunctions.canExchange.get(item);
+	  }
 
 	@Override
-	public int[] getAccessibleSlotsFromSide(int side) 
-	{
-		switch(side)
-		{
-		case 0: return slots_bottom;
-		case 1: return slots_top;
-		case 2: return slots_sides;
-		default: return null;
-		}
-	}
-
-	@Override
-	public boolean canInsertItem(int i, ItemStack itemstack, int j) {
-		return true;
-	}
-
-	@Override
-	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
+	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
 		return false;
 	}
 }

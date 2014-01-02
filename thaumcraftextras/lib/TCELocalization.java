@@ -35,6 +35,8 @@ public class TCELocalization {
 	public static String confusionFociTexture = "confusionFoci";
 	public static String snowFociTexture = "snowballFoci";
 	public static String fireworkFociTexture = "fireworkFoci";
+	public static String cleanFociTexture = "cleanFoci";
+	public static String entityFociTexture = "entityFoci";
 
 	/** Block Texture Name */
 	public static String ResearchBlockTexture = "researchblock";
@@ -95,6 +97,8 @@ public class TCELocalization {
 	public static String confusionFoci = "Wand Focus: Confusion";
 	public static String snowFoci = "Wand Focus: Snowball";
 	public static String fireworkFoci = "Wand Focus: Firework";
+	public static String cleanFoci = "Wand Focus: Clean";
+	public static String entityFoci = "Wand Focus: Entity Transporter";
 
 	public static String ultimateRod = "Ultimate Rod";
 	public static String ultimateRodTexture = "ultimaterod";
@@ -114,6 +118,15 @@ public class TCELocalization {
 	public static String candyRodTexture = "candyrod";
 	public static String candyRod = "Candy Rod";
 	
+	public static String angelRodTexture = "angelrod";
+	public static String angelRod = "Angel Rod";
+	
+	public static String devilRodTexture = "devilrod";
+	public static String devilRod = "Devil Rod";
+	
+	public static String godRodTexture = "godrod";
+	public static String godRod = "God Rod";
+	
 	/** Basic Blocks*/
 	public static String ResearchBlock = "Research Block";
 	public static String IgnisFuelBlock = "Ignis Fuel Block";
@@ -123,7 +136,8 @@ public class TCELocalization {
 	public static String lightShard = "Light Shard";
 	public static String emptyShard = "Empty Shard";
 	public static String xpShard = "Experience Shard";
-
+	public static String colorPouch = "Focus Pouch";
+	
 	 /** Infusion blocks */
 	public static String FireBlock = "Fire Block";
 	public static String AirBlock = "Air Block";
@@ -151,8 +165,17 @@ public class TCELocalization {
 	public static String magicCharger = "Magic Charger";
 	public static String magicChargerTexture  = "magiccharger";
 	
+	public static String smelter = "Magic Smelter";
+	public static String smelterTexture  = "smelter";
+	
 	public static String exchanger = "Exchanger";
 	public static String exchangerTexture  = "exchanger";
+	
+	public static String generator = "Generator";
+	public static String generatorTexture  = "generator";
+	
+	public static String cable = "Magic Cable";
+	public static String cableTexture  = "cable";
 	
 	/** Specials */
 	public static String WardedBlock = "Warded Block";
@@ -162,6 +185,7 @@ public class TCELocalization {
 	public static String WardedGlass = "Warded Glass";
 	public static String WardedPilar = "Warded Pilar";
 	public static String WardedCover = "Warded Cover";
+	public static String HiddenWarded = "Hidden Warded";
 
 	public static String WardedBlockTexture = "warded";
 	public static String WardedSlabTexture = "wardedslab";
@@ -170,5 +194,6 @@ public class TCELocalization {
 	public static String WardedGlassTexture = "wardedglass";
 	public static String WardedPilarTexture = "wardedpilar";
 	public static String WardedCoverTexture = "wardedcover";
+	public static String HiddenWardedTexture = "hiddenwarded";
 
 }

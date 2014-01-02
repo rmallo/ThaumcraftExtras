@@ -5,9 +5,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import thaumcraftextras.blocks.container.slots.SlotChargeable;
 import thaumcraftextras.blocks.container.slots.SlotExchange;
-import thaumcraftextras.blocks.tileEntity.TileEntityCharger;
 import thaumcraftextras.blocks.tileEntity.TileEntityExchanger;
 
 public class ContainerExchanger extends Container {
@@ -18,9 +16,10 @@ public class ContainerExchanger extends Container {
         public ContainerExchanger(TileEntityExchanger tileI, InventoryPlayer inventory) {
                 super();
                 this.tile = tileI;
-                
-                this.addSlotToContainer(new SlotExchange(tile, 0, 79, 17));
-                this.addSlotToContainer(new SlotChargeable(tile, 1, 79, 53));
+                this.addSlotToContainer(new Slot(tile, 0, 56, 17));
+                this.addSlotToContainer(new Slot(tile, 1, 56, 53));
+                this.addSlotToContainer(new SlotExchange(tile, 2, 116, 35));
+
                 int i;
 
                 for (i = 0; i < 3; ++i)
@@ -44,7 +43,7 @@ public class ContainerExchanger extends Container {
         
         
         @Override
-        public ItemStack transferStackInSlot(EntityPlayer player, int slot) 
+        public ItemStack transferStackInSlot(EntityPlayer player, int slotId) 
         {
         	return null;
         }

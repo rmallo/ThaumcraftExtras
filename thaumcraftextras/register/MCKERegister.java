@@ -3,12 +3,12 @@ package thaumcraftextras.register;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import thaumcraft.common.config.ConfigItems;
-import thaumcraft.common.items.ItemWispEssence;
-import thaumcraft.common.items.wands.ItemFocusPouch;
-import thaumcraftextras.api.ChargerFunctions;
-import thaumcraftextras.api.ExchangerFunctions;
+import thaumcraftextras.api.functions.ChargerFunctions;
+import thaumcraftextras.api.functions.ExchangerFunctions;
+import thaumcraftextras.blocks.BlockCable;
 import thaumcraftextras.blocks.BlockExchanger;
 import thaumcraftextras.blocks.MCKCharger;
+import thaumcraftextras.blocks.MagicGenerator;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.items.MagicCrystal;
 import thaumcraftextras.lib.TCELocalization;
@@ -35,6 +35,16 @@ public class MCKERegister {
 		GameRegistry.registerBlock(exchanger, "Exchanger");
 		LanguageRegistry.addName(exchanger, TCELocalization.exchanger);
 		
+		cable = new BlockCable(Config.cableId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.cableTexture);
+		GameRegistry.registerBlock(cable, "MagicCable");
+		LanguageRegistry.addName(cable, TCELocalization.cable);
+		
+		/*
+		magicCable = new MagicCable(Config.cableId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.cableTexture);
+		GameRegistry.registerBlock(magicCable, "MagicCable");
+		LanguageRegistry.addName(magicCable, TCELocalization.cable);
+		*/
+		
 	}
 	
 	public static void addToCharger()
@@ -48,10 +58,14 @@ public class MCKERegister {
 	
 	public static void addToExchanger()
 	{
-		ExchangerFunctions.addItem(Item.dyePowder);
+		ExchangerFunctions.addItem(Item.dyePowder, 15);
 	}
 	
 	public static Item magicCrystal;
 	public static Block MCKCharger;
 	public static Block exchanger;
+	public static Block generator;
+	public static Block smelter;
+	public static Block cable;
+
 }

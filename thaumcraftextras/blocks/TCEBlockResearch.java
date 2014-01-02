@@ -69,6 +69,26 @@ public class TCEBlockResearch extends Block{
             ((ItemWandCasting) wand.getItem()).storeAllVis(wand, new AspectList().add(Aspect.AIR, amount).add(Aspect.EARTH, amount).add(Aspect.FIRE, amount).add(Aspect.WATER, amount).add(Aspect.ORDER, amount).add(Aspect.ENTROPY, amount));
             par3List.add(wand);
             
+            amount = 100*100;
+            wand = new ItemStack(ConfigItems.itemWandCasting);
+            ((ItemWandCasting) wand.getItem()).setRod(wand, ItemRegister.angelRod);
+            ((ItemWandCasting) wand.getItem()).setCap(wand, ConfigItems.WAND_CAP_THAUMIUM);
+            ((ItemWandCasting) wand.getItem()).storeAllVis(wand, new AspectList().add(Aspect.AIR, amount).add(Aspect.EARTH, amount).add(Aspect.FIRE, amount).add(Aspect.WATER, amount).add(Aspect.ORDER, amount).add(Aspect.ENTROPY, amount));
+            par3List.add(wand);
+            
+            amount = 250*100;
+            wand = new ItemStack(ConfigItems.itemWandCasting);
+            ((ItemWandCasting) wand.getItem()).setRod(wand, ItemRegister.devilRod);
+            ((ItemWandCasting) wand.getItem()).setCap(wand, ConfigItems.WAND_CAP_THAUMIUM);
+            ((ItemWandCasting) wand.getItem()).storeAllVis(wand, new AspectList().add(Aspect.AIR, amount).add(Aspect.EARTH, amount).add(Aspect.FIRE, amount).add(Aspect.WATER, amount).add(Aspect.ORDER, amount).add(Aspect.ENTROPY, amount));
+            par3List.add(wand); 
+            
+            amount = 500*100;
+            wand = new ItemStack(ConfigItems.itemWandCasting);
+            ((ItemWandCasting) wand.getItem()).setRod(wand, ItemRegister.godRod);
+            ((ItemWandCasting) wand.getItem()).setCap(wand, ConfigItems.WAND_CAP_THAUMIUM);
+            ((ItemWandCasting) wand.getItem()).storeAllVis(wand, new AspectList().add(Aspect.AIR, amount).add(Aspect.EARTH, amount).add(Aspect.FIRE, amount).add(Aspect.WATER, amount).add(Aspect.ORDER, amount).add(Aspect.ENTROPY, amount));
+            par3List.add(wand);
     }
 	
 	@Override

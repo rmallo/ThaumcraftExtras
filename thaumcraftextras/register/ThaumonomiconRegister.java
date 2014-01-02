@@ -169,6 +169,13 @@ public class ThaumonomiconRegister {
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.destroyFoci));
 		}
 		
+		if(Config.cleanFoci == true)
+		{
+			text = "1";
+			research = new ResearchHelper(TCELocalization.cleanFoci, "THAUMATURGY", ResearchAspect.cleanFociResearch, -4, -5, -3, new ItemStack(ItemRegister.cleanFoci)).setParents("Wand Focus: Destroy").setHidden().registerResearchItem();
+			research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.cleanFoci));
+		}
+		
 		if(Config.freezeFoci == true)
 		{
 		text = "1";
@@ -195,14 +202,23 @@ public class ThaumonomiconRegister {
 		text = "1";
 		research = new ResearchHelper("Wand Rods", "THAUMATURGY", ResearchAspect.wandRodResearch, -9, 1, 3, new ItemStack(ItemRegister.goldRodItem)).setParents("ROD_greatwood").setHidden().registerResearchItem();
 		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.ironRod), new ResearchPage(ThaumcraftRecipeRegister.goldRod), new ResearchPage(ThaumcraftRecipeRegister.diamondRod), new ResearchPage(ThaumcraftRecipeRegister.emeraldRod), new ResearchPage(ThaumcraftRecipeRegister.candyRod));
+
+		text = "1";
+		research = new ResearchHelper("Advanced Rods", "THAUMATURGY", ResearchAspect.advancedRodsResearch, -11, 2, 3, new ItemStack(ItemRegister.devilRodItem)).setParents("Wand Rods").setHidden().registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.angelRod), new ResearchPage(ThaumcraftRecipeRegister.devilRod), new ResearchPage(ThaumcraftRecipeRegister.godRod) );
 		}
 		
 		if(Config.wardedBlocks == true)
 		{
 		text = "1";
 		research = new ResearchHelper("Warded Block", "ARTIFICE", ResearchAspect.wardedBlockResearch, 5, -4, 3, new ItemStack(BlockRegister.wardedBlock, 0, 1)).setParents("ARCANESTONE").setHidden().registerResearchItem();
-		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.wardedBlock), new ResearchPage(ThaumcraftRecipeRegister.thaumiumGlass), new ResearchPage(ThaumcraftRecipeRegister.wardedCarpet), new ResearchPage(ThaumcraftRecipeRegister.wardedSlab), new ResearchPage(ThaumcraftRecipeRegister.wardedWall), new ResearchPage(ThaumcraftRecipeRegister.wardedPilar), new ResearchPage(ThaumcraftRecipeRegister.wardedCover));
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.wardedBlock), new ResearchPage(ThaumcraftRecipeRegister.thaumiumGlass), new ResearchPage(ThaumcraftRecipeRegister.wardedCarpet), new ResearchPage(ThaumcraftRecipeRegister.wardedSlab), new ResearchPage(ThaumcraftRecipeRegister.wardedWall), new ResearchPage(ThaumcraftRecipeRegister.wardedPilar), new ResearchPage(ThaumcraftRecipeRegister.wardedCover), new ResearchPage(ThaumcraftRecipeRegister.hiddenWarded));
 		}
+		
+		text = "1";
+		research = new ResearchHelper("Magic Energy", "ARTIFICE", ResearchAspect.energyResearch, 6, -6, 3, new ItemStack(MCKERegister.MCKCharger, 0, 1)).setParents("Warded Block").setHidden().registerResearchItem();
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.charger), new ResearchPage(ThaumcraftRecipeRegister.exchanger), new ResearchPage(ThaumcraftRecipeRegister.battery));
+		
 	}
 	
 	public static void addPage()

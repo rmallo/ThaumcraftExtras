@@ -193,6 +193,15 @@ public class ThaumcraftRecipeRegister {
 			new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl)});
 	}
 	
+	if(Config.cleanFoci == true)
+	{
+		cleanFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.cleanFoci, new ItemStack(ItemRegister.cleanFoci),4,
+				CraftingAspects.cleanFoci,
+				new ItemStack(ItemRegister.destroyFoci), new ItemStack[]{
+				new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz),
+				new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), 
+				new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl)});
+	}
 	if(Config.freezeFoci == true)
 	{
 	freezeFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.freezeFoci, new ItemStack(ItemRegister.freezeFoci),4,
@@ -230,6 +239,13 @@ public class ThaumcraftRecipeRegister {
 			new ItemStack(Item.snowball), new ItemStack(Item.firework), new ItemStack(Item.snowball), 
 			new ItemStack(Item.firework), new ItemStack(Item.snowball)});
 	
+	snowFoci = ThaumcraftApi.addInfusionCraftingRecipe("Event Foci", new ItemStack(ItemRegister.snowFoci),4,
+			CraftingAspects.snowFoci,
+			new ItemStack(ItemRegister.pechTradeTier2), new ItemStack[]{
+			new ItemStack(Item.firework), new ItemStack(Item.snowball), new ItemStack(Item.firework),
+			new ItemStack(Item.snowball), new ItemStack(Item.firework), new ItemStack(Item.snowball), 
+			new ItemStack(Item.firework), new ItemStack(Item.snowball)});
+	
 	ironRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.ironRodItem), CraftingAspects.ironRod, new Object[]{
 		"  X",
 		" I ",
@@ -251,13 +267,34 @@ public class ThaumcraftRecipeRegister {
 		'X', Item.diamond,
 		'I', Item.stick});
 	
-	
 	emeraldRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.emeraldRodItem), CraftingAspects.emeraldRod, new Object[]{
 		"  X",
 		" I ",
 		"X  ",
 		'X', Item.emerald,
 		'I', Item.stick});
+	
+	
+	angelRod = ThaumcraftApi.addArcaneCraftingRecipe("Advanced Rods", new ItemStack(ItemRegister.angelRodItem), CraftingAspects.angelRod, new Object[]{
+		"  X",
+		" I ",
+		"X  ",
+		'X', ItemRegister.ignisFuel,
+		'I', new ItemStack(ConfigItems.itemWandRod, 1, 2)});
+	
+	devilRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.devilRodItem), CraftingAspects.devilRod, new Object[]{
+		"  X",
+		" I ",
+		"X  ",
+		'X', BlockRegister.enderBlock,
+		'I', new ItemStack(ItemRegister.angelRodItem, 1, 0)});
+	
+	godRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.godRodItem), CraftingAspects.godRod, new Object[]{
+		"  X",
+		" I ",
+		"X  ",
+		'X', Item.netherStar,
+		'I', new ItemStack(ItemRegister.devilRodItem, 1, 0)});
 	
 	candyRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.candyRodItem), CraftingAspects.candyRod, new Object[]{
 		"  X",
@@ -266,12 +303,13 @@ public class ThaumcraftRecipeRegister {
 		'X', Item.sugar,
 		'I', Item.bucketMilk});
 	
+	
 	ignisFuel = ThaumcraftApi.addShapelessArcaneCraftingRecipe(TCELocalization.IgnisFuel, 
 			new ItemStack(ItemRegister.ignisFuel), new AspectList().add(Aspect.FIRE, 3), 
 			Item.coal,
 			Block.netherrack);
 	
-	thaumiumGlass = ThaumcraftApi.addArcaneCraftingRecipe("Warded Blocks", new ItemStack(BlockRegister.wardedGlass, 8, 15), CraftingAspects.wardedBlock,  new Object[]{
+	thaumiumGlass = ThaumcraftApi.addArcaneCraftingRecipe("Warded Block", new ItemStack(BlockRegister.wardedGlass, 8, 15), CraftingAspects.wardedBlock,  new Object[]{
 		"XYX",
 		"YYY",
 		"XYX",
@@ -317,6 +355,38 @@ public class ThaumcraftRecipeRegister {
 		"XXX",
 		'X', BlockRegister.wardedBlock});
 	
+	hiddenWarded = ThaumcraftApi.addArcaneCraftingRecipe("Warded Block", new ItemStack(BlockRegister.hiddenWarded, 12, 15), CraftingAspects.wardedBlock,  new Object[]{
+		"YIY",
+		"IXI",
+		"YIY",
+		'X', BlockRegister.wardedBlock,
+		'Y', Block.trapdoor,
+		'I', ItemRegister.pechTradeTier1});
+	
+	charger = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.MCKCharger, 1, 0), CraftingAspects.chargerBlock,  new Object[]{
+		"XIX",
+		"IYI",
+		"XIX",
+		'X', ItemRegister.magicTradeTier1,
+		'I', Item.ingotGold,
+		'Y', Block.blockIron});
+	
+	exchanger = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.exchanger, 1, 0), CraftingAspects.exchangerBlock,  new Object[]{
+		"XIX",
+		"IYI",
+		"XIX",
+		'X', ItemRegister.magicTradeTier1,
+		'I', Item.diamond,
+		'Y', MCKERegister.MCKCharger});
+	
+	battery = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.magicCrystal, 1, 0), CraftingAspects.exchangerBlock,  new Object[]{
+		"XIX",
+		"IYI",
+		"XIX",
+		'X', ItemRegister.pechTradeTier2,
+		'I', ItemRegister.magicTradeTier2,
+		'Y', Block.blockRedstone});
+	
 		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.ignisFuelBlock), new Object[] {
 		"XXX",
 		"XXX",
@@ -330,7 +400,7 @@ public class ThaumcraftRecipeRegister {
 		'X', new ItemStack(Block.blockRedstone),
 		'I', Item.ingotGold,
 		'Y', Block.glass});
-				
+
 		int end;
 		int meta;
 		
@@ -447,6 +517,20 @@ public class ThaumcraftRecipeRegister {
 		meta++;
 		}
 		
+		/*
+		meta = 0;
+		end = 15;
+		while(meta >= 0 && meta <= end)
+		{
+		GameRegistry.addShapedRecipe(new ItemStack(ItemRegister.colorPouch, 1, meta), new Object[] {
+		"XXX",
+		"XYX",
+		"XXX",
+		'Y', new ItemStack(Item.dyePowder, 1, meta),
+		'X', ConfigItems.itemFocusPouch});
+		meta++;
+		}
+		*/
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.paper, 0, 0), ConfigItems.itemResearchNotes);
 	}
     
@@ -461,11 +545,15 @@ public class ThaumcraftRecipeRegister {
 	public static ShapedArcaneRecipe magicTradeTier4;
 	public static ShapedArcaneRecipe magicTradeTier5;
 	public static ShapedArcaneRecipe xpExtractor;
-	public static ShapelessArcaneRecipe ignisFuel;
 	public static ShapedArcaneRecipe ironRod;
 	public static ShapedArcaneRecipe goldRod;
 	public static ShapedArcaneRecipe diamondRod;
 	public static ShapedArcaneRecipe emeraldRod;
+	public static ShapedArcaneRecipe angelRod;
+	public static ShapedArcaneRecipe devilRod;
+	public static ShapedArcaneRecipe godRod;
+	public static ShapelessArcaneRecipe ignisFuel;
+
 	public static ShapedArcaneRecipe candyRod;
 	public static ShapedArcaneRecipe wardedBlock;
 	public static ShapedArcaneRecipe thaumiumGlass;
@@ -475,6 +563,10 @@ public class ThaumcraftRecipeRegister {
 	public static ShapedArcaneRecipe wardedWall;
 	public static ShapedArcaneRecipe wardedPilar;
 	public static ShapedArcaneRecipe wardedCover;
+	public static ShapedArcaneRecipe hiddenWarded;
+	public static ShapedArcaneRecipe exchanger;
+	public static ShapedArcaneRecipe charger;
+	public static ShapedArcaneRecipe battery;
 
 	public static ShapedArcaneRecipe copperRod;
 	public static ShapedArcaneRecipe tinRod;
@@ -494,4 +586,5 @@ public class ThaumcraftRecipeRegister {
 	public static InfusionRecipe beamExchangeFoci;
 	public static InfusionRecipe confusionFoci;
 	public static InfusionRecipe snowFoci;
+	public static InfusionRecipe cleanFoci;
 }

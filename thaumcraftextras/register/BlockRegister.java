@@ -1,6 +1,7 @@
 package thaumcraftextras.register;
 
 import net.minecraft.block.Block;
+import thaumcraftextras.blocks.BlockHidden;
 import thaumcraftextras.blocks.BlockInfusionInfo;
 import thaumcraftextras.blocks.LightItemBlock;
 import thaumcraftextras.blocks.TCEBlock;
@@ -103,7 +104,11 @@ public class BlockRegister {
 		wardedCover = new TCEWardedCover(Config.wardedCoverId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.WardedCoverTexture);
 		GameRegistry.registerBlock(wardedCover, WardedItemCover.class, (wardedCover.getUnlocalizedName()).substring(5));
 		LanguageRegistry.addName(wardedCover, TCELocalization.WardedCover);
-				
+		
+		hiddenWarded = new BlockHidden(Config.hiddenWardedId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.HiddenWardedTexture);
+		GameRegistry.registerBlock(hiddenWarded, "hiddenWarded");
+		LanguageRegistry.addName(hiddenWarded, TCELocalization.HiddenWarded);
+		
 		//colorBlock = new ColoredThaumiumBlock(Config.colorBlockId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ColorBlockTexture);
 		//GameRegistry.registerBlock(colorBlock, "ColorBlock");
 		//LanguageRegistry.addName(colorBlock, TCELocalization.colorBlock);
@@ -149,6 +154,7 @@ public class BlockRegister {
 	public static Block wardedWall;
 	public static Block wardedPilar;
 	public static Block wardedCover;
+	public static Block hiddenWarded;
 
 	public static Block colorBlock;
 }

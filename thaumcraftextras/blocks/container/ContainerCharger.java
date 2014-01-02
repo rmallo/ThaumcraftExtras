@@ -8,6 +8,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import thaumcraftextras.api.functions.ChargerFunctions;
 import thaumcraftextras.blocks.tileEntity.TileEntityCharger;
 import thaumcraftextras.register.ItemRegister;
 import thaumcraftextras.register.PostRegister;
@@ -46,9 +47,8 @@ public class ContainerCharger extends Container {
         
         
         @Override
-        public ItemStack transferStackInSlot(EntityPlayer player, int slot) 
+        public ItemStack transferStackInSlot(EntityPlayer player, int slotId) 
         {
-        	return null;
+            return null;
         }
-
 }

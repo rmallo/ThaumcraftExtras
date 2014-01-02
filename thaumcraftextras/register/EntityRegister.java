@@ -11,5 +11,6 @@ public class EntityRegister {
 	{
         EntityRegistry.registerModEntity(ProjectileFreeze.class, "projectileFreeze", 2, Main.instance, 160, 1, false);	
         EntityRegistry.registerModEntity(ProjectileConfusion.class, "projectileConfusion", 3, Main.instance, 160, 1, false);
+
 	}
 }

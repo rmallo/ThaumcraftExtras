@@ -1,19 +1,19 @@
 package thaumcraftextras.blocks.tileEntity;
 
-import java.sql.Time;
-import java.util.HashMap;
-import java.util.Map;
-
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.INetworkManager;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.Packet132TileEntityData;
 import net.minecraft.tileentity.TileEntity;
-import thaumcraftextras.api.ChargerFunctions;
+import thaumcraftextras.api.functions.ChargerFunctions;
+import cpw.mods.fml.common.network.PacketDispatcher;
 
-public class TileEntityCharger extends TileEntity implements ISidedInventory
+public class TileEntityCharger extends TileEntity implements IInventory
 {
     
 	ItemStack ItemStacks[]; 
@@ -99,7 +99,7 @@ public class TileEntityCharger extends TileEntity implements ISidedInventory
     			
     			ItemStack inChargeSlotStack = getStackInSlot(0);
     			
-    			if(ChargerFunctions.isFuel.contains(inFuelSlot) && ChargerFunctions.isChargeAble.contains(inChargeSlot))
+    			if(ChargerFunctions.isFuel.contains(inFuelSlot) && ChargerFunctions.isChargeAble.contains(inChargeSlot) && inChargeSlot.getDamage(inChargeSlotStack) <= inChargeSlot.getMaxDamage())
     			{
     				if(chargeTime > 0)
     					chargeTime--;
@@ -116,7 +116,6 @@ public class TileEntityCharger extends TileEntity implements ISidedInventory
     				{
     				ItemStacks[1] = new ItemStack(inFuelSlot, ItemStacks[1].stackSize - 1);
         			chargeTime = 60;
-
     				}
     				else if(ItemStacks[1].stackSize <= 1)
     				{
@@ -203,6 +202,30 @@ public class TileEntityCharger extends TileEntity implements ISidedInventory
              tagCompound.setTag("Inventory", itemList);
      }
 	
+     @Override
+     public Packet getDescriptionPacket() {
+             NBTTagCompound nbttagcompound = new NBTTagCompound();
+             writeToNBT(nbttagcompound);
+             return new Packet132TileEntityData(xCoord, yCoord, zCoord, -999, nbttagcompound);
+     }
+
+     @Override
+     public void onDataPacket(INetworkManager manager, Packet132TileEntityData packet) {
+             super.onDataPacket(manager, packet);
+             readFromNBT(packet.data);
+     }
+
+
+     @Override
+     public void onInventoryChanged() 
+     {
+             super.onInventoryChanged();
+             if(!worldObj.isRemote) 
+             {
+                     PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
+             }
+     }
+     
  	@Override
  	public boolean isUseableByPlayer(EntityPlayer player) 
  	{
@@ -217,28 +240,6 @@ public class TileEntityCharger extends TileEntity implements ISidedInventory
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) 
 	{
-        return true;
-	}
-
-	@Override
-	public int[] getAccessibleSlotsFromSide(int side) 
-	{
-		switch(side)
-		{
-		case 0: return slots_bottom;
-		case 1: return slots_top;
-		case 2: return slots_sides;
-		default: return null;
-		}
-	}
-
-	@Override
-	public boolean canInsertItem(int i, ItemStack itemstack, int j) {
-		return true;
-	}
-
-	@Override
-	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
-		return false;
+        return false;
 	}
 }

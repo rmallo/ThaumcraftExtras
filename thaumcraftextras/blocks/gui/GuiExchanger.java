@@ -1,7 +1,9 @@
 package thaumcraftextras.blocks.gui;
 
+import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Slot;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
@@ -27,7 +29,6 @@ public class GuiExchanger extends GuiContainer {
             GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
             mc.renderEngine.bindTexture(gui);
             drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
-            
             GL11.glColor3f(1F, 1F, 1F);
         }
         

@@ -3,7 +3,7 @@ package thaumcraftextras.register;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import thaumcraft.common.config.ConfigItems;
-import thaumcraftextras.api.ChargerFunctions;
+import thaumcraftextras.api.functions.ChargerFunctions;
 import thaumcraftextras.blocks.MCKCharger;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.items.MagicCrystal;

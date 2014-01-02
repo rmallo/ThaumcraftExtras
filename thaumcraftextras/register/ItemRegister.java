@@ -13,10 +13,12 @@ import thaumcraftextras.items.TCEItem;
 import thaumcraftextras.items.XPExtractor;
 import thaumcraftextras.items.foci.ArrowFoci;
 import thaumcraftextras.items.foci.BeamExchangeFoci;
+import thaumcraftextras.items.foci.CleanFoci;
 import thaumcraftextras.items.foci.ConfusionFoci;
 import thaumcraftextras.items.foci.DestroyFoci;
 import thaumcraftextras.items.foci.DispelFoci;
 import thaumcraftextras.items.foci.EnderFoci;
+import thaumcraftextras.items.foci.EntityFoci;
 import thaumcraftextras.items.foci.ExchangeFoci;
 import thaumcraftextras.items.foci.ExperienceFoci;
 import thaumcraftextras.items.foci.FreezeFoci;
@@ -113,6 +115,13 @@ public class ItemRegister {
 		snowFoci = new SnowballFoci(Config.snowballFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.snowFociTexture);
 		LanguageRegistry.addName(snowFoci,  TCELocalization.snowFoci);
 		
+		cleanFoci = new CleanFoci(Config.cleanFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.cleanFociTexture);
+		LanguageRegistry.addName(cleanFoci,  TCELocalization.cleanFoci);
+		
+		/*
+		colorPouch = new ColorPouch(Config.colorPouchId);
+		LanguageRegistry.addName(colorPouch, TCELocalization.colorPouch);
+		*/
 		
 		/** Special Wands */
 		ultimateRodItem = new RodItem(Config.ultimateRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ultimateRodTexture);
@@ -136,6 +145,18 @@ public class ItemRegister {
         emeraldRod = new WandRod("emerald", 80, new ItemStack(emeraldRodItem), 45,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_emerald.png"));
         LanguageRegistry.addName(emeraldRodItem, "Emerald Rod");
 	
+		angelRodItem = new RodItem(Config.angelRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.angelRodTexture);
+        angelRod = new WandRod("angel", 150, new ItemStack(angelRodItem), 75,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_angel.png"));
+        LanguageRegistry.addName(angelRodItem, "Angel Rod");
+        
+        devilRodItem = new RodItem(Config.devilRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.devilRodTexture);
+        devilRod = new WandRod("devil", 250, new ItemStack(devilRodItem), 100,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_devil.png"));
+        LanguageRegistry.addName(devilRodItem, "Devil Rod");
+        
+        godRodItem = new RodItem(Config.godRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.godRodTexture);
+        godRod = new WandRod("god", 500, new ItemStack(godRodItem), 150,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_god.png"));
+        LanguageRegistry.addName(godRodItem, "God Rod");
+        
         
         /** Event Items */
 		candyRodItem = new RodItem(Config.candyRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.candyRodTexture);
@@ -147,7 +168,7 @@ public class ItemRegister {
 	{
 	}
 	
-	public static Item pouch;
+	public static Item colorPouch;
 	public static Item pechTradeTier1;
 	public static Item pechTradeTier2;
 	public static Item pechTradeTier3;
@@ -180,6 +201,7 @@ public class ItemRegister {
 	public static Item confusionFoci;
 	public static Item fireworkFoci;
 	public static Item snowFoci;
+	public static Item cleanFoci;
 	
 	public static WandRod ultimateRod;
 	public static WandRod ironRod;
@@ -187,11 +209,18 @@ public class ItemRegister {
 	public static WandRod diamondRod;
 	public static WandRod emeraldRod;
 	public static WandRod candyRod;
-	
+	public static WandRod angelRod;
+	public static WandRod devilRod;
+	public static WandRod godRod;
+
 	public static Item ultimateRodItem;
 	public static Item ironRodItem;
 	public static Item goldRodItem;
 	public static Item diamondRodItem;
 	public static Item emeraldRodItem;
 	public static Item candyRodItem;
+	public static Item angelRodItem;
+	public static Item devilRodItem;
+	public static Item godRodItem;
+
 }
