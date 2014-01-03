@@ -70,8 +70,8 @@ item.Wand.diamond.rod=Diamond
 item.Wand.emerald.rod=Emerald
 item.Wand.angel.rod=Angel
 item.Wand.devil.rod=Devil
-item.wand.angel.rod=Angel
-item.wand.candy.rod=Candy
+item.Wand.god.rod=God
+item.Wand.candy.rod=Candy
 ------Blocks------
 tce.warded.block.black.name=Warded Block: Black
 tce.warded.block.red.name=Warded Block: Red

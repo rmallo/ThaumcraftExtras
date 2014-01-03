@@ -1,11 +1,13 @@
 package thaumcraftextras.register;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.wands.WandRod;
 import thaumcraft.common.items.wands.WandRodPrimalOnUpdate;
+import thaumcraftextras.api.functions.DestroyFunctions;
 import thaumcraftextras.helpers.FuelHelper;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.items.RodItem;
@@ -99,7 +101,8 @@ public class ItemRegister {
 		
 		dispelFoci = new DispelFoci(Config.dispelFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.dispelFociTexture);
 		LanguageRegistry.addName(dispelFoci,  TCELocalization.dispelFoci);
-	
+        
+		addToDestroy();
 		destroyFoci = new DestroyFoci(Config.destroyFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.destroyFociTexture);
 		LanguageRegistry.addName(destroyFoci,  TCELocalization.destroyFoci);
 		
@@ -130,31 +133,31 @@ public class ItemRegister {
         
         /** Tier Rods */
 		ironRodItem = new RodItem(Config.ironRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ironRodTexture);
-        ironRod = new WandRod("iron", 65, new ItemStack(ironRodItem), 12,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_iron.png"));
+        ironRod = new WandRod("iron", 65, new ItemStack(ironRodItem), 14,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_iron.png"));
         LanguageRegistry.addName(ironRodItem, "Iron Rod");
         
 		goldRodItem = new RodItem(Config.goldRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.goldRodTexture);
-        goldRod = new WandRod("gold", 60, new ItemStack(goldRodItem), 24,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_gold.png"));
+        goldRod = new WandRod("gold", 60, new ItemStack(goldRodItem), 12,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_gold.png"));
         LanguageRegistry.addName(goldRodItem, "Gold Rod");
         
 		diamondRodItem = new RodItem(Config.diamondRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.diamondRodTexture);
-        diamondRod = new WandRod("diamond", 90, new ItemStack(diamondRodItem), 50,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_diamond.png"));
+        diamondRod = new WandRod("diamond", 90, new ItemStack(diamondRodItem), 18,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_diamond.png"));
         LanguageRegistry.addName(diamondRodItem, "Diamond Rod");
         
 		emeraldRodItem = new RodItem(Config.emeraldRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.emeraldRodTexture);
-        emeraldRod = new WandRod("emerald", 80, new ItemStack(emeraldRodItem), 45,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_emerald.png"));
+        emeraldRod = new WandRod("emerald", 80, new ItemStack(emeraldRodItem), 16,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_emerald.png"));
         LanguageRegistry.addName(emeraldRodItem, "Emerald Rod");
 	
 		angelRodItem = new RodItem(Config.angelRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.angelRodTexture);
-        angelRod = new WandRod("angel", 150, new ItemStack(angelRodItem), 75,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_angel.png"));
+        angelRod = new WandRod("angel", 150, new ItemStack(angelRodItem), 20,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_angel.png"));
         LanguageRegistry.addName(angelRodItem, "Angel Rod");
         
         devilRodItem = new RodItem(Config.devilRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.devilRodTexture);
-        devilRod = new WandRod("devil", 250, new ItemStack(devilRodItem), 100,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_devil.png"));
+        devilRod = new WandRod("devil", 250, new ItemStack(devilRodItem), 30,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_devil.png"));
         LanguageRegistry.addName(devilRodItem, "Devil Rod");
         
         godRodItem = new RodItem(Config.godRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.godRodTexture);
-        godRod = new WandRod("god", 500, new ItemStack(godRodItem), 150,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_god.png"));
+        godRod = new WandRod("god", 500, new ItemStack(godRodItem), 40,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_god.png"));
         LanguageRegistry.addName(godRodItem, "God Rod");
         
         
@@ -164,6 +167,19 @@ public class ItemRegister {
         LanguageRegistry.addName(candyRodItem, "Candy Rod");
 	}
 	
+	public static void addToDestroy()
+	{
+	    DestroyFunctions.canDestroy.put(BlockRegister.wardedBlock.blockID, 0);
+	    DestroyFunctions.canDestroy.put(BlockRegister.wardedCarpet.blockID, 1);
+	    DestroyFunctions.canDestroy.put(BlockRegister.wardedCover.blockID, 2);
+	    DestroyFunctions.canDestroy.put(BlockRegister.wardedGlass.blockID, 3);
+	    DestroyFunctions.canDestroy.put(BlockRegister.wardedPilar.blockID, 4);
+	    DestroyFunctions.canDestroy.put(BlockRegister.wardedSlab.blockID, 5);
+	    DestroyFunctions.canDestroy.put(BlockRegister.wardedWall.blockID, 6);
+	    DestroyFunctions.canDestroy.put(BlockRegister.openWarded.blockID, 7);
+	    DestroyFunctions.canDestroy.put(BlockRegister.hiddenWarded.blockID, 8);
+	    DestroyFunctions.canDestroy.put(Block.bedrock.blockID, 9);
+	}
 	public static void recipe()
 	{
 	}

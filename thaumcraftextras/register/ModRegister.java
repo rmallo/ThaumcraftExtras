@@ -9,11 +9,11 @@ public class ModRegister {
 	{
     	AspectRegister.addAspects();
     	MiscRegister.load();
-    	ItemRegister.load();
-    	ItemRegister.recipe();
     	BlockRegister.load();
     	BlockRegister.recipe();
     	BlockRegister.oreDictionary();
+    	ItemRegister.load();
+    	ItemRegister.recipe();
     	EntityRegister.load();
     	InfusionRegister.load();
     	InfusionRegister.recipe();

@@ -14,7 +14,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "ThaumcraftExtras", name = "ThaumcraftExtras", version = "0.8" ,dependencies = "required-after:Thaumcraft")
+@Mod(modid = "ThaumcraftExtras", name = "ThaumcraftExtras", version = "0.8.0.1" ,dependencies = "required-after:Thaumcraft")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 
 public class Main {

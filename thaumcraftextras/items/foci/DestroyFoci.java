@@ -1,9 +1,5 @@
 package thaumcraftextras.items.foci;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
@@ -12,11 +8,12 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.common.Thaumcraft;
 import thaumcraft.common.items.wands.ItemWandCasting;
 import thaumcraft.common.lib.Utils;
+import thaumcraftextras.api.functions.DestroyFunctions;
 
 public class DestroyFoci extends ItemFoci {	 
 	
         private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 35).add(Aspect.ENTROPY, 35);
-
+        
         public DestroyFoci(int i) {
                 super(i);
         }
@@ -35,7 +32,8 @@ public class DestroyFoci extends ItemFoci {
                 	if (wand.consumeAllVis(itemstack, player, getVisCost(), true)) 
                 	{
                 		int blockId = player.worldObj.getBlockId(pos.blockX, pos.blockY, pos.blockZ);
-                		if(blockId != 0 && player.worldObj.getBlockId(pos.blockX, pos.blockY, pos.blockZ) != Block.bedrock.blockID)
+                		//if(blockId != 0 && blockId != Block.bedrock.blockID && blockId != BlockRegister.wardedBlock.blockID && blockId != BlockRegister.hiddenWarded.blockID)
+                		if(blockId != 0 && !DestroyFunctions.canDestroy.containsKey(blockId))
                 		{
                 			if(!player.worldObj.isRemote)
                 			{

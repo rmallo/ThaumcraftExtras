@@ -363,6 +363,14 @@ public class ThaumcraftRecipeRegister {
 		'Y', Block.trapdoor,
 		'I', ItemRegister.pechTradeTier1});
 	
+	openWarded = ThaumcraftApi.addArcaneCraftingRecipe("Warded Block", new ItemStack(BlockRegister.openWarded, 12, 15), CraftingAspects.wardedBlock,  new Object[]{
+		"YIY",
+		"IXI",
+		"YIY",
+		'X', BlockRegister.wardedBlock,
+		'Y', Block.dirt,
+		'I', ItemRegister.pechTradeTier1});
+	
 	charger = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.MCKCharger, 1, 0), CraftingAspects.chargerBlock,  new Object[]{
 		"XIX",
 		"IYI",
@@ -379,12 +387,12 @@ public class ThaumcraftRecipeRegister {
 		'I', Item.diamond,
 		'Y', MCKERegister.MCKCharger});
 	
-	battery = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.magicCrystal, 1, 0), CraftingAspects.exchangerBlock,  new Object[]{
+	battery = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.magicCrystal, 1, 50), CraftingAspects.exchangerBlock,  new Object[]{
 		"XIX",
 		"IYI",
 		"XIX",
-		'X', ItemRegister.pechTradeTier2,
-		'I', ItemRegister.magicTradeTier2,
+		'X', ItemRegister.pechTradeTier1,
+		'I', ItemRegister.magicTradeTier1,
 		'Y', Block.blockRedstone});
 	
 		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.ignisFuelBlock), new Object[] {
@@ -564,6 +572,8 @@ public class ThaumcraftRecipeRegister {
 	public static ShapedArcaneRecipe wardedPilar;
 	public static ShapedArcaneRecipe wardedCover;
 	public static ShapedArcaneRecipe hiddenWarded;
+	public static ShapedArcaneRecipe openWarded;
+
 	public static ShapedArcaneRecipe exchanger;
 	public static ShapedArcaneRecipe charger;
 	public static ShapedArcaneRecipe battery;

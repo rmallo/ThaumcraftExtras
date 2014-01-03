@@ -186,6 +186,7 @@ public class TCELocalization {
 	public static String WardedPilar = "Warded Pilar";
 	public static String WardedCover = "Warded Cover";
 	public static String HiddenWarded = "Hidden Warded";
+	public static String OpenWarded = "Open Warded";
 
 	public static String WardedBlockTexture = "warded";
 	public static String WardedSlabTexture = "wardedslab";
@@ -195,5 +196,6 @@ public class TCELocalization {
 	public static String WardedPilarTexture = "wardedpilar";
 	public static String WardedCoverTexture = "wardedcover";
 	public static String HiddenWardedTexture = "hiddenwarded";
+	public static String OpenWardedTexture = "openwarded";
 
 }

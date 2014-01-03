@@ -30,6 +30,7 @@ public class Config {
 	        wardedPillarId = config.getBlock("wardedPillar", 339).getInt();
 	        wardedCoverId = config.getBlock("wardedCover", 400).getInt();
 	        hiddenWardedId = config.getBlock("hiddenWarded", 410).getInt();
+	        openWardedId = config.getBlock("openWarded", 411).getInt();
 
 	        mckChargerId = config.getBlock("mckCharger", 420).getInt();
 	        exchangerId = config.getBlock("exchanger", 421).getInt();
@@ -142,7 +143,8 @@ public class Config {
 	public static int wardedPillarId;
 	public static int wardedCoverId;
 	public static int hiddenWardedId;
-	
+	public static int openWardedId;
+
 	public static int magicCrystalId;
 	public static int magicCrystal2Id;
 	public static int magicCrystal3Id;
