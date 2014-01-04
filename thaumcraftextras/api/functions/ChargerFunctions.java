@@ -8,8 +8,8 @@ import net.minecraft.item.Item;
 
 public class ChargerFunctions {
 
-	public static ArrayList<Item> isFuel = new ArrayList<Item>();
-	
+	public static Map<Item, Integer> isFuel = new HashMap<Item, Integer>();
+
 	public static ArrayList<Item> isChargeAble = new ArrayList<Item>();
 
 	
@@ -23,9 +23,9 @@ public class ChargerFunctions {
 		isChargeAble.remove(item);
 	}
 
-	public static void addFuel(Item item)
+	public static void addFuel(Item item, int energy)
 	{
-		isFuel.add(item);
+		isFuel.put(item, energy);
 	}
 	
 	public static void removeFuel(Item item)

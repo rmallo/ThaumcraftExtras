@@ -10,11 +10,13 @@ import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.Packet132TileEntityData;
 import net.minecraft.tileentity.TileEntity;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.wands.IWandable;
+import thaumcraft.common.items.wands.ItemWandCasting;
 import thaumcraftextras.api.functions.ChargerFunctions;
-import thaumcraftextras.api.functions.ExchangerFunctions;
 import cpw.mods.fml.common.network.PacketDispatcher;
 
-public class TileEntityCharger extends TileEntity implements IInventory
+public class TileEntityWandCharger extends TileEntity implements IInventory
 {
     
 	ItemStack ItemStacks[]; 
@@ -23,7 +25,7 @@ public class TileEntityCharger extends TileEntity implements IInventory
     private static final int[] slots_sides = new int[] {1};
     private static int chargeTime;
     
-    public TileEntityCharger()
+    public TileEntityWandCharger()
     {
     	ItemStacks = new ItemStack[2];
     	chargeTime = 60;
@@ -94,16 +96,14 @@ public class TileEntityCharger extends TileEntity implements IInventory
     		
     		if(getStackInSlot(0) != null && getStackInSlot(1) != null)
     		{
-    		    			
-    			Item inChargeSlot = getStackInSlot(0).getItem();
-    			Item inFuelSlot = getStackInSlot(1).getItem();
+    			Item inWandSlot = getStackInSlot(0).getItem();
+    			Item inChargeSlot = getStackInSlot(1).getItem();
     			
-    			ItemStack inChargeSlotStack = getStackInSlot(0);
-    			
-    			if(ChargerFunctions.isFuel.containsKey(inFuelSlot) && ChargerFunctions.isChargeAble.contains(inChargeSlot) && inChargeSlot.getDamage(inChargeSlotStack) <= inChargeSlot.getMaxDamage())
+    			ItemStack inChargeSlotStack = getStackInSlot(1);
+    			ItemStack inWandSlotStack = getStackInSlot(0);
+
+    			if(inWandSlot instanceof ItemWandCasting && ChargerFunctions.isChargeAble.contains(inChargeSlot) && inChargeSlot.getDamage(inChargeSlotStack) < inChargeSlot.getMaxDamage())
     			{
-    				if(inChargeSlot.getDamage(inChargeSlotStack) - getValueToAdd(inFuelSlot) >= 0)
-    				{
     				if(chargeTime > 0)
     					chargeTime--;
     				
@@ -113,16 +113,20 @@ public class TileEntityCharger extends TileEntity implements IInventory
     				item = inChargeSlot;
     				int getDamage = item.getDamage(inChargeSlotStack);
     			
-    				item.setDamage(inChargeSlotStack, getDamage - getValueToAdd(inFuelSlot));
+    				item.setDamage(inChargeSlotStack, getDamage + 1);
     				
-    				if(ItemStacks[1].stackSize > 1)
+    				if(ItemStacks[0].getItem() != null)
     				{
-    				ItemStacks[1] = new ItemStack(inFuelSlot, ItemStacks[1].stackSize - 1);
-        			chargeTime = 60;
-    				}
-    				else if(ItemStacks[1].stackSize <= 1)
-    				{
-    				ItemStacks[1] = null;
+    				//ItemStacks[0] = new ItemStack(inFuelSlot, ItemStacks[1].stackSize - 1);
+    		            ItemWandCasting wand = (ItemWandCasting)inWandSlot;
+    		            wand.addVis(inWandSlotStack, Aspect.ORDER, 1, true);
+    		            wand.addVis(inWandSlotStack, Aspect.FIRE, 1, true);
+    		            wand.addVis(inWandSlotStack, Aspect.ENTROPY, 1, true);
+    		            wand.addVis(inWandSlotStack, Aspect.WATER, 1, true);
+    		            wand.addVis(inWandSlotStack, Aspect.EARTH, 1, true);
+    		            wand.addVis(inWandSlotStack, Aspect.AIR, 1, true);
+
+    					chargeTime = 60;
     				}
     				
     				worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
@@ -130,15 +134,8 @@ public class TileEntityCharger extends TileEntity implements IInventory
     			}
     		}
     	}
-    	}
     }
     
-	
-	public int getValueToAdd(Item item)
-	{
-		  return ChargerFunctions.isFuel.get(item);
-	}
-	
 	@Override
 	public void setInventorySlotContents(int i, ItemStack itemstack) 
 	{	
@@ -178,6 +175,8 @@ public class TileEntityCharger extends TileEntity implements IInventory
 	{
 		
 	}
+	
+
 	
 	 @Override
      public void readFromNBT(NBTTagCompound tagCompound) {

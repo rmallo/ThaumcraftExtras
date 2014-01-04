@@ -4,13 +4,18 @@ import net.minecraft.entity.Entity;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.common.Thaumcraft;
 import thaumcraftextras.main.Config;
 
 public class AspectRegister{
 
 	public static void addAspects()
 	{
-		ThaumcraftApi.registerObjectTag(Config.researchBlockId, -1, new AspectList().add(Aspect.AIR, 999).add(Aspect.ARMOR, 999).add(Aspect.AURA, 999).add(Aspect.BEAST, 999).add(Aspect.CLOTH, 999).add(Aspect.CRAFT, 999).add(Aspect.CROP, 999).add(Aspect.CRYSTAL, 999).add(Aspect.DARKNESS ,999).add(Aspect.DEATH, 999).add(Aspect.EARTH, 999).add(Aspect.ELDRITCH, 999).add(Aspect.ENERGY, 999).add(Aspect.ENTROPY, 999).add(Aspect.EXCHANGE, 999).add(Aspect.FIRE, 999).add(Aspect.FLESH, 999).add(Aspect.FLIGHT, 999).add(Aspect.GREED, 999).add(Aspect.HARVEST, 999).add(Aspect.HEAL, 999).add(Aspect.HUNGER, 999).add(Aspect.ICE, 999).add(Aspect.LIFE, 999).add(Aspect.LIGHT, 999).add(Aspect.MAGIC, 999).add(Aspect.MAN, 999).add(Aspect.MECHANISM, 999).add(Aspect.METAL, 999).add(Aspect.MIND, 999).add(Aspect.MINE, 999).add(Aspect.MOTION, 9).add(Aspect.ORDER, 999).add(Aspect.PLANT, 999).add(Aspect.POISON, 999).add(Aspect.SEED, 999).add(Aspect.SENSES, 999).add(Aspect.SLIME, 999).add(Aspect.SOUL, 999).add(Aspect.STONE, 999).add(Aspect.TAINT, 999).add(Aspect.TOOL, 999).add(Aspect.TRAP, 999).add(Aspect.TRAVEL, 999).add(Aspect.TREE, 999).add(Aspect.UNDEAD, 999).add(Aspect.VOID, 999).add(Aspect.WATER, 999).add(Aspect.WEAPON, 999).add(Aspect.WEATHER, 999));
+
+		int amount = 9999;
+		AspectList a = new AspectList().add(Aspect.AIR, amount).add(Aspect.ARMOR, amount).add(Aspect.AURA, amount).add(Aspect.BEAST, amount).add(Aspect.CLOTH, amount).add(Aspect.CRAFT, amount).add(Aspect.CROP, amount).add(Aspect.CRYSTAL, amount).add(Aspect.DARKNESS ,amount).add(Aspect.DEATH, amount).add(Aspect.EARTH, amount).add(Aspect.ELDRITCH, amount).add(Aspect.ENERGY, amount).add(Aspect.ENTROPY, amount).add(Aspect.EXCHANGE, amount).add(Aspect.FIRE, amount).add(Aspect.FLESH, amount).add(Aspect.FLIGHT, amount).add(Aspect.GREED, amount).add(Aspect.HARVEST, amount).add(Aspect.HEAL, amount).add(Aspect.HUNGER, amount).add(Aspect.ICE, amount).add(Aspect.LIFE, amount).add(Aspect.LIGHT, amount).add(Aspect.MAGIC, amount).add(Aspect.MAN, amount).add(Aspect.MECHANISM, amount).add(Aspect.METAL, amount).add(Aspect.MIND, amount).add(Aspect.MINE, amount).add(Aspect.MOTION, 9).add(Aspect.ORDER, amount).add(Aspect.PLANT, amount).add(Aspect.POISON, amount).add(Aspect.SEED, amount).add(Aspect.SENSES, amount).add(Aspect.SLIME, amount).add(Aspect.SOUL, amount).add(Aspect.STONE, amount).add(Aspect.TAINT, amount).add(Aspect.TOOL, amount).add(Aspect.TRAP, amount).add(Aspect.TRAVEL, amount).add(Aspect.TREE, amount).add(Aspect.UNDEAD, amount).add(Aspect.VOID, amount).add(Aspect.WATER, amount).add(Aspect.WEAPON, amount).add(Aspect.WEATHER, amount);
+
+		ThaumcraftApi.registerObjectTag(Config.researchBlockId, -1, a);
 		
 		ThaumcraftApi.registerObjectTag(Config.fireBlockId, -1, new AspectList().add(Aspect.FIRE, 4));
 		ThaumcraftApi.registerObjectTag(Config.airBlockId, -1, new AspectList().add(Aspect.AIR, 4));

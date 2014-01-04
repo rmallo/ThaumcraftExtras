@@ -265,22 +265,21 @@ public class ThaumcraftRecipeRegister {
 		" I ",
 		"X  ",
 		'X', Item.diamond,
-		'I', Item.stick});
+		'I', new ItemStack(ItemRegister.goldRodItem, 1, 0)});
 	
 	emeraldRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.emeraldRodItem), CraftingAspects.emeraldRod, new Object[]{
 		"  X",
 		" I ",
 		"X  ",
 		'X', Item.emerald,
-		'I', Item.stick});
-	
+		'I', new ItemStack(ItemRegister.goldRodItem, 1, 0)});
 	
 	angelRod = ThaumcraftApi.addArcaneCraftingRecipe("Advanced Rods", new ItemStack(ItemRegister.angelRodItem), CraftingAspects.angelRod, new Object[]{
 		"  X",
 		" I ",
 		"X  ",
 		'X', ItemRegister.ignisFuel,
-		'I', new ItemStack(ConfigItems.itemWandRod, 1, 2)});
+		'I', new ItemStack(ItemRegister.diamondRodItem, 1, 0)});
 	
 	devilRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.devilRodItem), CraftingAspects.devilRod, new Object[]{
 		"  X",
@@ -293,7 +292,7 @@ public class ThaumcraftRecipeRegister {
 		"  X",
 		" I ",
 		"X  ",
-		'X', Item.netherStar,
+		'X', ItemRegister.darkThaumium,
 		'I', new ItemStack(ItemRegister.devilRodItem, 1, 0)});
 	
 	candyRod = ThaumcraftApi.addArcaneCraftingRecipe("Wand Rods", new ItemStack(ItemRegister.candyRodItem), CraftingAspects.candyRod, new Object[]{
@@ -387,6 +386,14 @@ public class ThaumcraftRecipeRegister {
 		'I', Item.diamond,
 		'Y', MCKERegister.MCKCharger});
 	
+	wandCharger = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.charger, 1, 0), CraftingAspects.exchangerBlock,  new Object[]{
+		"XIX",
+		"IYI",
+		"XIX",
+		'X', ItemRegister.darkThaumium,
+		'I', ItemRegister.magicTradeTier1,
+		'Y', new ItemStack(ItemRegister.devilRodItem, 1, 0)});
+	
 	battery = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.magicCrystal, 1, 50), CraftingAspects.exchangerBlock,  new Object[]{
 		"XIX",
 		"IYI",
@@ -394,6 +401,14 @@ public class ThaumcraftRecipeRegister {
 		'X', ItemRegister.pechTradeTier1,
 		'I', ItemRegister.magicTradeTier1,
 		'Y', Block.blockRedstone});
+	
+	darkThaumium = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(ItemRegister.darkThaumium, 1, 0), CraftingAspects.pechTradeTier3,  new Object[]{
+		"YIY",
+		"IXI",
+		"YIY",
+		'X', Item.diamond,
+		'I', ItemRegister.magicTradeTier1,
+		'Y', new ItemStack(ConfigItems.itemResource, 1, 2)});
 	
 		GameRegistry.addShapedRecipe(new ItemStack(BlockRegister.ignisFuelBlock), new Object[] {
 		"XXX",
@@ -576,7 +591,9 @@ public class ThaumcraftRecipeRegister {
 
 	public static ShapedArcaneRecipe exchanger;
 	public static ShapedArcaneRecipe charger;
+	public static ShapedArcaneRecipe wandCharger;
 	public static ShapedArcaneRecipe battery;
+	public static ShapedArcaneRecipe darkThaumium;
 
 	public static ShapedArcaneRecipe copperRod;
 	public static ShapedArcaneRecipe tinRod;

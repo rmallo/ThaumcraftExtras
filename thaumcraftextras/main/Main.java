@@ -14,7 +14,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "ThaumcraftExtras", name = "ThaumcraftExtras", version = "0.8.0.1" ,dependencies = "required-after:Thaumcraft")
+@Mod(modid = "ThaumcraftExtras", name = "ThaumcraftExtras", version = "0.8.1" ,dependencies = "required-after:Thaumcraft")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 
 public class Main {
@@ -45,6 +45,7 @@ public class Main {
         GameRegistry.registerTileEntity(thaumcraftextras.blocks.tileEntity.TileEntityCharger.class, "4");
         GameRegistry.registerTileEntity(thaumcraftextras.blocks.tileEntity.TileEntityExchanger.class, "5");
         GameRegistry.registerTileEntity(thaumcraftextras.blocks.tileEntity.TileEntityHidden.class, "6");
+        GameRegistry.registerTileEntity(thaumcraftextras.blocks.tileEntity.TileEntityWandCharger.class, "7");
         MinecraftForge.EVENT_BUS.register(this); 
     }
 

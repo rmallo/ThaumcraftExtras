@@ -1,6 +1,8 @@
 package thaumcraftextras.blocks;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -9,11 +11,15 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.ThaumcraftApiHelper;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.common.Thaumcraft;
 import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.items.wands.ItemWandCasting;
 import thaumcraftextras.helpers.IconHelper;
+import thaumcraftextras.main.Config;
 import thaumcraftextras.register.CreativeTabRegister;
 import thaumcraftextras.register.ItemRegister;
 import cpw.mods.fml.relauncher.Side;
@@ -28,7 +34,7 @@ public class TCEBlockResearch extends Block{
 		setHardness(1.0F);
 	}
 	int amount;
-	
+
     @Override
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List) {

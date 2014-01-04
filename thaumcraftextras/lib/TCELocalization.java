@@ -177,6 +177,12 @@ public class TCELocalization {
 	public static String cable = "Magic Cable";
 	public static String cableTexture  = "cable";
 	
+	public static String charger = "Wand Charger";
+	public static String chargerTexture  = "charger";
+	
+	public static String DarkThaumium = "Dark Thaumium";
+	public static String DarkThaumiumTexture  = "darkthaumium";
+	
 	/** Specials */
 	public static String WardedBlock = "Warded Block";
 	public static String WardedSlab = "Warded Slab";

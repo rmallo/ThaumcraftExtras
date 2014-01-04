@@ -35,16 +35,14 @@ public class Config {
 	        mckChargerId = config.getBlock("mckCharger", 420).getInt();
 	        exchangerId = config.getBlock("exchanger", 421).getInt();
 	        cableId = config.getBlock("cable", 423).getInt();
+	        chargerId = config.getBlock("charger", 424).getInt();
 
 	        //colorBlockId = config.getBlock("colorBlock", 336).getInt();
 	        //teslaBlockId = config.getBlock("teslaBlock", 337).getInt();
 	       // teleporterBlockId = config.getBlock("teleporterBlock", 368).getInt();
 
 	        magicCrystalId = config.getItem("magicCrystal", 11200).getInt();
-	        magicCrystal2Id = config.getItem("magicCrystal2", 11201).getInt();
-	        magicCrystal3Id = config.getItem("magicCrystal3", 11202).getInt();
-	        magicCrystal4Id = config.getItem("magicCrystal4", 11203).getInt();
-	        magicCrystal5Id = config.getItem("magicCrystal5", 11204).getInt();
+
 
 	        pechTradeTier1Id = config.getItem("pechTradeTier1", 12225).getInt();
 	        pechTradeTier2Id = config.getItem("pechTradeTier2", 12226).getInt();
@@ -90,7 +88,7 @@ public class Config {
 	        emptyShardId = config.getItem("emptyShard", 14202).getInt();
 	        xpShardId = config.getItem("xpShard", 14203).getInt();
 	        xpExtractorId = config.getItem("xpExtractor", 14204).getInt();
-	        //colorPouchId = config.getItem("colorPouch", 14205).getInt();
+	        darkThaumiumId = config.getItem("darkThaumium", 14205).getInt();
 
 	        enderFoci = config.get(Configuration.CATEGORY_GENERAL, "enderFoci", true).getBoolean(enderFoci);
 	    	arrowFoci = config.get(Configuration.CATEGORY_GENERAL, "arrowFoci", true).getBoolean(arrowFoci);
@@ -146,14 +144,10 @@ public class Config {
 	public static int openWardedId;
 
 	public static int magicCrystalId;
-	public static int magicCrystal2Id;
-	public static int magicCrystal3Id;
-	public static int magicCrystal4Id;
-	public static int magicCrystal5Id;
-
 
 	public static int mckChargerId;
 	public static int exchangerId;
+	public static int chargerId;
 	public static int cableId;
 
     public static int pechTradeTier1Id;
@@ -197,6 +191,8 @@ public class Config {
     public static int snowballFociId;
     public static int cleanFociId;
 
+    public static int darkThaumiumId;
+    
     public static int lightShardId;
     public static int emptyShardId;
     public static int xpShardId;

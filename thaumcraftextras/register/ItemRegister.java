@@ -42,6 +42,9 @@ public class ItemRegister {
 		LanguageRegistry.addName(ignisFuel, TCELocalization.IgnisFuel);
 		GameRegistry.registerFuelHandler(new FuelHelper());
 		
+		darkThaumium = new TCEItem(Config.darkThaumiumId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.DarkThaumiumTexture);
+		LanguageRegistry.addName(darkThaumium, TCELocalization.DarkThaumium);
+		
 		pechTradeTier1 = new TCEItem(Config.pechTradeTier1Id).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.PechTradeTier1Texture);
 		LanguageRegistry.addName(pechTradeTier1, TCELocalization.PechTradeTier1);
 
@@ -199,7 +202,8 @@ public class ItemRegister {
 	
 	public static Item ignisFuel;
 	public static Item xpExtractor;
-	
+	public static Item darkThaumium;
+
 	
 	public static Item enderFoci;
 	public static Item arrowFoci;
