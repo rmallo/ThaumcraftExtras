@@ -27,6 +27,9 @@ tce.tag.Wand Rods=Begonnen von ganz unten, nun sind wir hier
 tce.tag.Wand Focus: Confusion=Alles so verworren
 tce.tag.Warded Block=Erwidere meine Liebe
 tce.tag.Event Foci=Besondere Tage bleiben stets besonders
+tce.tag.Magic Energy=Vom Donner durchzogen
+tce.tag.Wand Focus: Clean=Reinige das Schmutzige
+tce.tag.Advanced Rods=Begonnen von ganz unten, nun sind ganz oben
 ------Thaumonomicon Entry------
 tce.text.Thaumcraft Extras=Du hast herausgefunden, dass mehr in Thaumcraft steckt als du erwartet hast. Es wird Thaumcraft Extras genannt.
 tce.text.Shard Infusion=Du hast einen Weg entdeckt, Luft-Scherben zu verfeinern, indem du sie mit Kohle verbindest. Dadurch strahlen sie ein starkes Licht aus. Du bist sicher, dass du mit der Zeit eine Verwendung für dieses seltsame Material finden wirst, aber sein eigenartiges Verhalten macht es ungeeignet um daraus Bündel herzustellen.
@@ -56,12 +59,18 @@ tce.text.Wand Rods=Während deiner Forschungen an Stabkernen hast du herausgefun
 tce.text.Wand Focus: Confusion=Dieser Fokus versprüht einen Nebel aus giftigem Gas, das jedes Lebewesen, das es trifft, verwirrt. Es wird einfach nicht verstehen, was vor sich geht.
 tce.text.Warded Block=Diese Blöcke machen dich sicher. Sie können nur von demjenigen zerstört werden, der sie gesetzt hat. Das ist der beste Weg, dein Haus zu sichern.
 tce.text.Event Foci=Um Ereignisse zu feiern kannst du jetzt spezielle Foki herstellen. Sie sind manchmal nutzlos, aber sie haben ein Thema. Ihr einziger Zweck ist, Spaß mit ihnen zu haben.
+tce.text.Magic Energy=Nach endlosen Forschungsstunden hast du einen Weg gefunden, um Items in magische Energie zu verwandeln und diese in magischen Geräten zu benutzen.
+tce.text.Wand Focus: Clean=Nach der Erforschung des Zerstörungs-Fokus hast du einen Weg gefunden, ihn sicherer zu machen, indem du nur bestimmte Items erlaubst.
+tce.text.Advanced Rods=Du hast herausgefunden, dass es verschiedene Typen von Stabkernen gibt, die aber bis jetzt alle nicht ausreichend für deine Zwecke sind. Jetzt hast du Kerne gefunden, die es sind. Diese Kerne können mehr Vis speichern als Silberholzkerne.
 ------Items------
 item.Wand.ultimate.rod=Ultimativ
 item.Wand.iron.rod=Eisen
 item.Wand.gold.rod=Gold
 item.Wand.diamond.rod=Diamant
 item.Wand.emerald.rod=Smaragd
+item.Wand.angel.rod=Engel
+item.Wand.devil.rod=Teufel
+item.Wand.god.rod=Gott
 item.wand.candy.rod=Zucker
 ------Blocks------
 tce.warded.block.black.name=Bannender Block: Schwarz
