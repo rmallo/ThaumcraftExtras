@@ -30,6 +30,7 @@ tce.tag.Event Foci=Besondere Tage bleiben stets besonders
 tce.tag.Magic Energy=Vom Donner durchzogen
 tce.tag.Wand Focus: Clean=Reinige das Schmutzige
 tce.tag.Advanced Rods=Begonnen von ganz unten, nun sind ganz oben
+tce.tag.Empty Focus=Irgendwo müssen wir anfangen
 ------Thaumonomicon Entry------
 tce.text.Thaumcraft Extras=Du hast herausgefunden, dass mehr in Thaumcraft steckt als du erwartet hast. Es wird Thaumcraft Extras genannt.
 tce.text.Shard Infusion=Du hast einen Weg entdeckt, Luft-Scherben zu verfeinern, indem du sie mit Kohle verbindest. Dadurch strahlen sie ein starkes Licht aus. Du bist sicher, dass du mit der Zeit eine Verwendung für dieses seltsame Material finden wirst, aber sein eigenartiges Verhalten macht es ungeeignet um daraus Bündel herzustellen.
@@ -62,6 +63,7 @@ tce.text.Event Foci=Um Ereignisse zu feiern kannst du jetzt spezielle Foki herst
 tce.text.Magic Energy=Nach endlosen Forschungsstunden hast du einen Weg gefunden, um Items in magische Energie zu verwandeln und diese in magischen Geräten zu benutzen.
 tce.text.Wand Focus: Clean=Nach der Erforschung des Zerstörungs-Fokus hast du einen Weg gefunden, ihn sicherer zu machen, indem du nur bestimmte Items erlaubst.
 tce.text.Advanced Rods=Du hast herausgefunden, dass es verschiedene Typen von Stabkernen gibt, die aber bis jetzt alle nicht ausreichend für deine Zwecke sind. Jetzt hast du Kerne gefunden, die es sind. Diese Kerne können mehr Vis speichern als Silberholzkerne.
+tce.text.Empty Focus=Als du entdeckt hast, dass es viel mehr magische Geräte gibt, als du dachtest, hast du herausgefunden, dass es sogar mehr Stabfoki gibt. Dieses Item ermöglicht dir viele neue Foki.
 ------Items------
 item.Wand.ultimate.rod=Ultimativ
 item.Wand.iron.rod=Eisen
@@ -71,7 +73,20 @@ item.Wand.emerald.rod=Smaragd
 item.Wand.angel.rod=Engel
 item.Wand.devil.rod=Teufel
 item.Wand.god.rod=Gott
+item.Wand.darkSilverwood.rod=Dunkles Silberholz
 item.wand.candy.rod=Zucker
+------Bees-------
+tce.species.ignisFuel=Ignis
+tce.species.magicEssence=Magie-Essenz
+tce.species.greedEssence=Gier-Essenz
+tce.species.lightShard=Lichtscherbe
+tce.species.thaumium=Thaumium
+tce.species.darkThaumium=Dunkles Thaumium
+tce.species.greatwood=Großholz
+tce.species.silverwood=Silberholz
+tce.species.darkSilverwood=Dunkles Silberholz
+tce.species.salis=Salis Mundus
+tce.species.pig=Schwein
 ------Blocks------
 tce.warded.block.black.name=Bannender Block: Schwarz
 tce.warded.block.red.name=Bannender Block: Rot

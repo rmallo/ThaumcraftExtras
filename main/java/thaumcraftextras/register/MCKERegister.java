@@ -2,15 +2,17 @@ package thaumcraftextras.register;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.config.ConfigItems;
 import thaumcraftextras.api.functions.ChargerFunctions;
+import thaumcraftextras.api.functions.ExchangeFociFunctions;
 import thaumcraftextras.api.functions.ExchangerFunctions;
+import thaumcraftextras.api.items.Crystal;
 import thaumcraftextras.blocks.BlockCable;
 import thaumcraftextras.blocks.BlockCharger;
 import thaumcraftextras.blocks.BlockExchanger;
 import thaumcraftextras.blocks.MCKCharger;
 import thaumcraftextras.helpers.MainHelper;
-import thaumcraftextras.items.MagicCrystal;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -20,10 +22,15 @@ public class MCKERegister {
 	public static void load()
 	{
 		//Items
-		magicCrystal = new MagicCrystal(Config.magicCrystalId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.magicCrystalTexture);
-		GameRegistry.registerItem(magicCrystal, "MagicCrystal");
-		LanguageRegistry.addName(magicCrystal, TCELocalization.magicCrystal);
-		
+		magicCrystal = new Crystal(Config.magicCrystalId, 50, "Tier 1", 0xFF3333);
+		magicCrystal.setCreativeTab(CreativeTabRegister.tabMain);
+		magicCrystalT2 = new Crystal(Config.magicCrystalT2Id, 100, "Tier 2", 0x0099FF);
+		magicCrystalT2.setCreativeTab(CreativeTabRegister.tabMain);
+		magicCrystalT3 = new Crystal(Config.magicCrystalT3Id, 250, "Tier 3", 0x6600CC);
+		magicCrystalT3.setCreativeTab(CreativeTabRegister.tabMain);
+		magicCrystalT4 = new Crystal(Config.magicCrystalT4Id, 500, "Tier 4", 0x9999CC);
+		magicCrystalT4.setCreativeTab(CreativeTabRegister.tabMain);
+
 		addToCharger();
 		addToExchanger();
 		
@@ -52,9 +59,7 @@ public class MCKERegister {
 	}
 	
 	public static void addToCharger()
-	{
-		ChargerFunctions.addChargeAble(magicCrystal);
-		
+	{		
 		ChargerFunctions.addFuel(ConfigItems.itemShard, 1);
 		ChargerFunctions.addFuel(InfusionRegister.lightShard, 2);
 		ChargerFunctions.addFuel(ItemRegister.ignisFuel, 3);
@@ -70,7 +75,11 @@ public class MCKERegister {
 		ExchangerFunctions.addItem(ConfigItems.itemShard, 5);
 	}
 	
-	public static Item magicCrystal;
+	public static Crystal magicCrystal;
+	public static Crystal magicCrystalT2;
+	public static Crystal magicCrystalT3;
+	public static Crystal magicCrystalT4;
+
 	public static Block MCKCharger;
 	public static Block exchanger;
 	public static Block generator;

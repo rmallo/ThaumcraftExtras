@@ -1,4 +1,4 @@
-package thaumcraftextras.register.modSupport.bees;
+package thaumcraftextras.register.modSupport.forestry.bees;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -39,18 +39,59 @@ public class BeeMutation implements IBeeMutation
 
 		
 		new BeeMutation(Allele.getBaseSpecies("Cultivated"), Allele.getBaseSpecies("Forest"), Species.greatwood, 40);
+		new BeeMutation(Allele.getBaseSpecies("Cultivated"), Allele.getBaseSpecies("Meadows"), Species.ignisFuel, 50);
 		new BeeMutation(Allele.getBaseSpecies("Cultivated"), Species.greatwood, Species.tradeEssence, 20);
 		new BeeMutation(Species.tradeEssence, Species.silverwood, Species.magicEssence, 5);
 
 		new BeeMutation(Species.silverwood, Species.greatwood, Species.tradeEssence, 5);
 		new BeeMutation(Species.ignisFuel, Species.darkSilverwood, Species.lightShard, 5);
 		new BeeMutation(Species.ignisFuel, Species.darkThaumium, Species.salis, 5);
+		new BeeMutation(Species.ignisFuel, Species.thaumium, Species.quicksilver, 5);
+		new BeeMutation(Species.salis, Species.darkThaumium, Species.mana, 2);
+		
+    	
+    	if(Loader.isModLoaded("ArsMagica") && OreDictionary.getOres("gemChimerite").size() > 0)
+    	{
+    		new BeeMutation(Species.thaumium, Species.silverwood, Species.chimerite, 20);
+    	}
+    	
+    	
+    	if(Loader.isModLoaded("ArsMagica") && OreDictionary.getOres("gemSunstone").size() > 0)
+    	{
+    		new BeeMutation(Species.thaumium, Species.chimerite, Species.sunstone, 20);
+    	}
+    	
+    	if(Loader.isModLoaded("ArsMagica") && OreDictionary.getOres("gemMoonstoon").size() > 0)
+    	{
+    		new BeeMutation(Species.sunstone, Species.chimerite, Species.moonstone, 20);
+    	}
 
+    	
     	if(Loader.isModLoaded("TConstruct") && OreDictionary.getOres("nuggetPigIron").size() > 0)
     	{
     		new BeeMutation(Species.darkSilverwood, Species.darkThaumium, Species.pig, 3);
     	}
+    	
+    	if(OreDictionary.getOres("fuelCoke").size() > 0)
+    	{
+    		new BeeMutation(Species.silverwood, Species.greatwood, Species.coke, 5);
+    	}
+    	
+    	if(OreDictionary.getOres("dustCertusQuartz").size() > 0)
+    	{
+    		new BeeMutation(Species.silverwood, Species.greatwood, Species.certusQuartz, 5);
+    	}
+    	
+    	if(OreDictionary.getOres("ingotReinforced").size() > 0)
+    	{
+    		new BeeMutation(Species.darkSilverwood, Species.darkThaumium, Species.reinforced, 5);
+    	}
 	
+    	if(OreDictionary.getOres("ingotDraconic").size() > 0)
+    	{
+    		new BeeMutation(Species.darkSilverwood, Species.darkThaumium, Species.draconic, 1);
+    	}
+    	
 	}
 	
 	private IAllele parent1;

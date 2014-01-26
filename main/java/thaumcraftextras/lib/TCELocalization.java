@@ -184,6 +184,9 @@ public class TCELocalization {
 	public static String emptyFoci = "Empty Focus";
 	public static String emptyFociTexture  = "emptyFoci";
 	
+	public static String infoBook = "Thaumcraft Extras Info";
+	public static String infoBookTexture  = "book";
+	
 	/** Blocks */
 	public static String magicCharger = "Magic Charger";
 	public static String magicChargerTexture  = "magiccharger";

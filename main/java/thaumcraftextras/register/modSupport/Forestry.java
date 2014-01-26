@@ -1,12 +1,11 @@
 package thaumcraftextras.register.modSupport;
 
-import thaumcraftextras.helpers.MainHelper;
-import thaumcraftextras.items.ItemFociEmpty;
+import net.minecraft.item.Item;
+import net.minecraftforge.oredict.OreDictionary;
+import thaumcraftextras.api.items.Nugget;
 import thaumcraftextras.main.Config;
-import thaumcraftextras.register.modSupport.bees.BeeManager;
-import thaumcraftextras.register.modSupport.bees.Species;
+import thaumcraftextras.register.modSupport.forestry.bees.BeeManager;
 import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Forestry {
 	public static void isInstalled()
@@ -20,12 +19,20 @@ public class Forestry {
 	items();
 	bees();
 	blocks();
-	recipes();
 	}
 	
 	public static void items()
 	{
+		if(OreDictionary.getOres("ingotDraconic").size() > 0)
+			draconicNugget = new Nugget(Config.draconicNuggetId, "Draconic", "ingotDraconic", 0x990000, true, 0, null);
 		
+		if(OreDictionary.getOres("ingotReinforced").size() > 0)
+			reinforcedNugget = new Nugget(Config.reinforcedNuggetId, "Reinforced", "ingotReinforced", 0xCCCC99, true, 0, null);
+	
+		/*
+		if(OreDictionary.getOres("gemSunstone").size() > 0)
+			sunstoneNugget = new Nugget(Config.sunstoneNuggetId, "Sunstone", "gemSunstone", 0xFF6600, true, 0, null);
+	*/
 	}
 	
 	public static void bees()
@@ -42,5 +49,7 @@ public class Forestry {
 	{
 		
 	}
-	
+	public static Nugget draconicNugget;
+	public static Nugget reinforcedNugget;	
+	public static Nugget sunstoneNugget;	
 }

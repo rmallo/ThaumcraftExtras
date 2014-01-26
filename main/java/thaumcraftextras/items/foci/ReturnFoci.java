@@ -21,15 +21,19 @@ public class ReturnFoci extends ItemFoci {
         @Override
         public ItemStack onFocusRightClick(ItemStack itemstack, World world, EntityPlayer player, MovingObjectPosition movingobjectposition) {
             ItemWandCasting wand = (ItemWandCasting)itemstack.getItem();
-            if(player.getBedLocation() == null)
+            if(player.getBedLocation(player.dimension) == null)
             	return itemstack;
             	
             if (wand.consumeAllVis(itemstack, player, getVisCost(), true)) {
         
-            	int bedX = player.getBedLocation().posX;
-            	int bedY = player.getBedLocation().posY;
-            	int bedZ = player.getBedLocation().posZ;
+            	if(player.getBedLocation(player.dimension) != null)
+            	{
+            		
+            	int bedX = player.getBedLocation(player.dimension).posX;
+            	int bedY = player.getBedLocation(player.dimension).posY;
+            	int bedZ = player.getBedLocation(player.dimension).posZ;
             	player.setPosition(bedX, bedY, bedZ);
+            	}
             }
       		return itemstack;
         }

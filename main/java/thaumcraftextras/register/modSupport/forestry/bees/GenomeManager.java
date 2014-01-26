@@ -1,6 +1,11 @@
-package thaumcraftextras.register.modSupport.bees;
+package thaumcraftextras.register.modSupport.forestry.bees;
 
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import forestry.api.apiculture.EnumBeeChromosome;
+import forestry.api.apiculture.EnumBeeType;
+import forestry.api.core.ItemInterface;
 import forestry.api.genetics.IAllele;
 
 public class GenomeManager {
@@ -136,6 +141,103 @@ public class GenomeManager {
 			return genome;
 		}
 		
+		public static IAllele[] getTemplateQuickSilver()
+		{
+			IAllele[] genome = getTemplateModBase();
+			
+			genome[EnumBeeChromosome.SPECIES.ordinal()] = Species.quicksilver;
+			genome[EnumBeeChromosome.CAVE_DWELLING.ordinal()] = Allele.getBaseAllele("boolTrue");
+			genome[EnumBeeChromosome.NOCTURNAL.ordinal()] = Allele.getBaseAllele("boolTrue");
+
+			return genome;
+		}
+		
+		public static IAllele[] getTemplateMana()
+		{
+			IAllele[] genome = getTemplateModBase();
+			
+			genome[EnumBeeChromosome.SPECIES.ordinal()] = Species.mana;
+			genome[EnumBeeChromosome.CAVE_DWELLING.ordinal()] = Allele.getBaseAllele("boolTrue");
+			genome[EnumBeeChromosome.NOCTURNAL.ordinal()] = Allele.getBaseAllele("boolTrue");
+
+			return genome;
+		}
+		
+		public static IAllele[] getTemplateReinforced()
+		{
+			IAllele[] genome = getTemplateModBase();
+			
+			genome[EnumBeeChromosome.SPECIES.ordinal()] = Species.reinforced;
+			genome[EnumBeeChromosome.CAVE_DWELLING.ordinal()] = Allele.getBaseAllele("boolTrue");
+			genome[EnumBeeChromosome.NOCTURNAL.ordinal()] = Allele.getBaseAllele("boolTrue");
+
+			return genome;
+		}
+		
+		public static IAllele[] getTemplateSunstone()
+		{
+			IAllele[] genome = getTemplateModBase();
+			
+			genome[EnumBeeChromosome.SPECIES.ordinal()] = Species.sunstone;
+
+			return genome;
+		}
+		
+		public static IAllele[] getTemplateMoonstoon()
+		{
+			IAllele[] genome = getTemplateModBase();
+			
+			genome[EnumBeeChromosome.SPECIES.ordinal()] = Species.moonstone;
+			genome[EnumBeeChromosome.CAVE_DWELLING.ordinal()] = Allele.getBaseAllele("boolTrue");
+			genome[EnumBeeChromosome.NOCTURNAL.ordinal()] = Allele.getBaseAllele("boolTrue");
+
+			return genome;
+		}
+		
+		public static IAllele[] getTemplateChimerite()
+		{
+			IAllele[] genome = getTemplateModBase();
+			
+			genome[EnumBeeChromosome.SPECIES.ordinal()] = Species.chimerite;
+			genome[EnumBeeChromosome.CAVE_DWELLING.ordinal()] = Allele.getBaseAllele("boolTrue");
+			genome[EnumBeeChromosome.NOCTURNAL.ordinal()] = Allele.getBaseAllele("boolTrue");
+
+			return genome;
+		}
+		
+		public static IAllele[] getTemplateCertusQuartz()
+		{
+			IAllele[] genome = getTemplateModBase();
+			
+			genome[EnumBeeChromosome.SPECIES.ordinal()] = Species.certusQuartz;
+			genome[EnumBeeChromosome.CAVE_DWELLING.ordinal()] = Allele.getBaseAllele("boolTrue");
+			genome[EnumBeeChromosome.NOCTURNAL.ordinal()] = Allele.getBaseAllele("boolTrue");
+
+			return genome;
+		}
+		
+		public static IAllele[] getTemplateCoke()
+		{
+			IAllele[] genome = getTemplateModBase();
+			
+			genome[EnumBeeChromosome.SPECIES.ordinal()] = Species.coke;
+			genome[EnumBeeChromosome.CAVE_DWELLING.ordinal()] = Allele.getBaseAllele("boolTrue");
+			genome[EnumBeeChromosome.NOCTURNAL.ordinal()] = Allele.getBaseAllele("boolTrue");
+
+			return genome;
+		}
+		
+		public static IAllele[] getTemplateDraconic()
+		{
+			IAllele[] genome = getTemplateModBase();
+			
+			genome[EnumBeeChromosome.SPECIES.ordinal()] = Species.draconic;
+			genome[EnumBeeChromosome.CAVE_DWELLING.ordinal()] = Allele.getBaseAllele("boolTrue");
+			genome[EnumBeeChromosome.NOCTURNAL.ordinal()] = Allele.getBaseAllele("boolTrue");
+
+			return genome;
+		}
+		
 		public static IAllele[] getTemplatePig()
 		{
 			IAllele[] genome = getTemplateModBase();
@@ -143,5 +245,46 @@ public class GenomeManager {
 			genome[EnumBeeChromosome.SPECIES.ordinal()] = Species.pig;
 
 			return genome;
+		}
+		
+		public static ItemStack getBeeNBTForSpecies(Species species, EnumBeeType beeType)
+		{
+			ItemStack taggedBee;
+			switch (beeType)
+			{
+				case PRINCESS:
+					taggedBee = ItemInterface.getItem("beePrincessGE");
+					break;
+				case QUEEN:
+					taggedBee = ItemInterface.getItem("beeQueenGE");
+					break;
+				case DRONE:
+				default:
+					taggedBee = ItemInterface.getItem("beeDroneGE");
+					break;
+			}
+			
+			NBTTagCompound tags = new NBTTagCompound();
+			
+			addGeneToCompound(EnumBeeChromosome.SPECIES, species, tags);
+			
+			taggedBee.setTagCompound(tags);
+			
+			return taggedBee;
+		}
+		
+		private static void addGeneToCompound(EnumBeeChromosome gene, IAllele allele, NBTTagCompound compound)
+		{
+			NBTTagCompound geneRoot = new NBTTagCompound();
+			compound.setTag("Genome", geneRoot);
+			NBTTagList chromosomes = new NBTTagList();
+			geneRoot.setTag("Chromosomes", chromosomes);
+			
+			NBTTagCompound selectedGene = new NBTTagCompound();
+			chromosomes.appendTag(selectedGene);
+			
+			selectedGene.setByte("Slot", (byte)gene.ordinal());
+			selectedGene.setString("UID0", allele.getUID());
+			selectedGene.setString("UID1", allele.getUID());		
 		}
 }

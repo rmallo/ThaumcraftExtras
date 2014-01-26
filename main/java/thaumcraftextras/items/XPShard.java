@@ -2,12 +2,14 @@ package thaumcraftextras.items;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import thaumcraftextras.api.items.Shard;
 import thaumcraftextras.helpers.IconHelper;
 import thaumcraftextras.register.CreativeTabRegister;
 
-public class XPShard extends ShardItem{
+public class XPShard extends Item{
 
 	public XPShard(int id) {
 		super(id);

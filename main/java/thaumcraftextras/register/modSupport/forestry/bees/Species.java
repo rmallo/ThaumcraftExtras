@@ -1,4 +1,4 @@
-package thaumcraftextras.register.modSupport.bees;
+package thaumcraftextras.register.modSupport.forestry.bees;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -160,6 +160,47 @@ public class Species implements IAlleleBeeSpecies, IIconProvider{
     	.setGenome(GenomeManager.getTemplateSalis())
 		.register();
     	
+    	quicksilver = new Species("quicksilver", "quicksilver", BeeClassification.QUICKSILVER, 0xCC6666, 0xFFFFFF, EnumTemperature.NORMAL, EnumHumidity.NORMAL, true, false, false, true);
+    	quicksilver.addProduct(new ItemStack(ConfigItems.itemResource, 1, 3), 50)
+    	.addProduct(OreDictionary.getOres("dropHoney").get(0), 50)
+    	.setGenome(GenomeManager.getTemplateQuickSilver())
+		.register();
+    	
+    	mana = new Species("mana", "mana", BeeClassification.MANA, 0xCC6600, 0x9933CC, EnumTemperature.NORMAL, EnumHumidity.NORMAL, true, false, false, true);
+    	mana.addProduct(new ItemStack(ConfigItems.itemManaBean), 50)
+    	.addProduct(OreDictionary.getOres("dropHoney").get(0), 50)
+    	.setGenome(GenomeManager.getTemplateMana())
+		.register();
+    	
+    	if(Loader.isModLoaded("arsmagica2") && OreDictionary.getOres("gemSunstone").size() > 0)
+    	{
+        	ItemStack item = OreDictionary.getOres("gemSunstone").get(0);
+        	sunstone = new Species("sunstone", "sunstone", BeeClassification.SUNSTONE, 0xFF6600, 0xFF0000, EnumTemperature.NORMAL, EnumHumidity.NORMAL, true, false, false, true);
+        	sunstone.addProduct(item, 5)
+        	.addProduct(OreDictionary.getOres("dropHoney").get(0), 50)
+        	.setGenome(GenomeManager.getTemplateSunstone())
+    		.register();
+    	}
+    	
+    	if(Loader.isModLoaded("arsmagica2") && OreDictionary.getOres("gemMoonstoon").size() > 0)
+    	{
+        	ItemStack item = OreDictionary.getOres("gemMoonstoon").get(0);
+        	moonstone = new Species("moonstone", "moonstone", BeeClassification.MOONSTONE, 0x999999, 0xCC9999, EnumTemperature.NORMAL, EnumHumidity.NORMAL, true, false, false, true);
+        	moonstone.addProduct(item, 5)
+        	.addProduct(OreDictionary.getOres("dropHoney").get(0), 50)
+        	.setGenome(GenomeManager.getTemplateSunstone())
+    		.register();
+    	}
+    	if(Loader.isModLoaded("arsmagica2") && OreDictionary.getOres("gemChimerite").size() > 0)
+    	{
+        	ItemStack item = OreDictionary.getOres("gemChimerite").get(0);
+        	chimerite = new Species("chimerite", "chimerite", BeeClassification.CHIMERITE, 0xCCFFFF, 0xCC9999, EnumTemperature.NORMAL, EnumHumidity.NORMAL, true, false, false, true);
+        	chimerite.addProduct(item, 5)
+        	.addProduct(OreDictionary.getOres("dropHoney").get(0), 50)
+        	.setGenome(GenomeManager.getTemplateChimerite())
+    		.register();
+    	}
+    	
     	if(Loader.isModLoaded("TConstruct") && OreDictionary.getOres("nuggetPigIron").size() > 0)
     	{
     	ItemStack pigItem = OreDictionary.getOres("nuggetPigIron").get(0);
@@ -168,6 +209,47 @@ public class Species implements IAlleleBeeSpecies, IIconProvider{
     	.addProduct(OreDictionary.getOres("dropHoney").get(0), 50)
     	.setGenome(GenomeManager.getTemplatePig())
 		.register();
+    	}
+    	
+    	if(OreDictionary.getOres("fuelCoke").size() > 0)
+    	{
+    	ItemStack item = OreDictionary.getOres("fuelCoke").get(0);
+    	coke = new Species("coke", "coke", BeeClassification.COKE, 0x9966CC, 0xFFFFCC, EnumTemperature.NORMAL, EnumHumidity.NORMAL, true, false, false, true);
+    	coke.addProduct(item, 5)
+    	.addProduct(OreDictionary.getOres("dropHoney").get(0), 50)
+    	.setGenome(GenomeManager.getTemplateCoke())
+		.register();
+    	}
+    	
+    	if(OreDictionary.getOres("dustCertusQuartz").size() > 0)
+    	{
+    	ItemStack item = OreDictionary.getOres("dustCertusQuartz").get(0);
+    	certusQuartz = new Species("certusQuartz", "certusQuartz", BeeClassification.CERTUSQUARTZ, 0x00FFCC, 0xFFFFCC, EnumTemperature.NORMAL, EnumHumidity.NORMAL, true, false, false, true);
+    	certusQuartz.addProduct(item, 5)
+    	.addProduct(OreDictionary.getOres("dropHoney").get(0), 50)
+    	.setGenome(GenomeManager.getTemplateCertusQuartz())
+		.register();
+    	}
+    	
+    	
+    	if(OreDictionary.getOres("nuggetReinforced").size() > 0)
+    	{
+        	ItemStack reinforcedItem = OreDictionary.getOres("nuggetReinforced").get(0);
+        	reinforced = new Species("reinforced", "reinforced", BeeClassification.REINFORCED, 0x9966CC, 0xFF66FF, EnumTemperature.NORMAL, EnumHumidity.NORMAL, true, false, false, true);
+        	reinforced.addProduct(reinforcedItem, 5)
+        	.addProduct(OreDictionary.getOres("dropHoney").get(0), 50)
+        	.setGenome(GenomeManager.getTemplateReinforced())
+    		.register();
+    	}
+    	
+    	if(OreDictionary.getOres("nuggetDraconic").size() > 0)
+    	{
+        	ItemStack draconicItem = OreDictionary.getOres("nuggetDraconic").get(0);
+        	draconic = new Species("draconic", "draconic", BeeClassification.DRACONIC, 0x9966CC, 0xFF66FF, EnumTemperature.NORMAL, EnumHumidity.NORMAL, true, false, false, true);
+        	draconic.addProduct(draconicItem, 5)
+        	.addProduct(OreDictionary.getOres("dropHoney").get(0), 50)
+        	.setGenome(GenomeManager.getTemplateDraconic())
+    		.register();
     	}
     }
 
@@ -213,7 +295,7 @@ public class Species implements IAlleleBeeSpecies, IIconProvider{
 
     @Override
     public String getEntityTexture() {
-        return "/gfx/forestry/entities/bees/honeyBee.png"; // Because we don't need custom bee textures...
+        return "/gfx/forestry/entities/bees/honeyBee.png";
     }
 
     @Override
@@ -243,7 +325,7 @@ public class Species implements IAlleleBeeSpecies, IIconProvider{
 
     @Override
     public float getResearchSuitability(ItemStack itemstack) {
-        return 0f; // TODO: Researchability!
+        return 0f;
     }
 
     @Override
@@ -310,7 +392,7 @@ public class Species implements IAlleleBeeSpecies, IIconProvider{
 
     @Override
     public Icon getIcon(short texUID) {
-        return icons[0][0]; // According to Myst... Unused.
+        return icons[0][0];
     }
 
     @Override
@@ -366,6 +448,15 @@ public class Species implements IAlleleBeeSpecies, IIconProvider{
     public static Species greatwood;
     public static Species ignisFuel;
     public static Species salis;
+    public static Species quicksilver;
+    public static Species mana;
+    public static Species reinforced;
+    public static Species draconic;
     public static Species pig;
+    public static Species sunstone;
+    public static Species moonstone;
+    public static Species chimerite;
+    public static Species coke;
+    public static Species certusQuartz;
 
 }

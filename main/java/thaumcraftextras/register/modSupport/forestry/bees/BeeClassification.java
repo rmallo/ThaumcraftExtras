@@ -1,4 +1,4 @@
-package thaumcraftextras.register.modSupport.bees;
+package thaumcraftextras.register.modSupport.forestry.bees;
 
 import java.util.ArrayList;
 
@@ -19,6 +19,15 @@ public enum BeeClassification implements IClassification
 	GREATWOOD("Greatwood", "Greatwood"),
 	IGNISFUEL("IgnisFuel", "IgnisFuel"),
 	SALIS("Salis", "Salis"),
+	QUICKSILVER("QuickSilver", "QuickSilver"),
+	MANA("Mana", "Mana"),
+	SUNSTONE("Sunstone", "Sunstone"), 
+	MOONSTONE("Moonstone", "Moonstone"), 
+	CHIMERITE("Chimerite", "Chimerite"), 
+	COKE("Coke", "Coke"), 
+	CERTUSQUARTZ("CertusQuartz", "CertusQuartz"), 
+	REINFORCED("Reinforced", "Reinforced"), 
+	DRACONIC("Draconic", "Draconic"),
 	PIG("Pig", "Pig");
 
 	private String uID;

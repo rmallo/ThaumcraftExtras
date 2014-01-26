@@ -14,6 +14,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.items.wands.ItemWandCasting;
+import thaumcraftextras.api.functions.ExchangeFociFunctions;
 import thaumcraftextras.register.ParticleRegister;
 
 public class ExchangeFoci extends ItemFoci {
@@ -35,7 +36,8 @@ public class ExchangeFoci extends ItemFoci {
                 	if (wand.consumeAllVis(itemstack, player, getVisCost(), true)) {
             		if(!world.isRemote)
             		{
-                	if(blockId == Block.stoneBrick.blockID)
+                	/*
+            		if(blockId == Block.stoneBrick.blockID)
             		{
             		cap = 3;
             		setBlock(mop, world, player, itemstack);
@@ -126,13 +128,20 @@ public class ExchangeFoci extends ItemFoci {
                 		ChangeBlockType(mop, world, player, itemstack);
             		}
             		}
+            		*/
+            			
+            			if(ExchangeFociFunctions.canBeExchange.containsKey(blockId))
+            			{
+            				cap = ExchangeFociFunctions.canBeExchange.get(blockId);
+                			setBlock(mop, world, player, itemstack);
+            			}
+            		}
                 	}
             	}
             	
       		return itemstack;
         }
         private static int cap;
-        private static int type;
         
         
         public static void setBlock(MovingObjectPosition mop, World world, EntityPlayer player, ItemStack itemstack)
@@ -156,30 +165,7 @@ public class ExchangeFoci extends ItemFoci {
 			}
         }
         
-        public static void ChangeBlockType(MovingObjectPosition mop, World world, EntityPlayer player, ItemStack itemstack)
-        {           
-            int blockId = world.getBlockId(mop.blockX, mop.blockY, mop.blockZ);
-        	if(type == 0)
-        		world.setBlock(mop.blockX, mop.blockY, mop.blockZ, Block.plantYellow.blockID);
-        	if(type == 1)
-        		world.setBlock(mop.blockX, mop.blockY, mop.blockZ, Block.plantRed.blockID);
-        	if(type == 2)
-        		world.setBlock(mop.blockX, mop.blockY, mop.blockZ, Block.cobblestoneMossy.blockID);
-        	if(type == 3)
-        		world.setBlock(mop.blockX, mop.blockY, mop.blockZ, Block.cobblestone.blockID);
-        
-			
-			if(blockId != 0)
-			{
-			for (int i = 0; i < 4; ++i)
-            {
-				{
-         		 Random rand2 = new Random();
-         		 ParticleRegister.spawnParticle("enchantmenttable", world, mop.blockX, mop.blockY + rand2.nextDouble() * 0.5D, mop.blockZ, rand2.nextGaussian(), 0.5D, rand2.nextGaussian());
-				}
-			}
-			}
-        }
+       
         @Override
         public String getSortingHelper(ItemStack itemstack) {
                 return "EXCHANGE";

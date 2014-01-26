@@ -6,8 +6,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.wands.WandRod;
+import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.items.wands.WandRodPrimalOnUpdate;
 import thaumcraftextras.api.functions.DestroyFunctions;
+import thaumcraftextras.api.functions.ExchangeFociFunctions;
 import thaumcraftextras.helpers.FuelHelper;
 import thaumcraftextras.helpers.MainHelper;
 import thaumcraftextras.items.ItemColorPouch;
@@ -15,11 +17,11 @@ import thaumcraftextras.items.ItemFociEmpty;
 import thaumcraftextras.items.RodItem;
 import thaumcraftextras.items.TCEItem;
 import thaumcraftextras.items.XPExtractor;
+import thaumcraftextras.items.InfoBook.ItemInfo;
 import thaumcraftextras.items.foci.ArrowFoci;
 import thaumcraftextras.items.foci.BeamExchangeFoci;
 import thaumcraftextras.items.foci.CleanFoci;
 import thaumcraftextras.items.foci.ConfusionFoci;
-import thaumcraftextras.items.foci.CustomFoci;
 import thaumcraftextras.items.foci.DestroyFoci;
 import thaumcraftextras.items.foci.DispelFoci;
 import thaumcraftextras.items.foci.EnderFoci;
@@ -107,6 +109,7 @@ public class ItemRegister {
 		returnFoci = new ReturnFoci(Config.returnFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.returnFociTexture);
 		LanguageRegistry.addName(returnFoci,  TCELocalization.returnFoci);
 		
+		addToExchanger();
 		exchangeFoci = new ExchangeFoci(Config.exchangeFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.exchangeFociTexture);
 		LanguageRegistry.addName(exchangeFoci,  TCELocalization.exchangeFoci);
 		
@@ -141,8 +144,11 @@ public class ItemRegister {
 		colorPouch = new ItemColorPouch(Config.colorPouchId);
 		LanguageRegistry.addName(colorPouch, TCELocalization.colorPouch);
 		
-		emptyFoci = new ItemFociEmpty(Config.emptyFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.emptyFociTexture);;
+		emptyFoci = new ItemFociEmpty(Config.emptyFociId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.emptyFociTexture);
 		LanguageRegistry.addName(emptyFoci, TCELocalization.emptyFoci);
+		
+		book = new ItemInfo(Config.infoBookId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.infoBookTexture);
+		LanguageRegistry.addName(book, TCELocalization.infoBook);
 		
 		/** Special Wands */
 		ultimateRodItem = new RodItem(Config.ultimateRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ultimateRodTexture);
@@ -201,12 +207,32 @@ public class ItemRegister {
 	    DestroyFunctions.canDestroy.put(BlockRegister.hiddenWarded.blockID, 8);
 	    DestroyFunctions.canDestroy.put(Block.bedrock.blockID, 9);
 	}
+	
+	public static void addToExchanger()
+	{
+		ExchangeFociFunctions.canBeExchange.put(Block.stoneBrick.blockID, 3);
+		ExchangeFociFunctions.canBeExchange.put(Block.wood.blockID, 3);
+		ExchangeFociFunctions.canBeExchange.put(Block.planks.blockID, 3);
+		ExchangeFociFunctions.canBeExchange.put(Block.sandStone.blockID, 3);
+		ExchangeFociFunctions.canBeExchange.put(Block.sapling.blockID, 3);
+		ExchangeFociFunctions.canBeExchange.put(Block.leaves.blockID, 3);
+		ExchangeFociFunctions.canBeExchange.put(Block.woodSingleSlab.blockID, 3);
+		ExchangeFociFunctions.canBeExchange.put(Block.woodDoubleSlab.blockID, 3);
+		ExchangeFociFunctions.canBeExchange.put(Block.stoneSingleSlab.blockID, 6);
+		ExchangeFociFunctions.canBeExchange.put(ConfigBlocks.blockCandle.blockID, 15);
+		ExchangeFociFunctions.canBeExchange.put(Block.stainedClay.blockID, 16);
+		ExchangeFociFunctions.canBeExchange.put(Block.cloth.blockID, 16);
+		ExchangeFociFunctions.canBeExchange.put(Block.carpet.blockID, 16);
+
+	}
+	
 	public static void recipe()
 	{
 	}
 	
 	public static Item colorPouch;
 	public static Item emptyFoci;
+	public static Item book;
 
 	public static Item pechTradeTier1;
 	public static Item pechTradeTier2;

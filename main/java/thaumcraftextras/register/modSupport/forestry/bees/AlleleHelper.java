@@ -1,4 +1,4 @@
-package thaumcraftextras.register.modSupport.bees;
+package thaumcraftextras.register.modSupport.forestry.bees;
 
 import forestry.api.apiculture.IAlleleBeeSpecies;
 import forestry.api.genetics.AlleleManager;

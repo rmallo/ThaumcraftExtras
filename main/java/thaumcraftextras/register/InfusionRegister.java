@@ -8,15 +8,11 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.api.crafting.ShapelessArcaneRecipe;
-import thaumcraft.common.Thaumcraft;
 import thaumcraft.common.config.ConfigItems;
+import thaumcraftextras.api.items.Shard;
 import thaumcraftextras.helpers.MainHelper;
-import thaumcraftextras.items.ShardItem;
-import thaumcraftextras.items.TCEItem;
 import thaumcraftextras.items.XPShard;
-import thaumcraftextras.items.foci.ArrowFoci;
-import thaumcraftextras.items.foci.HealFoci;
-import thaumcraftextras.items.foci.SpeedFoci;
+import thaumcraftextras.lib.CraftingAspects;
 import thaumcraftextras.lib.TCELocalization;
 import thaumcraftextras.main.Config;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -25,12 +21,10 @@ public class InfusionRegister {
 
 	public static void load()
 	{	
-		lightShard = new ShardItem(Config.lightShardId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.lightShardTexture);
-		LanguageRegistry.addName(lightShard, TCELocalization.lightShard);
-		
-		emptyShard = new ShardItem(Config.emptyShardId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.emptyShardTexture);
-		LanguageRegistry.addName(emptyShard, TCELocalization.emptyShard);
-		
+		emptyShard = new Shard(Config.emptyShardId, "Empty", 0xCCCC99);
+		lightShard = new Shard(Config.lightShardId, "Light", 0xFFFF33);
+		enderShard = new Shard(Config.enderShardId, "Ender", 0x003333);
+
 		xpShard = new XPShard(Config.xpShardId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.xpShardTexture);
 		LanguageRegistry.addName(xpShard, TCELocalization.xpShard);
 	}
@@ -41,6 +35,15 @@ public class InfusionRegister {
 				new ItemStack(BlockRegister.airBlock),
 				new AspectList().add(Aspect.AIR, 18), Block.stoneBrick, 
 				new ItemStack(ConfigItems.itemShard, 1, 0));
+		
+		emptyShardRecipe = ThaumcraftApi.addArcaneCraftingRecipe("Shard Infusion", new ItemStack(emptyShard, 1, 0), CraftingAspects.emptyFoci,  new Object[]{
+			"YIY",
+			"IXI",
+			"YIY",
+			'X', new ItemStack(ConfigItems.itemShard, 1, 0),
+			'I', Block.glass,
+			'Y', Item.ingotIron});
+		
 		
 		if(Config.lightBlock = true)
 		{
@@ -78,16 +81,21 @@ public class InfusionRegister {
 		{
 			lightShardRecipe = ThaumcraftApi.addShapelessArcaneCraftingRecipe("Shard Infusion", 
 					new ItemStack(lightShard), new AspectList().add(Aspect.AIR, 2), 
-					Item.coal, 
-					new ItemStack(ConfigItems.itemShard, 1, 0));
+					emptyShard, 
+					Block.torchWood);
 		}
 		
 		if(Config.enderBlock = true)
 		{
+			enderShardRecipe = ThaumcraftApi.addShapelessArcaneCraftingRecipe("Shard Infusion", 
+					new ItemStack(enderShard), new AspectList().add(Aspect.AIR, 2), 
+					emptyShard, 
+					Item.enderPearl);
+			
 			enderBlock = ThaumcraftApi.addShapelessArcaneCraftingRecipe(TCELocalization.EnderBlock, 
 					new ItemStack(BlockRegister.enderBlock), new AspectList().add(Aspect.ENTROPY, 2), 
 					Block.stoneBrick, 
-					Item.enderPearl);
+					enderShard);
 		}
 		
 		}
@@ -101,8 +109,11 @@ public class InfusionRegister {
 	public static ShapelessArcaneRecipe enderBlock;
 	
 	public static ShapelessArcaneRecipe lightShardRecipe;
-	
-	public static Item lightShard;
+	public static ShapelessArcaneRecipe enderShardRecipe;
+	public static ShapedArcaneRecipe emptyShardRecipe;
+
+	public static Shard lightShard;
+	public static Shard enderShard;
 	public static Item xpShard;
-	public static Item emptyShard;	
+	public static Shard emptyShard;	
 }

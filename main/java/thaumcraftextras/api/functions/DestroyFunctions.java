@@ -3,8 +3,6 @@ package thaumcraftextras.api.functions;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.minecraft.block.Block;
-
 public class DestroyFunctions {
     public static Map<Integer, Integer> canDestroy = new HashMap();
 

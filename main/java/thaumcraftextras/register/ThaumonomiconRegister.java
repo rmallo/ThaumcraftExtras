@@ -43,7 +43,7 @@ public class ThaumonomiconRegister {
 		
 		text = "1";
 		research = new ResearchHelper(TCELocalization.emptyFoci, "TCE", ResearchAspect.emptyFociResearch, -3, 0, 3, new ItemStack(ItemRegister.emptyFoci)).setParents("Thaumcraft Extras").registerResearchItem();
-		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.arrowFoci));
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.emptyFoci));
 		
 		if(Config.arrowFoci == true)
 		{
@@ -88,7 +88,7 @@ public class ThaumonomiconRegister {
 		
 		text = "1";
 		research = new ResearchHelper("Shard Infusion", "TCE", new AspectList(), 2, 0, 3, new ItemStack(InfusionRegister.lightShard)).setParents("Empty Focus").setRound().setAutoUnlock().registerResearchItem();
-		research.setPages(new ResearchPage(text), new ResearchPage(InfusionRegister.lightShardRecipe));
+		research.setPages(new ResearchPage(text), new ResearchPage(InfusionRegister.emptyShardRecipe), new ResearchPage(InfusionRegister.lightShardRecipe), new ResearchPage(InfusionRegister.enderShardRecipe));
 		
 		text = "1";
 		text2 = "2";
@@ -221,7 +221,7 @@ public class ThaumonomiconRegister {
 		
 		text = "1";
 		research = new ResearchHelper("Magic Energy", "ARTIFICE", ResearchAspect.energyResearch, 6, -6, 3, new ItemStack(MCKERegister.MCKCharger, 0, 1)).setParents("Warded Block").setHidden().registerResearchItem();
-		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.charger), new ResearchPage(ThaumcraftRecipeRegister.exchanger), new ResearchPage(ThaumcraftRecipeRegister.wandCharger), new ResearchPage(ThaumcraftRecipeRegister.darkThaumium), new ResearchPage(ThaumcraftRecipeRegister.battery));
+		research.setPages(new ResearchPage(text), new ResearchPage(ThaumcraftRecipeRegister.charger), new ResearchPage(ThaumcraftRecipeRegister.exchanger), new ResearchPage(ThaumcraftRecipeRegister.wandCharger), new ResearchPage(ThaumcraftRecipeRegister.darkThaumium), new ResearchPage(ThaumcraftRecipeRegister.battery), new ResearchPage(ThaumcraftRecipeRegister.battery2), new ResearchPage(ThaumcraftRecipeRegister.battery3), new ResearchPage(ThaumcraftRecipeRegister.battery4));
 		
 	}
 	

@@ -44,6 +44,9 @@ public class Config {
 	       // teleporterBlockId = config.getBlock("teleporterBlock", 368).getInt();
 
 	        magicCrystalId = config.getItem("magicCrystal", 11200).getInt();
+	        magicCrystalT2Id = config.getItem("magicCrystalT2", 11201).getInt();
+	        magicCrystalT3Id = config.getItem("magicCrystalT3", 11202).getInt();
+	        magicCrystalT4Id = config.getItem("magicCrystalT4", 11203).getInt();
 
 
 	        pechTradeTier1Id = config.getItem("pechTradeTier1", 12225).getInt();
@@ -57,7 +60,6 @@ public class Config {
 	        magicTradeTier3Id = config.getItem("magicTradeTier3", 12232).getInt();
 	        magicTradeTier4Id = config.getItem("magicTradeTier4", 12233).getInt();
 	        magicTradeTier5Id = config.getItem("magicTradeTier5", 12234).getInt();
-	        
 	        
 	        ignisFuelId = config.getItem("ignisFuel", 12235).getInt();
 	        ultimateRodId = config.getItem("ultimateRod", 12236).getInt();
@@ -88,10 +90,14 @@ public class Config {
 	        cleanFociId = config.getItem("cleanFoci", 13267).getInt();
 	        
 	        colorPouchId = config.getItem("colorFoci", 13300).getInt();
-	        
-	        darkThaumiumNuggetId = config.getItem("darkThaumiumNugget", 13400).getInt();
+	        infoBookId = config.getItem("infoBook", 13301).getInt();
+
 	        magicShardId = config.getItem("magicShard", 13401).getInt();
 	        greedShardId = config.getItem("greedShard", 13402).getInt();
+	        darkThaumiumNuggetId = config.getItem("darkThaumiumNugget", 13400).getInt();
+	        draconicNuggetId = config.getItem("draconicNugget", 13401).getInt();
+	        reinforcedNuggetId = config.getItem("reinforcedNugget", 13402).getInt();
+	        sunstoneNuggetId = config.getItem("sunstoneNugget", 13403).getInt();
 
 	        lightShardId = config.getItem("lightShard", 14201).getInt();
 	        emptyShardId = config.getItem("emptyShard", 14202).getInt();
@@ -99,6 +105,7 @@ public class Config {
 	        xpExtractorId = config.getItem("xpExtractor", 14204).getInt();
 	        darkThaumiumId = config.getItem("darkThaumium", 14205).getInt();
 	        emptyFociId = config.getItem("emptyFoci", 14206).getInt();
+	        enderShardId = config.getItem("emderShard", 14207).getInt();
 
 	        enderFoci = config.get(Configuration.CATEGORY_GENERAL, "enderFoci", true).getBoolean(enderFoci);
 	    	arrowFoci = config.get(Configuration.CATEGORY_GENERAL, "arrowFoci", true).getBoolean(arrowFoci);
@@ -126,6 +133,8 @@ public class Config {
 	    	wandRods = config.get(Configuration.CATEGORY_GENERAL, "wandRods", true).getBoolean(wandRods);
 	    	ignisFuel = config.get(Configuration.CATEGORY_GENERAL, "ignisFuel", true).getBoolean(ignisFuel);
 	    	cleanFoci = config.get(Configuration.CATEGORY_GENERAL, "cleanFoci", true).getBoolean(cleanFoci);
+	    	
+	    	forestrySupport = config.get(Configuration.CATEGORY_GENERAL, "forestrySupport", true).getBoolean(forestrySupport);
 
 	    	config.save();
 }
@@ -156,6 +165,9 @@ public class Config {
 	public static int darkSilverwoodLogId;
 
 	public static int magicCrystalId;
+	public static int magicCrystalT2Id;
+	public static int magicCrystalT3Id;
+	public static int magicCrystalT4Id;
 
 	public static int mckChargerId;
 	public static int exchangerId;
@@ -175,9 +187,12 @@ public class Config {
     public static int magicTradeTier5Id;
     
     public static int ignisFuelId;
-    public static int darkThaumiumNuggetId;
     public static int magicShardId;
     public static int greedShardId;
+    public static int darkThaumiumNuggetId;
+    public static int draconicNuggetId;
+    public static int reinforcedNuggetId;
+    public static int sunstoneNuggetId;
 
     public static int ignisFuelBlockId;
 
@@ -213,11 +228,14 @@ public class Config {
     public static int emptyFociId;
 
     public static int lightShardId;
+    public static int enderShardId;
     public static int emptyShardId;
+    
     public static int xpShardId;
     public static int xpExtractorId;
     public static int colorPouchId;
-    
+    public static int infoBookId;
+
     public static boolean enderFoci;
     public static boolean arrowFoci;
     public static boolean healFoci;
@@ -244,4 +262,7 @@ public class Config {
 	public static boolean wardedBlocks;
 	public static boolean ignisFuel;
 	public static boolean cleanFoci;
+	
+	public static boolean forestrySupport;
+
 	}

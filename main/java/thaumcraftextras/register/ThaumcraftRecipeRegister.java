@@ -150,7 +150,7 @@ public class ThaumcraftRecipeRegister {
 	{
 		returnFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.returnFoci, new ItemStack(ItemRegister.returnFoci),4,
 			CraftingAspects.returnFoci,
-			new ItemStack(ItemRegister.emptyFoci), new ItemStack[]{
+			new ItemStack(ItemRegister.enderFoci), new ItemStack[]{
 			new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz),
 			new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), 
 			new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl)});
@@ -188,7 +188,7 @@ public class ThaumcraftRecipeRegister {
 	{
 	destroyFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.destroyFoci, new ItemStack(ItemRegister.destroyFoci),4,
 			CraftingAspects.destroyFoci,
-			new ItemStack(ItemRegister.emptyFoci), new ItemStack[]{
+			new ItemStack(ItemRegister.smeltingFoci), new ItemStack[]{
 			new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz),
 			new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), 
 			new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl)});
@@ -198,7 +198,7 @@ public class ThaumcraftRecipeRegister {
 	{
 		cleanFoci = ThaumcraftApi.addInfusionCraftingRecipe(TCELocalization.cleanFoci, new ItemStack(ItemRegister.cleanFoci),4,
 				CraftingAspects.cleanFoci,
-				new ItemStack(ItemRegister.emptyFoci), new ItemStack[]{
+				new ItemStack(ConfigItems.itemFocusExcavation), new ItemStack[]{
 				new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz),
 				new ItemStack(Item.enderPearl), new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl), 
 				new ItemStack(Item.netherQuartz), new ItemStack(Item.enderPearl)});
@@ -402,6 +402,30 @@ public class ThaumcraftRecipeRegister {
 		'X', ItemRegister.pechTradeTier1,
 		'I', ItemRegister.magicTradeTier1,
 		'Y', Block.blockRedstone});
+	
+	battery2 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.magicCrystalT2, 1, 100), CraftingAspects.exchangerBlock,  new Object[]{
+		"XIX",
+		"IYI",
+		"XIX",
+		'X', ItemRegister.pechTradeTier1,
+		'I', ItemRegister.magicTradeTier1,
+		'Y', MCKERegister.magicCrystal});
+	
+	battery3 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.magicCrystalT3, 1, 250), CraftingAspects.exchangerBlock,  new Object[]{
+		"XIX",
+		"IYI",
+		"XIX",
+		'X', ItemRegister.pechTradeTier1,
+		'I', ItemRegister.magicTradeTier1,
+		'Y', MCKERegister.magicCrystalT2});
+	
+	battery4 = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.magicCrystalT4, 1, 500), CraftingAspects.exchangerBlock,  new Object[]{
+		"XIX",
+		"IYI",
+		"XIX",
+		'X', ItemRegister.pechTradeTier2,
+		'I', ItemRegister.magicTradeTier2,
+		'Y', MCKERegister.magicCrystalT3});
 	
 	darkThaumium = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(ItemRegister.darkThaumium, 1, 0), CraftingAspects.pechTradeTier3,  new Object[]{
 		"YIY",
@@ -634,9 +658,13 @@ public class ThaumcraftRecipeRegister {
 	public static ShapedArcaneRecipe exchanger;
 	public static ShapedArcaneRecipe charger;
 	public static ShapedArcaneRecipe wandCharger;
-	public static ShapedArcaneRecipe battery;
 	public static ShapedArcaneRecipe darkThaumium;
 	public static ShapedArcaneRecipe emptyFoci;
+
+	public static ShapedArcaneRecipe battery;
+	public static ShapedArcaneRecipe battery2;
+	public static ShapedArcaneRecipe battery3;
+	public static ShapedArcaneRecipe battery4;
 
 	public static ShapedArcaneRecipe copperRod;
 	public static ShapedArcaneRecipe tinRod;

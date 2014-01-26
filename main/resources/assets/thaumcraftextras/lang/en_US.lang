@@ -75,6 +75,13 @@ item.Wand.devil.rod=Devil
 item.Wand.god.rod=God
 item.Wand.darkSilverwood.rod=Dark Silverwood
 item.Wand.candy.rod=Candy
+------Nuggets-----
+item.tce.nuggets.Draconic.name=Draconic Nugget
+item.tce.nuggets.Reinforced.name=Reinforced Nugget
+------Shards------
+item.tce.shards.Empty.name=Empty Shard
+item.tce.shards.Ender.name=Ender Shard
+item.tce.shards.Light.name=Light Shard
 ------Bees-------
 tce.species.ignisFuel=Ignis Fuel
 tce.species.magicEssence=Magic Essence
@@ -86,7 +93,16 @@ tce.species.greatwood=Greatwood
 tce.species.silverwood=Silverwood
 tce.species.darkSilverwood=Dark Silverwood
 tce.species.salis=Salis Mundus
+tce.species.mana=Mana
+tce.species.quicksilver=Quicksilver
+tce.species.reinforced=Reinforced
+tce.species.draconic=Draconic
 tce.species.pig=Pig
+tce.species.sunstone=Sunstone
+tce.species.moonstone=Moonstone
+tce.species.chimerite=Chimerite
+tce.species.coke=Coke
+tce.species.certusQuartz=Certus Quartz
 ------Blocks------
 tce.warded.block.black.name=Warded Block: Black
 tce.warded.block.red.name=Warded Block: Red

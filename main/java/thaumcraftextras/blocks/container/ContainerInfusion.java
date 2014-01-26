@@ -16,7 +16,7 @@ import thaumcraftextras.register.InfusionRegister;
 import thaumcraftextras.register.ItemRegister;
 
 public class ContainerInfusion extends Container {
-		int x, y;
+                int x, y;
         public static TileEntityInfusion tile;
         public static boolean bool = false;
         public ContainerInfusion(TileEntityInfusion tileI, InventoryPlayer inventory) {
@@ -38,68 +38,68 @@ public class ContainerInfusion extends Container {
         @Override
         public ItemStack slotClick(int id, int x, int y, EntityPlayer player)
         {
-        	Item item;
-        	Block block = null;
-        	if(id == 0)
-        	{
-        		block = BlockRegister.lightBlock;
-        		GuiInfuseInfo.text = "Block Infusion";
-        		GuiInfuseInfo.text2 = "With block infusion you can";
-            	GuiInfuseInfo.text3 = "infuse blocks with an aspect,";
-            	GuiInfuseInfo.text4 = "This will give them special effects.";
-            	GuiInfuseInfo.text5 = "";
-            	
-            	return new ItemStack(block);
-        	}
-        	if(id == 1)
-        	{
-        		item = InfusionRegister.lightShard;
-        		GuiInfuseInfo.text = "Shard Infusion";
-        		GuiInfuseInfo.text2 = "With shard infusion you can";
-            	GuiInfuseInfo.text3 = "infuse items with an aspect,";
-            	GuiInfuseInfo.text4 = "This can be used in a later stage.";
-            	GuiInfuseInfo.text5 = "";
-            	return new ItemStack(item);
-        	}
-        	
-        	if(id == 2)
-        	{
-        		item = ItemRegister.exchangeFoci;
-        		GuiInfuseInfo.text = "Wand Foci";
-        		GuiInfuseInfo.text2 = "In Thaumcraft Extras there are";
-        		GuiInfuseInfo.text3 = "A lot of different kind of foci.";
-        		GuiInfuseInfo.text4 = "There all do something different.";
-        		GuiInfuseInfo.text5 = "";
-            	return new ItemStack(item);
-        	}
-        	
-        	if(id == 3)
-        	{
-        		block = BlockRegister.researchBlock;
-        		GuiInfuseInfo.text = "Blocks";
-        		GuiInfuseInfo.text2 = "Thaumcraft Extras blocks";
-            	GuiInfuseInfo.text3 = "are special blocks that have";
-            	GuiInfuseInfo.text4 = "multiple purposes.";
-            	GuiInfuseInfo.text5 = "";
-            	return new ItemStack(block);
-        	}
-        	
-        	if(id == 4)
-        	{
-        		item = ItemRegister.xpExtractor;
-        		GuiInfuseInfo.text = "Items";
-        		GuiInfuseInfo.text2 = "Thaumcraft Extras items";
-               	GuiInfuseInfo.text3 = "are special items that have";
-               	GuiInfuseInfo.text4 = "multiple purposes.";
-               	GuiInfuseInfo.text5 = "";
-            	return new ItemStack(item);
-        	}
-        	else
-        	{
-        		block = Block.dirt;
-            	return new ItemStack(block);
-        	}
-        	
+                Item item;
+                Block block = null;
+                if(id == 0)
+                {
+                        block = BlockRegister.lightBlock;
+                        GuiInfuseInfo.text = "Block Infusion";
+                        GuiInfuseInfo.text2 = "With block infusion you can";
+                    GuiInfuseInfo.text3 = "infuse blocks with an aspect,";
+                    GuiInfuseInfo.text4 = "This will give them special effects.";
+                    GuiInfuseInfo.text5 = "";
+                    
+                    return new ItemStack(block);
+                }
+                if(id == 1)
+                {
+                        item = InfusionRegister.lightShard;
+                        GuiInfuseInfo.text = "Shard Infusion";
+                        GuiInfuseInfo.text2 = "With shard infusion you can";
+                    GuiInfuseInfo.text3 = "infuse items with an aspect,";
+                    GuiInfuseInfo.text4 = "This can be used in a later stage.";
+                    GuiInfuseInfo.text5 = "";
+                    return new ItemStack(item);
+                }
+                
+                if(id == 2)
+                {
+                        item = ItemRegister.exchangeFoci;
+                        GuiInfuseInfo.text = "Wand Foci";
+                        GuiInfuseInfo.text2 = "In Thaumcraft Extras there are";
+                        GuiInfuseInfo.text3 = "A lot of different kind of foci.";
+                        GuiInfuseInfo.text4 = "There all do something different.";
+                        GuiInfuseInfo.text5 = "";
+                    return new ItemStack(item);
+                }
+                
+                if(id == 3)
+                {
+                        block = BlockRegister.researchBlock;
+                        GuiInfuseInfo.text = "Blocks";
+                        GuiInfuseInfo.text2 = "Thaumcraft Extras blocks";
+                    GuiInfuseInfo.text3 = "are special blocks that have";
+                    GuiInfuseInfo.text4 = "multiple purposes.";
+                    GuiInfuseInfo.text5 = "";
+                    return new ItemStack(block);
+                }
+                
+                if(id == 4)
+                {
+                        item = ItemRegister.xpExtractor;
+                        GuiInfuseInfo.text = "Items";
+                        GuiInfuseInfo.text2 = "Thaumcraft Extras items";
+                       GuiInfuseInfo.text3 = "are special items that have";
+                       GuiInfuseInfo.text4 = "multiple purposes.";
+                       GuiInfuseInfo.text5 = "";
+                    return new ItemStack(item);
+                }
+                else
+                {
+                        block = Block.dirt;
+                    return new ItemStack(block);
+                }
+                
         }
 
         @Override
