@@ -75,6 +75,13 @@ item.Wand.devil.rod=Teufel
 item.Wand.god.rod=Gott
 item.Wand.darkSilverwood.rod=Dunkles Silberholz
 item.wand.candy.rod=Zucker
+------Nuggets-----
+item.tce.nuggets.Draconic.name=Drakonischer Klumpen
+item.tce.nuggets.Reinforced.name=Verstärkter Klumpen
+------Shards------
+item.tce.shards.Empty.name=Leere Scherbe
+item.tce.shards.Ender.name=Ender-Scherbe
+item.tce.shards.Light.name=Licht-Scherbe
 ------Bees-------
 tce.species.ignisFuel=Ignis
 tce.species.magicEssence=Magie-Essenz
@@ -86,7 +93,16 @@ tce.species.greatwood=Großholz
 tce.species.silverwood=Silberholz
 tce.species.darkSilverwood=Dunkles Silberholz
 tce.species.salis=Salis Mundus
+tce.species.mana=Mana
+tce.species.quicksilver=Quecksilber
+tce.species.reinforced=Verstärkt
+tce.species.draconic=Drakonisch
 tce.species.pig=Schwein
+tce.species.sunstone=Sonnenstein
+tce.species.moonstone=Mondstein
+tce.species.chimerite=Chimerite
+tce.species.coke=Koks
+tce.species.certusQuartz=Certus Quartz
 ------Blocks------
 tce.warded.block.black.name=Bannender Block: Schwarz
 tce.warded.block.red.name=Bannender Block: Rot
